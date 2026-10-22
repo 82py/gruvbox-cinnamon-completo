@@ -35,6 +35,16 @@ class InstallTest(unittest.TestCase):
    self.assertEqual((h/'tema-anterior/teste').read_text(),'ícone anterior')
    self.assertEqual((h/'Espaços de trabalho Gruvbox/Espaço 2/criado-depois.txt').read_text(),'não apagar')
    self.assertEqual(json.loads((h/'fake-dconf.json').read_text()),{'/org/cinnamon/theme/name':"'Original'"})
+ def test_snapshot_precedes_cross_schema_side_effects(self):
+  with tempfile.TemporaryDirectory(prefix='gruvbox-settings-') as d:
+   h=self.home(d);key='/org/gnome/desktop/interface/icon-theme';original=json.loads((h/'fake-dconf.json').read_text());original[key]="'Before'";(h/'fake-dconf.json').write_text(json.dumps(original))
+   installer=m.Installer(h,True);setter=installer.set
+   def synced_set(name,value):
+    setter(name,value)
+    if name=='/org/cinnamon/desktop/interface/icon-theme':setter(key,value)
+   installer.set=synced_set;installer.install()
+   record=json.loads((h/'.local/state/gruvbox-cinnamon/install.json').read_text());self.assertEqual(record['settings'][key],"'Before'")
+   installer.restore();self.assertEqual(json.loads((h/'fake-dconf.json').read_text()),original)
  def test_failure_rolls_back(self):
   with tempfile.TemporaryDirectory(prefix='gruvbox-rollback-') as d:
    h=self.home(d);i=m.Installer(h,True);put=i.put;count=0

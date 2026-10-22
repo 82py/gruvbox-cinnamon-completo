@@ -100,7 +100,7 @@ def daemon():
         nonlocal stop
         stop=True
     signal.signal(signal.SIGTERM,stopping);signal.signal(signal.SIGINT,stopping)
-    last=None;checked=0;actual='';warned=None;wallpaper_warning=None;disconnected=False
+    last=None;checked=None;actual='';warned=None;wallpaper_warning=None;disconnected=False
     backgrounds=fundos.Controller(d)
     try:
         if PENDING.exists():
@@ -112,7 +112,7 @@ def daemon():
         while not stop:
             while d.pending_events():d.next_event()
             c=read();tag_wallpaper(d)
-            if time.monotonic()-checked>30:
+            if checked is None or time.monotonic()-checked>30:
                 actual=versions();checked=time.monotonic()
                 if actual==c['validated_versions'] and subprocess.run(['pgrep','-x','nemo-desktop'],capture_output=True).returncode:
                     # Raincarroof may start before Nemo during login. Its window
@@ -165,6 +165,7 @@ def daemon():
             except Exception:pass
         try:d.close()
         except error.ConnectionClosedError:pass
+        lock.close()
 
 def pause():
     c=read();c['enabled']=False;save(CFG,c)

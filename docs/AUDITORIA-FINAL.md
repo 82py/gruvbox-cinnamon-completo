@@ -1,6 +1,6 @@
 # Conferência final da personalização ativa — 21/10/2026
 
-Revisão 1.0.1. A conferência leu o estado do Cinnamon e comparou os arquivos ativos com as duas árvores de distribuição. Nada foi aplicado na sessão real.
+Revisão 1.0.2. A conferência leu o estado do Cinnamon e comparou os arquivos ativos com as duas árvores de distribuição. Nada foi aplicado na sessão real da máquina de origem; a instalação completa foi exercitada em uma VM separada.
 
 | Componente ativo | Cobertura |
 | --- | --- |
@@ -35,4 +35,4 @@ Os instaladores/restauradores antigos de áreas, datados e vinculados ao estado 
 
 A comparação de cobertura é reproduzível com `python3 scripts/auditar-desktop.py` enquanto a máquina de origem mantiver esta configuração. As adaptações intencionais são enumeradas em `AUDITORIA-COBERTURA.json`.
 
-A instalação/restauração e o seletor são testados em HOME e preferências isolados. Os dois arquivos finais são extraídos para testar as 25 cores e a resolução/renderização GTK dos ícones. O terminal real também foi iniciado sem janela visível e em barramento privado: carregou o perfil exportado, executou o comando de teste e preservou os dados originais. Não foi aplicada a instalação completa a uma segunda sessão Cinnamon real.
+A instalação/restauração e o seletor são testados em HOME e preferências isolados. Os dois arquivos finais são extraídos para testar as 25 cores e a resolução/renderização GTK dos ícones. O terminal real também foi iniciado sem janela visível e em barramento privado: carregou o perfil exportado, executou o comando de teste e preservou os dados originais. A revisão 1.0.2 também foi instalada e desinstalada em uma segunda sessão Cinnamon real, dentro de uma VM Mint 22.3. A restauração foi conferida antes e depois de reiniciar: nenhuma diferença nos 115 destinos, nas 936 preferências e nos três conjuntos de arquivos internos comparados. Consulte VALIDACAO-VM.md.

@@ -130,10 +130,15 @@ class Controller:
                         '--property=Type=exec','--property=ExitType=cgroup',
                         '--setenv=RAIN_VIDEO='+entry.get('video',''),
                         str(Path.home()/'.local/bin/video-wallpaper'),'start')
-                for _ in range(30):
+                ready=False;deadline=time.monotonic()+20
+                modefile=Path.home()/'.local/state/video-wallpaper/working-mode'
+                while time.monotonic()<deadline:
                     time.sleep(.1);ws=windows(self.d)
-                    if ws:break
-                if not ws:raise RuntimeError('Rain não iniciou. Sua imagem estática foi mantida.')
+                    if not ws or not modefile.is_file():continue
+                    try:ready=ipc(['get_property','vo-configured']) is True
+                    except (OSError,RuntimeError):continue
+                    if ready:break
+                if not ready:raise RuntimeError('Rain não iniciou. Sua imagem estática foi mantida.')
                 signature=(index,json.dumps(entry,sort_keys=True),tuple(w.id for w in ws))
                 self.state={'hidden':False};app.save(STATE,self.state)
             if ws:

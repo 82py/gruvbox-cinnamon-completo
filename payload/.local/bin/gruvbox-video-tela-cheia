@@ -18,7 +18,7 @@ def main(home=None,player="mpv"):
         config.write_text(json.dumps({'video':video},ensure_ascii=False))
     if player=='celluloid' and shutil.which('celluloid'):
         subprocess.Popen(['celluloid','--mpv-fullscreen=yes',video])
-    else:subprocess.Popen(['mpv','--fs','--',video])
+    else:subprocess.Popen(['mpv','--ao=pulse','--audio-client-name=Gruvbox-Video','--fs','--',video])
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--player',choices=['mpv','celluloid'],default='mpv');args=parser.parse_args();main(player=args.player)

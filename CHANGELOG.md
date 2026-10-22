@@ -1,5 +1,15 @@
 # Alterações
 
+## 1.0.2 — 21/10/2026
+
+- Instalação e desinstalação reais em VM Mint 22.3 Cinnamon X11, com reinicializações e comparação de 115 destinos, 936 preferências e arquivos internos.
+- Verificação das versões dos espaços já no primeiro ciclo de boot.
+- Saídas incorporadas GPU/X11 e confirmação de vídeo pronto antes da seleção do modo Rain.
+- Áudio próprio Rain/vídeo via compatibilidade PulseAudio, evitando a captura do player pela Radio3 sem modificar o applet.
+- Captura de todas as preferências antes das alterações; desligamento dos componentes antes da restauração dos arquivos.
+- Encerramento da janela e da bandeja próprias do Rain na desinstalação.
+- Regressões para boot antecipado e sincronização entre schemas, evidências e capturas da VM.
+
 ## 1.0.1 — 2026-10-21
 
 - Auditoria dos componentes realmente carregados, do menu e das preferências atuais.

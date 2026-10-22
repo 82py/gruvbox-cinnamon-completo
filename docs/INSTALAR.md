@@ -2,7 +2,7 @@
 
 ## Plataforma
 
-A configuração de origem é Linux Mint 22.3 Zena com Cinnamon 6.6.9, Nemo/Muffin 6.6.3 e X11. O instalador aceita Cinnamon/Nemo 6.6.x em X11; outras versões precisam de validação. Não execute em GNOME/Wayland. A instalação completa ainda não foi experimentada em uma segunda máquina: foram testados montagem, integridade, sintaxe e ciclo de instalação/restauração com configurações simuladas em pastas isoladas. O Cinnamon original permaneceu ativo e intacto durante esses testes.
+A configuração de origem é Linux Mint 22.3 Zena com Cinnamon 6.6.9, Nemo/Muffin 6.6.3 e X11. O instalador aceita Cinnamon/Nemo 6.6.x em X11; outras versões precisam de validação. Não execute em GNOME/Wayland. A versão 1.0.2 foi instalada e desinstalada em uma VM Mint 22.3 com Cinnamon 6.6.4, Nemo 6.6.3 e Muffin 6.6.1, incluindo reinicializações e comparação dos arquivos e preferências originais. O Cinnamon da máquina de origem permaneceu intacto. Veja VALIDACAO-VM.md para o alcance dos testes.
 
 ## Passos
 
@@ -38,3 +38,9 @@ O atalho Relax pede um vídeo local e abre Celluloid em tela cheia (com alternat
 As correções de fontes de KClock e Materialgram são preferências do usuário, não alterações nos aplicativos. O instalador mescla FONTCONFIG_FILE com as outras permissões/variáveis já existentes, sem removê-las. A organização do menu Chromium também é mesclada. Insync e Bitwarden só recebem sua entrada de inicialização automática se já estiverem instalados; o pacote não instala esses programas nem copia suas contas.
 
 As associações de arquivos ficam em `optional/mimeapps.list` como referência; não substituem automaticamente os aplicativos padrão do destinatário. Os programas e serviços pessoais de servidores, tarefas, VPN e sincronização não fazem parte do tema.
+
+## Ajustes da revisão 1.0.2
+
+O serviço dos espaços verifica suas versões já na primeira execução, sem o aviso falso de atualização durante o boot. O Rain aguarda a saída de vídeo ficar pronta e usa X11 como alternativa quando a aceleração gráfica não está disponível. Seu áudio e o atalho de vídeo mpv usam a interface PulseAudio compatível do Mint, com nomes próprios, para não serem confundidos com a Radio3. Nenhum applet foi alterado.
+
+O instalador captura todas as preferências originais antes da primeira mudança. A restauração desativa os componentes gerenciados antes de remover seus arquivos e encerra os processos próprios do Rain. As dependências do sistema são instaladas antes da personalização e não são removidas automaticamente na desinstalação.

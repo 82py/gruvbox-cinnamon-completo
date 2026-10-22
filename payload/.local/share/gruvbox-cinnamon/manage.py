@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """GPL-3.0-or-later. Pir (82py), com assistência do OpenAI Codex."""
 from pathlib import Path
-import argparse,datetime,hashlib,json,os,re,shutil,subprocess,sys,tempfile,configparser,io,copy as copy_module
+import argparse,datetime,hashlib,json,os,re,shutil,subprocess,sys,tempfile,time,configparser,io,copy as copy_module
 import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 PACKAGES=['cinnamon','nemo','muffin','xdg-user-dirs','python3-xlib','mpv']
@@ -122,7 +122,9 @@ class Installer:
   manifest=json.loads((ROOT/'manifest.json').read_text())
   missing=[u['source'] for u in manifest['units'] if not (ROOT/u['source']).exists() and u['target']!='.local/bin/xwinwrap']
   if missing:raise RuntimeError('Componentes locais ausentes: '+', '.join(missing)+'. Consulte docs/PUBLICAR.md; não instale uma distribuição incompleta.')
-  self.data={'version':manifest['version'],'sandbox':self.sandbox,'status':'installing','files':[],'settings':{},'created':datetime.datetime.now().isoformat()};self.checkpoint()
+  values=json.loads((ROOT/'settings.json').read_text())
+  original_settings={key:self.get(key) for key in values}
+  self.data={'version':manifest['version'],'sandbox':self.sandbox,'status':'installing','files':[],'settings':original_settings,'created':datetime.datetime.now().isoformat()};self.checkpoint()
   try:
    # Existing desktop data stays exactly in place. Only the managed pointer changes.
    current=Path(run('xdg-user-dir','DESKTOP')) if not self.sandbox else self.home/'Desktop'
@@ -182,26 +184,58 @@ class Installer:
     self.put(rel,text=s)
    values=json.loads((ROOT/'settings.json').read_text())
    for key in sorted(values,key=lambda k:k.endswith('enabled-extensions')):
-    self.data['settings'][key]=self.get(key);self.checkpoint();self.set(key,self.render(values[key]))
+    self.set(key,self.render(values[key]))
    self.data['status']='installed';self.checkpoint()
   except BaseException:
    self.restore(rollback=True);raise
   print('Instalação concluída. Encerre a sessão e entre novamente. Escolha suas imagens e vídeos no menu.')
+ def suspend_managed_spices(self):
+  if self.sandbox:return
+  from gi.repository import Gio,GLib
+  owned={kind:set() for kind in ['extensions','applets']}
+  for unit in self.data['files']:
+   parts=Path(unit['target']).parts
+   for kind in owned:
+    if kind in parts and '.local' in parts:
+     index=parts.index(kind)
+     if len(parts)>index+1:owned[kind].add(parts[index+1])
+  settings=Gio.Settings.new('org.cinnamon')
+  for key,kind in [('enabled-extensions','extensions'),('enabled-applets','applets')]:
+   path='/org/cinnamon/'+key
+   if path not in self.data['settings']:continue
+   raw=self.data['settings'][path]
+   previous=GLib.Variant.parse(None,raw,None,None).unpack() if raw is not None else settings.get_default_value(key).unpack()
+   kept=[entry for entry in previous if (entry if kind=='extensions' else entry.split(':')[3]) not in owned[kind]]
+   self.set(path,GLib.Variant('as',kept).print_(True))
+  Gio.Settings.sync()
+  proxy=Gio.DBusProxy.new_for_bus_sync(Gio.BusType.SESSION,Gio.DBusProxyFlags.NONE,None,'org.Cinnamon','/org/Cinnamon','org.Cinnamon',None)
+  code='JSON.stringify({extensions:imports.ui.extensionSystem.runningExtensions,applets:imports.ui.appletManager.definitions.filter(d=>!!d.applet).map(d=>d.real_uuid)})'
+  deadline=time.monotonic()+15
+  while time.monotonic()<deadline:
+   ok,data=proxy.call_sync('Eval',GLib.Variant('(s)',(code,)),Gio.DBusCallFlags.NONE,5000,None).unpack()
+   if not ok:raise RuntimeError('Não foi possível conferir o desligamento dos componentes do Cinnamon.')
+   while isinstance(data,str):data=json.loads(data)
+   if all(not (set(data[kind]) & owned[kind]) for kind in owned):
+    time.sleep(.4);return
+   time.sleep(.1)
+  raise RuntimeError('O Cinnamon ainda está desligando componentes. Tente novamente antes de remover os arquivos.')
  def restore(self,rollback=False):
   if not self.journal.exists():raise RuntimeError('Nenhuma instalação registrada neste usuário.')
   self.data=json.loads(self.journal.read_text())
   if bool(self.data['sandbox'])!=self.sandbox:raise RuntimeError('Modo de restauração não corresponde ao registro.')
   for entry in self.data['files']:
    if entry['backup'] and not exists(self.state/entry['backup']):raise RuntimeError('Cópia de segurança ausente: '+entry['target'])
+  self.suspend_managed_spices()
   if not self.sandbox:
    subprocess.run(['systemctl','--user','stop','espacos-de-trabalho.service'],capture_output=True)
    player=self.home/'.local/bin/video-wallpaper'
    if player.exists():subprocess.run([str(player),'stop'],capture_output=True,timeout=15)
-   # Match the exact tray launcher, rather than terminating unrelated Python apps.
+   # Match only owned Rain launchers, never unrelated Python applications.
+   rain_launchers={str(self.home/'.local/bin/video-wallpaper-tray').encode(),str(self.home/'.local/lib/rain/painel.py').encode()}
    for proc in Path('/proc').glob('[0-9]*/cmdline'):
     try:
      args=proc.read_bytes().split(b'\0')
-     if str(self.home/'.local/bin/video-wallpaper-tray').encode() in args:os.kill(int(proc.parent.name),15)
+     if rain_launchers.intersection(args):os.kill(int(proc.parent.name),15)
     except (OSError,ValueError):pass
   recovery=self.state/('alterados-'+datetime.datetime.now().strftime('%Y%m%d-%H%M%S'))
   for e in reversed(self.data['files']):
@@ -210,7 +244,12 @@ class Installer:
     copy(dest,recovery/e['target'])
    remove(dest)
    if e['backup']:copy(self.state/e['backup'],dest)
-  for key,value in self.data['settings'].items():self.set(key,value)
+  for key in sorted(self.data['settings'],key=lambda k:(k.startswith('/org/gnome/desktop/interface/'),k)):
+   self.set(key,self.data['settings'][key])
+  if not self.sandbox:
+   time.sleep(.4)
+   for key in ['/org/gnome/desktop/interface/gtk-theme','/org/gnome/desktop/interface/icon-theme','/org/gnome/desktop/interface/cursor-theme','/org/cinnamon/enabled-desklets']:
+    if key in self.data['settings']:self.set(key,self.data['settings'][key])
   self.data['status']='rolled-back' if rollback else 'uninstalled';self.checkpoint()
   # Retain backups, and all workspace documents. Archive the journal to allow a future install.
   stamp=datetime.datetime.now().strftime('%Y%m%d-%H%M%S-%f')

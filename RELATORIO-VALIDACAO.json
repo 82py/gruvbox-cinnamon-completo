@@ -1,7 +1,7 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "date": "2026-10-21",
-  "regular_files": 27833,
+  "regular_files": 27838,
   "internal_relative_symlinks": 25224,
   "installation_units": 82,
   "settings": 936,
@@ -16,13 +16,14 @@
     "public_tests": 5,
     "audit_addition_tests": 7,
     "active_coverage_audit": "passed",
-    "full_install_restore_tests": 2,
-    "runtime_without_media_tests": 2,
+    "full_install_restore_tests": 3,
+    "runtime_tests": 3,
+    "real_cinnamon_vm": "Mint 22.3 X11: install, features, uninstall and reboot passed",
     "xwinwrap_source_build": "passed (one upstream unused chdir return warning)",
     "current_environment_preflight": "passed"
   },
   "limits": [
-    "No install in a second live Cinnamon session performed",
+    "Physical GPU, Wi-Fi, Bluetooth and printer hardware not exercised in the VM",
     "Public export builds xwinwrap from included pinned source instead of the local binary",
     "No Ubuntu adaptation performed",
     "Folder color selector validation report is supplied alongside the archives"

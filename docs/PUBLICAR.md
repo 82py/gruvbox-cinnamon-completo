@@ -2,7 +2,7 @@
 
 Repositório público: https://github.com/82py/gruvbox-cinnamon-completo
 
-A primeira publicação, v1.0.1, é um pré-lançamento. Antes de anunciar estabilidade, falta validar uma instalação completa em uma segunda sessão Cinnamon real.
+A primeira publicação, v1.0.1, permanece como pré-lançamento histórico. A v1.0.2 incorpora as correções encontradas e a validação completa em uma VM Mint 22.3 Cinnamon X11; veja VALIDACAO-VM.md.
 
 Execute `python3 scripts/exportar-publico.py` para criar uma árvore pública e um TAR.GZ ao lado deste projeto. A exportação inclui ícones, temas, cursor, código e documentação. O binário xwinwrap copiado da máquina de origem fica fora: o instalador compila o fonte fixado em `vendor/xwinwrap` no computador de destino.
 
@@ -12,7 +12,7 @@ Os avisos dos projetos de origem foram recuperados e preservados. A proveniênci
 
 1. Confira `CREDITOS.md`, os avisos em `LICENSES/` e os arquivos ORIGIN.txt. Não remova os créditos dos autores originais ou substitua licenças de terceiros pela licença da raiz.
 2. Confira os arquivos preparados e execute `python3 tests/test_public.py` e `python3 tests/test_install.py`.
-3. Faça uma instalação/desinstalação numa conta descartável ou máquina virtual Mint 22.3 Cinnamon X11 antes de anunciar uma versão estável. Os testes isolados verificam arquivos e restauração; não validam uma segunda sessão gráfica.
+3. Para futuras alterações de instalação/runtime, repita o ciclo em uma VM Mint 22.3 Cinnamon X11, com reinicializações e comparação de arquivos/preferências. Os testes isolados complementam essa sessão gráfica; não a substituem.
 4. Produza capturas novas numa conta limpa, sem foto, documentos ou locais de rede pessoais.
 5. Para novas versões, confira o diff e as exclusões, execute os testes, gere o TAR.GZ com `python3 scripts/empacotar.py` e publique com sua assinatura SHA-256. Nunca envie `assets-locais/`, mídias ou perfis pessoais. Nenhum envio é realizado pelos scripts do tema.
 

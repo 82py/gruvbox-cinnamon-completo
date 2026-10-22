@@ -1,0 +1,88 @@
+{
+  "files_checked": 115,
+  "preferences_checked": 936,
+  "system_trees_checked": [
+    "/usr/share/cinnamon",
+    "/usr/share/themes",
+    "/usr/share/applications"
+  ],
+  "functional": {
+    "workspaces": {
+      "folder_switches": 5,
+      "separate_documents": true,
+      "separate_backgrounds": true
+    },
+    "folder_colors": {
+      "colors": [
+        "blue",
+        "orange",
+        "jade"
+      ],
+      "restore": true
+    },
+    "rain": {
+      "real_video_playback": true,
+      "volume": 40.0,
+      "mute_unmute": true,
+      "workspace_pause_resume": true,
+      "video_output": "x11",
+      "audio_client": "Rain"
+    },
+    "existing_document_preserved": true
+  },
+  "loaded_applets": 15,
+  "running_extensions": 5,
+  "extension_states": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "restore_differences": {
+    "files": [],
+    "settings": [],
+    "system": [],
+    "desktop_path": false
+  },
+  "terminal_child_normal_xdg": true,
+  "original_terminal_data_untouched": true,
+  "version": "1.0.2",
+  "date": "2026-10-21",
+  "environment": {
+    "os": "Linux Mint 22.3 Zena",
+    "cinnamon": "6.6.4",
+    "nemo": "6.6.3",
+    "muffin": "6.6.1",
+    "session": "X11",
+    "hypervisor": "QEMU/KVM",
+    "vcpus": 4,
+    "memory_mib": 8192,
+    "virtual_disk_gib": 40,
+    "host_disks_shared": false,
+    "shared_folders": false,
+    "host_clipboard_shared": false
+  },
+  "official_iso": {
+    "iso": "linuxmint-22.3-cinnamon-64bit.iso",
+    "sha256": "a081ab202cfda17f6924128dbd2de8b63518ac0531bcfe3f1a1b88097c459bd4",
+    "signature_key": "27DEB15644C6B3CF3BD7D291300F846BA25BAE09",
+    "signature": "valid",
+    "official_source": "https://pub.linuxmint.io/stable/22.3/"
+  },
+  "restore_rechecked_after_reboot": true,
+  "dependencies_installed_before_baseline": true,
+  "limitations": [
+    "GPU hardware acceleration not exercised; embedded X11 output was exercised.",
+    "No physical Wi-Fi, Bluetooth, printer or host microphone devices passed through.",
+    "Ubuntu GNOME/Wayland not supported."
+  ],
+  "fixes": [
+    "Immediate version check during early boot.",
+    "Explicit embedded video outputs and readiness probe.",
+    "Rain and fullscreen video use PulseAudio compatibility with distinct client names; upstream applet unchanged.",
+    "Capture all original preferences before any installation mutation.",
+    "Unload managed Cinnamon components before restoring their files; restore original interface settings after Cinnamon settings.",
+    "Stop owned Rain GUI as well as its tray on uninstall."
+  ]
+}

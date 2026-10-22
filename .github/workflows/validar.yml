@@ -10,4 +10,6 @@ jobs:
       - run: python3 tests/test_public.py
       - run: python3 tests/test_install.py
       - run: python3 tests/test_audit_additions.py
+      - run: sudo apt-get update && sudo apt-get install -y python3-gi python3-xlib
+      - run: /usr/bin/python3 tests/test_runtime.py
       - run: bash -n escolher-cor-pastas.sh folders-color-chooser.sh

@@ -10,7 +10,7 @@ EXTRA=()
 
 case "$MODE" in
     gpu)
-        EXTRA+=(--hwdec=auto-safe)
+        EXTRA+=(--vo=gpu --hwdec=auto-safe)
         ;;
     x11)
         EXTRA+=(--vo=x11 --hwdec=no)
@@ -18,6 +18,8 @@ case "$MODE" in
 esac
 
 exec mpv \
+    --ao=pulse \
+    --audio-client-name=Rain \
     --wid="$WID" \
     --loop-file=inf \
     --no-osc \
