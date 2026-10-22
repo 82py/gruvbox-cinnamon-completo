@@ -54,3 +54,25 @@ for i,color in enumerate(['blue','jade','green','olive','gold','orange','rust','
 label(d,42,198,'10 of 25 options · See all colors / Veja todas as cores',17,fill=MUTED)
 strip.save(OUT/'folder-colors-preview.png',optimize=True)
 print('Prévias geradas a partir dos ícones reais do pacote.')
+# Concept diagram: examples, not a screenshot or a bundled wallpaper collection.
+workspace=Image.new('RGB',(1440,650),BG);d=ImageDraw.Draw(workspace)
+label(d,50,28,'One desktop. Four independent spaces.',39,bold=True)
+label(d,52,90,'Um desktop. Quatro espaços independentes.',25,fill=MUTED)
+examples=[('1 · Work / Trabalho','Work-notes.txt','#455b57'),('2 · Study / Estudo','Study-plan.txt','#5b523e'),('3 · Relax','my-local-video.mp4','#3e505c'),('4 · Personal / Pessoal','Personal-list.txt','#514b3d')]
+for i,(name,filename,c) in enumerate(examples):
+    x=48+i*344;d.rounded_rectangle((x,160,x+320,455),radius=16,fill=c,outline=LINE,width=2)
+    place(workspace,BASE/'places/scalable/folder-jade.svg',x+102,200,108)
+    center(d,x+160,337,name,21);center(d,x+160,380,filename,18)
+label(d,52,492,'Own files + own background / Arquivos próprios + fundo próprio',28,fill='#d79921')
+label(d,52,544,'Choose an image or a looping local video for each workspace.',23)
+label(d,52,585,'Illustration with sample data / Ilustração com dados de exemplo',18,fill=MUTED)
+palette(d,1440,650);workspace.save(OUT/'independent-workspaces.png',optimize=True)
+items=[('WhatsApp',BASE/'apps/scalable/whatsapp.svg'),('Yubico',BASE/'apps/scalable/yubioath.svg'),('Master PDF',BASE/'apps/scalable/masterpdfeditor.svg'),('Rain',BASE/'apps/scalable/rain-gruvbox.svg'),('Calendar',SYSTEM/'apps-compact/24/org.gnome.Calendar.svg'),('Calculator',SYSTEM/'apps-compact/24/org.gnome.Calculator.svg'),('Sound',SYSTEM/'scalable/actions/xsi-audio-volume-high-symbolic.svg'),('Wi-Fi',SYSTEM/'scalable/actions/xsi-network-wireless-signal-excellent.svg'),('Microphone',SYSTEM/'scalable/actions/xsi-microphone-sensitivity-high.svg'),('Bluetooth',SYSTEM/'scalable/status/blueman-active.svg'),('Printer',SYSTEM/'scalable/categories/printer.svg'),('Updates',SYSTEM/'scalable/status/mintupdate-up-to-date.svg')]
+gallery=Image.new('RGB',(1440,670),BG);d=ImageDraw.Draw(gallery)
+label(d,52,28,'Applications & system icons',42,bold=True);label(d,54,91,'Ícones de aplicativos e de sistema · Actual package SVGs',24,fill=MUTED)
+for i,(name,path) in enumerate(items):
+    x=48+(i%6)*228;y=160+(i//6)*232
+    d.rounded_rectangle((x,y,x+208,y+204),radius=14,fill=CARD,outline=LINE,width=2)
+    place(gallery,path,x+50,y+20,108);center(d,x+104,y+156,name,22)
+label(d,52,634,'Artwork and original authors: CREDITOS.md / Autores e origens: CREDITOS.md',17,fill=MUTED)
+palette(d,1440,670);gallery.save(OUT/'icons-gallery.png',optimize=True)

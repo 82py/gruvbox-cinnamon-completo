@@ -28,6 +28,28 @@ Created by **Pir ([82py](https://github.com/82py))**, with assistance from **Ope
 
 **Personal videos, wallpaper images, profile photos, and documents are not included.** The setup starts with a solid Gruvbox background; you choose your own media. Third-party applications are installed separately.
 
+### Extra workflow features
+
+**Your files and backgrounds follow the workspace.** This setup adds per-workspace desktop folders and background management to Cinnamon's workspace workflow. Keep work files in one area, study material in another, and a different setup for relaxation. Switching areas changes the files shown on the desktop and that area's background. The first area keeps your existing Desktop folder; the other three start empty. Your files are not moved when you switch.
+
+![Four independent workspace folders and backgrounds — concept illustration](docs/imagens/independent-workspaces.png)
+
+**Copy directly to another area.** Nemo's “Copiar para outra área…” action shows the four destinations with previews. Originals remain in place. One selection makes one copy operation; the window closes and requests a notification when finished.
+
+![Actual copy tool with four sample destinations](docs/imagens/copy-workspaces-preview.png)
+
+**Rain turns your own local video into a looping background.** Choose a video you recorded or downloaded yourself; Rain plays it in an indefinite loop behind your desktop. Each area can remember a video or a static image. The tray lets you start, stop, restart, mute/unmute, and adjust volume. Switching to a static area hides and pauses the video. This uses one shared player, with the chosen video loaded for the active area.
+
+![Actual Rain interface using a sample local filename](docs/imagens/rain-ui-preview.png)
+
+No videos or wallpapers are bundled or downloaded automatically. MP4, WebM, and other local files work according to the installed mpv/FFmpeg codecs. The current application interfaces shown here use Portuguese; captions and guides explain the controls in both languages. See the [workspace and Rain guide](docs/ESPACOS-E-RAIN.md).
+
+**Choose your folder color.** All 25 variants are shown in the [illustrated color guide](docs/CORES-DAS-PASTAS.md). The selector creates separate variants and preserves the original themes.
+
+### Icon gallery
+
+![A selection of actual application and system icons](docs/imagens/icons-gallery.png)
+
 ### Install
 
 Download the **TAR.GZ** and its **SHA-256 checksum file** from [Releases](https://github.com/82py/gruvbox-cinnamon-completo/releases). Use the TAR.GZ rather than GitHub's automatic ZIP to preserve icon symlinks. Extract it and open a terminal in the extracted folder:
@@ -45,11 +67,11 @@ To restore the previous setup:
 bash desinstalar.sh
 ```
 
-An existing managed installation must be uninstalled before installing another version. Read the [restoration guide](docs/DESINSTALAR.md) first. Detailed guides are currently in Portuguese: [workspaces and Rain](docs/ESPACOS-E-RAIN.md), [folder colors](docs/CORES-DAS-PASTAS.md).
+An existing managed installation must be uninstalled before installing another version. Read the [restoration guide](docs/DESINSTALAR.md) first. All project guides provide English first, followed by Portuguese: [workspaces and Rain](docs/ESPACOS-E-RAIN.md), [folder colors](docs/CORES-DAS-PASTAS.md).
 
 ### Compatibility and testing
 
-This release targets **Cinnamon 6.6 on X11**. It is not an installer for Ubuntu GNOME or Wayland; see the [Ubuntu adaptation assessment](docs/UBUNTU.md).
+Tested environment: **Linux Mint 22.3, Cinnamon/Nemo 6.6.x, X11**. The source machine runs Cinnamon 6.6.9 and Nemo/Muffin 6.6.3; the VM validation used Cinnamon 6.6.4, Nemo 6.6.3, and Muffin 6.6.1. Testing is limited to these environments. See the [platform assessment](docs/UBUNTU.md) for technical details.
 
 - **1.0.3:** 22 automated tests passed, including GTK regression tests for repeated clicks in the file-copy dialog. Both final archives were also checked for folder colors and icon resolution.
 - **1.0.2:** full installation, feature checks, uninstallation, and reboots were tested in a Linux Mint 22.3 QEMU/KVM VM. The final comparison found no differences in 115 installation destinations and 936 preferences; test documents were preserved.
@@ -60,7 +82,7 @@ The full VM cycle was not repeated for 1.0.3. See the [VM report](docs/VALIDACAO
 
 `payload/` contains the portable desktop components; `scripts/` contains the installation and restoration tools; `tests/` contains the automated checks. The public installer builds xwinwrap from the source included in `vendor/xwinwrap/`.
 
-The integration code is licensed under **GPL-3.0-or-later**. Third-party components retain their own licenses and attribution. See [credits](CREDITOS.md), [license notices](LICENSES/), [provenance](docs/PROVENIENCIA.json), and [contributing](CONTRIBUTING.md).
+The integration code is licensed under **GPL-3.0-or-later**. Third-party components retain their own licenses and attribution. See [credits](CREDITOS.md), [license notices](LICENSES/), [provenance](docs/PROVENIENCIA.md), and [contributing](CONTRIBUTING.md).
 
 ### Made with vibe coding
 
@@ -107,6 +129,28 @@ Criada por **Pir ([82py](https://github.com/82py))**, com assistência do **Open
 
 **Vídeos, imagens de fundo, foto de perfil e documentos pessoais não acompanham o pacote.** A configuração começa com um fundo sólido Gruvbox; cada pessoa escolhe suas mídias. Aplicativos de terceiros são instalados separadamente.
 
+### Recursos extras da personalização
+
+**Arquivos e fundos acompanham o espaço.** Esta configuração acrescenta pastas de desktop e gerenciamento de fundos por espaço ao fluxo de trabalho do Cinnamon. Você pode separar arquivos de trabalho, material de estudo e um ambiente para relaxar. Ao trocar de área, mudam os arquivos exibidos no desktop e o fundo escolhido para ela. A primeira área mantém sua pasta de Área de Trabalho; as outras três começam vazias. Trocar de área não move os arquivos.
+
+![Quatro espaços com pastas e fundos próprios — ilustração do funcionamento](docs/imagens/independent-workspaces.png)
+
+**Copie diretamente para outra área.** A ação “Copiar para outra área…” do Nemo mostra os quatro destinos com prévias. Os originais ficam onde estão. Cada seleção faz uma única operação de cópia; ao terminar, a janela fecha e solicita uma notificação.
+
+![Ferramenta real de cópia com quatro destinos de exemplo](docs/imagens/copy-workspaces-preview.png)
+
+**O Rain transforma seu vídeo local em fundo em loop.** Escolha um vídeo que você gravou ou baixou por conta própria; o Rain o reproduz repetidamente atrás do desktop. Cada área pode guardar a escolha de um vídeo ou de uma imagem estática. A bandeja permite iniciar, parar, reiniciar, silenciar/reativar o som e ajustar o volume. Em uma área estática, o vídeo fica oculto e pausado. Há um único reprodutor compartilhado, que carrega o vídeo escolhido para a área ativa.
+
+![Interface real do Rain com um nome de arquivo de exemplo](docs/imagens/rain-ui-preview.png)
+
+Nenhum vídeo ou fundo é incluído ou baixado automaticamente. MP4, WebM e outros arquivos locais dependem dos codecs disponíveis no mpv/FFmpeg instalado. As interfaces mostradas usam português; as legendas e os guias explicam os controles nos dois idiomas. Consulte o [guia dos espaços e do Rain](docs/ESPACOS-E-RAIN.md).
+
+**Escolha a cor das pastas.** As 25 variantes aparecem no [guia ilustrado de cores](docs/CORES-DAS-PASTAS.md). O seletor cria variantes separadas e preserva os temas originais.
+
+### Galeria de ícones
+
+![Seleção de ícones reais de aplicativos e de sistema](docs/imagens/icons-gallery.png)
+
 ### Instalação
 
 Baixe o **TAR.GZ** e seu **arquivo de verificação SHA-256** em [Releases](https://github.com/82py/gruvbox-cinnamon-completo/releases). Prefira o TAR.GZ ao ZIP automático do GitHub para preservar os links dos ícones. Extraia e abra um terminal na pasta extraída:
@@ -128,7 +172,7 @@ Uma instalação gerenciada anterior precisa ser desinstalada antes de instalar 
 
 ### Compatibilidade e testes
 
-Esta versão foi preparada para **Cinnamon 6.6 em X11**. Não é um instalador para Ubuntu GNOME ou Wayland; veja a [análise de adaptação para Ubuntu](docs/UBUNTU.md).
+Ambiente testado: **Linux Mint 22.3, Cinnamon/Nemo 6.6.x, X11**. A máquina de origem usa Cinnamon 6.6.9 e Nemo/Muffin 6.6.3; a validação em VM usou Cinnamon 6.6.4, Nemo 6.6.3 e Muffin 6.6.1. Os testes se limitam a esses ambientes. Veja a [avaliação de plataformas](docs/UBUNTU.md) para os detalhes técnicos.
 
 - **1.0.3:** 22 testes automatizados aprovados, incluindo testes GTK contra cliques repetidos na janela de cópia. Os dois compactados finais também foram verificados quanto às cores das pastas e à resolução dos ícones.
 - **1.0.2:** instalação completa, recursos, desinstalação e reinicializações testados em uma VM QEMU/KVM com Linux Mint 22.3. A comparação final não encontrou diferenças em 115 destinos de instalação e 936 preferências; os documentos de teste foram preservados.
@@ -139,7 +183,7 @@ O ciclo completo de VM não foi repetido para a 1.0.3. Consulte o [relatório da
 
 `payload/` reúne os componentes portáteis; `scripts/`, as ferramentas de instalação e restauração; `tests/`, as verificações automatizadas. O instalador público compila o xwinwrap a partir do código incluído em `vendor/xwinwrap/`.
 
-O código de integração usa **GPL-3.0-or-later**. Componentes de terceiros mantêm suas próprias licenças e atribuições. Consulte os [créditos](CREDITOS.md), [avisos de licença](LICENSES/), [registro de origem](docs/PROVENIENCIA.json) e [orientações para contribuir](CONTRIBUTING.md).
+O código de integração usa **GPL-3.0-or-later**. Componentes de terceiros mantêm suas próprias licenças e atribuições. Consulte os [créditos](CREDITOS.md), [avisos de licença](LICENSES/), [registro de origem](docs/PROVENIENCIA.md) e [orientações para contribuir](CONTRIBUTING.md).
 
 ### Feito com vibe coding
 
