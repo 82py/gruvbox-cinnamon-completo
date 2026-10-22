@@ -67,11 +67,6 @@
       "local": false
     },
     {
-      "source": "payload/.local/share/cinnamon/applets/Radio3.0@claudiux",
-      "target": ".local/share/cinnamon/applets/Radio3.0@claudiux",
-      "local": false
-    },
-    {
       "source": "payload/.config/cinnamon/spices/printers@cinnamon.org/6.json",
       "target": ".config/cinnamon/spices/printers@cinnamon.org/6.json",
       "local": false
@@ -84,11 +79,6 @@
     {
       "source": "payload/.config/cinnamon/spices/network@cinnamon.org/network@cinnamon.org.json",
       "target": ".config/cinnamon/spices/network@cinnamon.org/network@cinnamon.org.json",
-      "local": false
-    },
-    {
-      "source": "payload/.config/cinnamon/spices/Radio3.0@claudiux/Radio3.0@claudiux.json",
-      "target": ".config/cinnamon/spices/Radio3.0@claudiux/Radio3.0@claudiux.json",
       "local": false
     },
     {

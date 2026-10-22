@@ -1,10 +1,11 @@
 {
-  "note": "Distribuição pública. O instalador compila xwinwrap do fonte incluído; o binário da máquina de origem não é distribuído.",
+  "note": "Local personal GUI build, based on theme 1.0.3. Not published. xwinwrap is built from included source; no originating-machine binary is distributed.",
   "components": [
     {
       "source": "assets-locais/.local/bin/xwinwrap",
       "target": ".local/bin/xwinwrap",
       "local": true
     }
-  ]
+  ],
+  "gui_version": "0.1.0-personal"
 }

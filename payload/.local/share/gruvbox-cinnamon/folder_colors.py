@@ -18,7 +18,9 @@ def index(name):
 def apply(color=None,restore=False):
  home=Path.home().resolve();icons=home/'.local/share/icons';state=home/'.local/state/gruvbox-cinnamon';journal=state/'install.json';prefs=state/'folder-colors.json'
  if not icons.resolve().is_relative_to(home) or not state.resolve().is_relative_to(home):raise RuntimeError('Destino fora da pasta pessoal; operação recusada.')
- if not journal.is_file() or json.loads(journal.read_text()).get('status')!='installed':raise RuntimeError('Instale primeiro o pacote Gruvbox Cinnamon; nenhuma cor foi alterada.')
+ gui=home/'.local/state/gruvbox-manager/installed.json'
+ valid_gui=gui.is_file() and 'folder_colors' in json.loads(gui.read_text()).get('groups',[])
+ if not valid_gui and (not journal.is_file() or json.loads(journal.read_text()).get('status')!='installed'):raise RuntimeError('Instale primeiro o pacote Gruvbox Cinnamon; nenhuma cor foi alterada.')
  state.mkdir(parents=True,exist_ok=True);state.chmod(0o700)
  with (state/'folder-colors.lock').open('a') as lock:
   try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)

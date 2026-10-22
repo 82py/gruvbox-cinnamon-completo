@@ -1,0 +1,37 @@
+{
+  "gui_version": "0.1.0-personal",
+  "base_theme_version": "1.0.3",
+  "status": "passed",
+  "publication": "local personal build; not published",
+  "radio": "excluded from GUI, payload and new panel defaults; existing enabled instance preserved",
+  "automated_tests": {
+    "gui_engine": 24,
+    "gtk_interface": 5,
+    "workspace_runtime": 3,
+    "copy_dialog": 4,
+    "syntax_manifest_and_safe_paths": 5
+  },
+  "virtual_machine": {
+    "environment": "Linux Mint 22.3; Cinnamon 6.6.4; Nemo 6.6.3; Muffin 6.6.1; X11",
+    "isolation": "QEMU/KVM separate disk; no host folders, clipboard or media shared",
+    "installation": "16 components; 14 applets and 5 extensions loaded",
+    "partial_restore": "cursor uninstall and point restoration passed",
+    "after_reboot": "Rain infinite loop, volume, mute, workspace pause, folder color switch/restore and GUI launch passed",
+    "uninstall": "all 16 components removed using retained installer, with extracted source absent",
+    "comparison_after_uninstall": {
+      "changed_managed_paths": [],
+      "changed_original_settings": [],
+      "changed_system_directories": [],
+      "desktop_path_changed": false
+    },
+    "after_uninstall_reboot": "same zero-difference comparison; baseline Cinnamon applets restored; no managed extensions active",
+    "documents": "files created both before installation and afterwards inside workspace folders preserved"
+  },
+  "limits": [
+    "Physical GPU, printer, Bluetooth and Wi-Fi hardware were not exercised in the VM.",
+    "Only the specified Mint/Cinnamon X11 versions were validated.",
+    "Administrative dependency installation was not run on the personal host.",
+    "Personal media, profile photo, profiles and backups are not bundled.",
+    "This is a personal GUI release, separate from the published stable theme."
+  ]
+}

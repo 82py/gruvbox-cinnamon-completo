@@ -30,9 +30,9 @@ for p in sorted(R.rglob('*')):
   files.append((rel,sha))
 if errors:raise SystemExit('\n'.join(errors))
 (R/'SHA256SUMS').write_text(''.join(sha+'  '+rel+'\n' for rel,sha in files))
-report={'version':manifest['version'],'date':'2026-10-21','regular_files':len(files),'internal_relative_symlinks':len(links),'installation_units':len(manifest['units']),'settings':len(json.loads((R/'settings.json').read_text())),'exclusions_verified':['videos','wallpaper-images-not-copied','personal-photo-by-hash','personal-documents-not-copied','fixed-personal-home-paths'],'checks':{'public_tests':5,'audit_addition_tests':7,'active_coverage_audit':'passed','full_install_restore_tests':3,'runtime_tests':3,'copy_dialog_tests':4,'real_cinnamon_vm':'Historical baseline 1.0.2: Mint 22.3 X11 install, features, uninstall and reboot passed; full VM cycle not repeated for 1.0.3','xwinwrap_source_build':'passed (one upstream unused chdir return warning)','current_environment_preflight':'passed'},'limits':['Physical GPU, Wi-Fi, Bluetooth and printer hardware not exercised in the VM','Public export builds xwinwrap from included pinned source instead of the local binary','No Ubuntu adaptation performed','Folder color selector validation report is supplied alongside the archives'],'links':links}
+report={'base_theme_version':manifest['version'],'gui_version':(R/'GUI-VERSION').read_text().strip(),'regular_files':len(files),'internal_relative_symlinks':len(links),'installation_units':len(manifest['units']),'settings':len(json.loads((R/'settings.json').read_text())),'exclusions_verified':['videos','wallpaper-images-not-copied','personal-photo-by-hash','personal-documents-not-copied','fixed-personal-home-paths','Radio3-payload-removed'],'gui_validation':json.loads((R/'VALIDACAO-GUI.json').read_text()),'links':links}
 (R/'RELATORIO-VALIDACAO.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
-archive=R.parent/(R.name+'.tar.gz')
+archive=R.parent/'Gruvbox-Cinnamon-GUI-Pessoal-0.1.0.tar.gz'
 def clean(info):
  if '.git' in Path(info.name).parts or '__pycache__' in Path(info.name).parts:return None
  info.uid=0;info.gid=0;info.uname='';info.gname=''
