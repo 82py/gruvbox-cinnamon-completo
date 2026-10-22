@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+"""Vídeo em tela cheia; escolha local, sem mídia distribuída."""
+from pathlib import Path
+import json,subprocess,shutil,argparse
+
+def main(home=None,player="mpv"):
+    home=Path.home() if home is None else Path(home)
+    config=home/'.local/state/gruvbox-video-tela-cheia'/('escolha.json' if player=='mpv' else 'escolha-celluloid.json')
+    video=''
+    try:video=json.loads(config.read_text()).get('video','')
+    except (OSError,ValueError):pass
+    if not Path(video).is_file():
+        selected=subprocess.run(['zenity','--file-selection','--title=Escolha seu vídeo para tela cheia','--file-filter=Vídeos | *.mp4 *.webm *.mkv *.mov *.m4v'],capture_output=True,text=True)
+        if selected.returncode:return
+        video=selected.stdout.strip()
+        if not Path(video).is_file():return
+        config.parent.mkdir(parents=True,exist_ok=True);config.parent.chmod(0o700)
+        config.write_text(json.dumps({'video':video},ensure_ascii=False))
+    if player=='celluloid' and shutil.which('celluloid'):
+        subprocess.Popen(['celluloid','--mpv-fullscreen=yes',video])
+    else:subprocess.Popen(['mpv','--fs','--',video])
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--player',choices=['mpv','celluloid'],default='mpv');args=parser.parse_args();main(player=args.player)

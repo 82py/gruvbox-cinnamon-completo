@@ -1,0 +1,12 @@
+[Icon Theme]
+Name=Gruvbox-Pastas-Coloridas-A
+Comment=Escolha de cor em variante separada; originais preservados.
+Inherits=Gruvbox-Sistema-Colorido,Gruvbox-Plus-Dark,hicolor
+Directories=places/scalable
+
+[places/scalable]
+Size=64
+MinSize=8
+MaxSize=512
+Type=Scalable
+Context=Places

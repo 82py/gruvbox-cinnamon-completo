@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns2="http://www.inkscape.org/namespaces/inkscape" xmlns:ns3="http://www.w3.org/1999/xlink" xmlns:ns5="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="16" height="16" id="svg2" ns1:version="0.32" ns2:version="0.91 r13725" version="1.0" ns1:docname="xapp-go-history-previous-symbolic.svg" ns2:output_extension="org.inkscape.output.svg.inkscape" fill="#7daea3" color="#7daea3">
+  <defs id="defs4">
+    <ns2:perspective ns1:type="inkscape:persp3d" ns2:vp_x="0 : 8 : 1" ns2:vp_y="0 : 1000 : 0" ns2:vp_z="16 : 8 : 1" ns2:persp3d-origin="8 : 5.3333333 : 1" id="perspective18" />
+    <linearGradient id="StandardGradient" gradientTransform="matrix(-1.0923124,0,0,0.915489,16.03125,0)" x1="7.6386113" y1="3.2598698" x2="7.6386113" y2="14.22356" gradientUnits="userSpaceOnUse">
+      <stop id="stop3284" offset="0" style="stop-color:#7daea3;stop-opacity:0.86274511;" />
+      <stop id="stop3286" offset="1" style="stop-color:#7daea3;stop-opacity:0.47058824;" />
+    </linearGradient>
+    <ns2:perspective id="perspective3648" ns2:persp3d-origin="0.5 : 0.33333333 : 1" ns2:vp_z="1 : 0.5 : 1" ns2:vp_y="0 : 1000 : 0" ns2:vp_x="0 : 0.5 : 1" ns1:type="inkscape:persp3d" />
+    <linearGradient ns2:collect="always" ns3:href="#StandardGradient" id="linearGradient3626" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-1.0923124,0,0,0.915489,-3.96875,0)" x1="7.6386113" y1="3.2598698" x2="7.6386113" y2="14.22356" />
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3633">
+      <path style="fill:#9ec7b8;fill-opacity:1;stroke:none;display:inline" d="m -20,0 0,16 16,0 0,-16 -16,0 z m 10.03125,3 0,2.96875 3.96875,0 0,4.0625 -3.96875,0 0,2.96875 -8,-5 8,-5 z" id="path3635" />
+    </clipPath>
+    <linearGradient ns2:collect="always" ns3:href="#StandardGradient" id="linearGradient4469" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-1.0923124,0,0,0.915489,16.03125,0)" x1="7.6386113" y1="3.2598698" x2="7.6386113" y2="14.22356" />
+    <linearGradient ns2:collect="always" ns3:href="#StandardGradient" id="linearGradient4473" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-1.0923124,0,0,0.915489,16.03125,0)" x1="7.6386113" y1="3.2598698" x2="7.6386113" y2="14.22356" />
+  </defs>
+  <ns1:namedview id="base" pagecolor="#047a7c" bordercolor="#9a9a9a" borderopacity="1" ns2:pageopacity="0" ns2:pageshadow="2" ns2:zoom="35.157114" ns2:cx="5.5910016" ns2:cy="8.4322583" ns2:document-units="px" ns2:current-layer="layer4" showgrid="true" ns2:showpageshadow="true" showguides="true" ns2:guide-bbox="true" ns2:window-width="1559" ns2:window-height="968" ns2:window-x="357" ns2:window-y="18" ns2:window-maximized="0" ns2:snap-bbox="true" ns2:bbox-paths="true" ns2:snap-bbox-edge-midpoints="true" ns2:bbox-nodes="true" ns2:snap-bbox-midpoints="true">
+    <ns1:guide orientation="1,0" position="0,112" id="guide2383" />
+    <ns1:guide orientation="0,1" position="26.278146,128" id="guide2385" />
+    <ns1:guide orientation="1,0" position="128,54.082119" id="guide2387" />
+    <ns1:guide orientation="0,1" position="78.156291,0" id="guide2389" />
+    <ns2:grid type="xygrid" id="grid3672" visible="true" enabled="true" empspacing="5" snapvisiblegridlinesonly="true" />
+  </ns1:namedview>
+  <metadata id="metadata7">
+    <rdf:RDF>
+      <ns5:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </ns5:Work>
+    </rdf:RDF>
+  </metadata>
+  <g ns2:groupmode="layer" id="layer4" ns2:label="Arrow" style="display:inline">
+    <path style="display:inline;fill:#7daea3;fill-opacity:1;stroke:none" d="m 10.028195,1.9843776 -8.0125701,5.0027051 8.0125701,5.0285443 0,-2.9948184 3.95618,0 0,-4.043966 -3.95618,0.00753 0,-3 z" id="Symbol" ns1:nodetypes="cccccccc" ns2:label="#path2493" ns2:connector-curvature="0" />
+    <rect style="opacity:1;fill:#7daea3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="rect4149" width="2" height="2" x="2" y="13" />
+    <rect style="display:inline;opacity:1;fill:#7daea3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="rect4149-3" width="2" height="2" x="7" y="13" />
+    <rect style="display:inline;opacity:1;fill:#7daea3;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="rect4149-6" width="2" height="2" x="12" y="13" />
+  </g>
+</svg>

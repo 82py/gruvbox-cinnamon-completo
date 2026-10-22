@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Cool Retro Term
+Comment=Perfil visual personalizado em configuração separada
+Exec="__HOME__/.local/bin/gruvbox-terminal"
+TryExec=cool-retro-term
+Icon=cool-retro-term
+Terminal=false
+Categories=System;TerminalEmulator;

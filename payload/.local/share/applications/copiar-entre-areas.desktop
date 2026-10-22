@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Copiar entre espaços
+Exec=/usr/bin/python3 "__HOME__/.local/share/gruvbox-cinnamon/espacos/copiar_entre_areas.py"
+Icon=edit-copy
+Terminal=false
+Categories=Utility;

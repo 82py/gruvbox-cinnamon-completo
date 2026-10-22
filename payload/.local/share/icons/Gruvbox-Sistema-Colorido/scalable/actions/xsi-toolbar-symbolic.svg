@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" id="svg7384" width="16" height="16" version="1.1" fill="#7daea3" color="#7daea3">
+ <metadata id="metadata90">
+  <rdf:RDF>
+   <ns2:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title>Gnome Symbolic Icon Theme</dc:title>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <title id="title9167">Gnome Symbolic Icon Theme</title>
+ <g id="layer12" transform="translate(-141 -867)">
+  <rect id="rect12858" transform="rotate(90)" x="873" y="-157" width="4" height="4" rx=".38462" ry=".50229" style="color:#7daea3;enable-background:new;fill:#7daea3" />
+  <rect id="rect12860" transform="rotate(90)" x="873" y="-151" width="4" height="4" rx=".38462" ry=".50229" style="color:#7daea3;enable-background:new;fill:#7daea3" />
+  <rect id="rect12862" transform="rotate(90)" x="873" y="-145" width="4" height="4" rx=".38462" ry=".50229" style="color:#7daea3;enable-background:new;fill:#7daea3" />
+ </g>
+</svg>

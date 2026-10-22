@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<defs>
+<linearGradient id="tile" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse"><stop stop-color="#3c3836"/><stop offset="1" stop-color="#282828"/></linearGradient>
+<linearGradient id="paper" x1="34" y1="69" x2="222" y2="184" gradientUnits="userSpaceOnUse"><stop stop-color="#fbf1c7"/><stop offset="1" stop-color="#d5c4a1"/></linearGradient>
+</defs>
+<rect x="8" y="8" width="240" height="240" rx="50" fill="url(#tile)"/>
+<rect x="10" y="10" width="236" height="236" rx="48" fill="none" stroke="#ebdbb2" stroke-opacity=".18" stroke-width="2"/>
+
+<!-- A placa VPREREX e o traço diagonal vêm do ícone distribuído com vprerex. -->
+<path d="M59 37 202 218" stroke="#83a598" stroke-width="6" stroke-linecap="round"/>
+<circle cx="59" cy="37" r="8" fill="#fabd2f"/>
+<circle cx="202" cy="218" r="8" fill="#fabd2f"/>
+<rect x="34" y="69" width="188" height="115" rx="14" fill="#1d2021" opacity=".26" transform="translate(2 5)"/>
+<rect x="34" y="69" width="188" height="115" rx="14" fill="url(#paper)" stroke="#fabd2f" stroke-width="3"/>
+<path d="M56 94h144" stroke="#7c6f64" stroke-opacity=".42" stroke-width="3"/>
+<text x="128" y="143" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-weight="bold" font-size="29" letter-spacing=".5" fill="#282828">VPREREX</text>
+<path d="M58 160h140" stroke="#7c6f64" stroke-opacity=".42" stroke-width="3"/>
+
+</svg>

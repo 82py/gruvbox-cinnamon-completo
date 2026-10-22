@@ -1,0 +1,13 @@
+/assets-locais/
+*.tar.gz
+*.zip
+__pycache__/
+*.pyc
+*.log
+.face
+.face.*
+*.sock
+*.pid
+/configuracao.json
+/fundos.json
+/estado*.json

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Relax
+Comment=Escolher um vídeo local para assistir em tela cheia
+Exec="__HOME__/.local/bin/gruvbox-video-tela-cheia" --player celluloid
+Icon=thunder
+Terminal=false
+Categories=AudioVideo;Video;

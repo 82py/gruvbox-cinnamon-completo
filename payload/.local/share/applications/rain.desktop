@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Rain
+Exec=/usr/bin/python3 "__HOME__/.local/lib/rain/painel.py"
+Icon=rain-gruvbox
+Terminal=false
+Categories=Utility;

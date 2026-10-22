@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Ícones separados por espaço
+Exec=/usr/bin/python3 "__HOME__/.local/share/gruvbox-cinnamon/espacos/espacos.py" login
+Icon=preferences-desktop-workspaces
+Terminal=false
+Categories=Settings;DesktopSettings;
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=8
+OnlyShowIn=X-Cinnamon;

@@ -1,0 +1,3 @@
+Official collection: https://github.com/linuxmint/cinnamon-spices-actions
+Authors: el-amine-404, claudiux, anaximeno; original metadata retained in each action directory.
+The collection root supplies COPYING (GPL-2.0); integration scripts retain their own notices.

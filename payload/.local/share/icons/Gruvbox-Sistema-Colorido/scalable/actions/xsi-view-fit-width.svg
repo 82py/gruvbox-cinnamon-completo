@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns2="http://www.inkscape.org/namespaces/inkscape" xmlns:ns4="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="16" height="16" version="1.1" id="svg4661" ns1:docname="view-fit-width-symbolic.svg" ns2:version="0.92.5 (2060ec1f9f, 2020-04-08)" fill="#83a598" color="#83a598">
+  <metadata id="metadata4667">
+    <rdf:RDF>
+      <ns4:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </ns4:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs4665" />
+  <ns1:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" ns2:pageopacity="0" ns2:pageshadow="2" ns2:window-width="1280" ns2:window-height="959" id="namedview4663" showgrid="false" ns2:zoom="22.627417" ns2:cx="3.8421904" ns2:cy="11.079717" ns2:window-x="0" ns2:window-y="0" ns2:window-maximized="1" ns2:current-layer="svg4661" />
+  <g font-weight="400" id="g4659" transform="matrix(0.94517958,0,0,1,0.43856333,0.01104854)" style="font-weight:400;fill:#83a598">
+    <path d="M 3,7 V 9 H 13 V 7 Z" overflow="visible" style="font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;shape-padding:0;overflow:visible;isolation:auto;mix-blend-mode:normal" id="path4655" ns2:connector-curvature="0" />
+    <path d="m 10,4 v 1 c 0,0.257 0.13,0.528 0.313,0.719 L 12.593,8 10.313,10.281 C 10.13,10.471 10,10.743 10,11 v 1 h 1 c 0.31,0 0.552,-0.09 0.75,-0.281 L 15.406,8 11.75,4.281 C 11.552,4.091 11.31,4 11,4 Z M 6,4 V 5 C 6,5.257 5.87,5.528 5.688,5.719 L 3.406,8 5.688,10.281 C 5.87,10.471 6,10.743 6,11 v 1 H 5 C 4.69,12 4.448,11.91 4.25,11.719 L 0.594,8 4.25,4.281 C 4.448,4.091 4.69,4 5,4 Z" overflow="visible" style="color:#83a598;font-family:'Bitstream Vera Sans';text-indent:0;text-decoration:none;text-decoration-line:none;text-transform:none;overflow:visible" id="path4657" ns2:connector-curvature="0" />
+  </g>
+  <path style="fill:none;stroke:#83a598;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" d="m 0.125,0.15625 v 15.5625" id="path832" ns2:connector-curvature="0" />
+  <rect style="fill:#83a598;fill-opacity:1;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="rect840" width="1" height="16" x="5e-07" y="-5e-07" />
+  <rect style="fill:#83a598;fill-opacity:1;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="rect851" width="1" height="16" x="15" y="3.8857806e-16" />
+</svg>

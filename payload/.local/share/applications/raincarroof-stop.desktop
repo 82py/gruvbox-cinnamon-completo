@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Parar Rain
+Comment=Parar wallpaper animado de chuva
+Exec="__HOME__/.local/bin/raincarroof-stop"
+Icon=rain-stop-gruvbox
+Terminal=false
+Categories=Utility;
+StartupNotify=false

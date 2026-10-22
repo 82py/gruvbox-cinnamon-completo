@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Fundos por espaço
+Exec=/usr/bin/python3 "__HOME__/.local/share/gruvbox-cinnamon/espacos/espacos.py" fundos
+Icon=preferences-desktop-wallpaper
+Terminal=false
+Categories=Settings;

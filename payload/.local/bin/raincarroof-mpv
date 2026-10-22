@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+WID="$1"
+SOCKET="$2"
+VIDEO="$3"
+MODE="${4:-gpu}"
+
+EXTRA=()
+
+case "$MODE" in
+    gpu)
+        EXTRA+=(--hwdec=auto-safe)
+        ;;
+    x11)
+        EXTRA+=(--vo=x11 --hwdec=no)
+        ;;
+esac
+
+exec mpv \
+    --wid="$WID" \
+    --loop-file=inf \
+    --no-osc \
+    --no-input-default-bindings \
+    --input-vo-keyboard=no \
+    --input-cursor=no \
+    --no-border \
+    --input-ipc-server="$SOCKET" \
+    --volume=35 \
+    --mute=yes \
+    --panscan=1.0 \
+    "${EXTRA[@]}" \
+    "$VIDEO"

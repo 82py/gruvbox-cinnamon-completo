@@ -1,0 +1,1325 @@
+{
+  "date": "2026-10-21",
+  "application_count": 180,
+  "categories": [
+    {
+      "path": "/Aplicativos",
+      "icon": "applications-other"
+    },
+    {
+      "path": "/Aplicativos/Aplicativos do Chromium",
+      "icon": "chromium-browser"
+    },
+    {
+      "path": "/Aplicativos/Ciência",
+      "icon": "applications-science"
+    },
+    {
+      "path": "/Aplicativos/Acessórios",
+      "icon": "applications-accessories"
+    },
+    {
+      "path": "/Aplicativos/Educativo",
+      "icon": "applications-education"
+    },
+    {
+      "path": "/Aplicativos/Jogos",
+      "icon": "applications-games"
+    },
+    {
+      "path": "/Aplicativos/Gráficos",
+      "icon": "applications-graphics"
+    },
+    {
+      "path": "/Aplicativos/Internet",
+      "icon": "applications-internet"
+    },
+    {
+      "path": "/Aplicativos/Escritório",
+      "icon": "applications-office"
+    },
+    {
+      "path": "/Aplicativos/Outros",
+      "icon": "applications-other"
+    },
+    {
+      "path": "/Aplicativos/Desenvolvimento",
+      "icon": "applications-development"
+    },
+    {
+      "path": "/Aplicativos/Multimídia",
+      "icon": "applications-multimedia"
+    },
+    {
+      "path": "/Aplicativos/Preferências",
+      "icon": "preferences-desktop"
+    },
+    {
+      "path": "/Aplicativos/Administração",
+      "icon": "preferences-system"
+    }
+  ],
+  "applications": [
+    {
+      "id": "chrome-gjcmcplpgihbecacndmmbaenpfgimlec-Default.desktop",
+      "name": "Gemini Notebook",
+      "icon": "chrome-gjcmcplpgihbecacndmmbaenpfgimlec-Default",
+      "category": "/Aplicativos/Aplicativos do Chromium",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "chrome-glnogkpmloabhicejjonhglibckpkigi-Default.desktop",
+      "name": "Mubi",
+      "icon": "mubi-gruvbox",
+      "category": "/Aplicativos/Aplicativos do Chromium",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "chrome-eppojlglocelodeimnohnlnionkobfln-Default.desktop",
+      "name": "Netflix",
+      "icon": "chrome-eppojlglocelodeimnohnlnionkobfln-Default",
+      "category": "/Aplicativos/Aplicativos do Chromium",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "chrome-faolnafnngnfdaknnbpnkhgohbobgegn-Default.desktop",
+      "name": "Outlook (PWA)",
+      "icon": "chrome-faolnafnngnfdaknnbpnkhgohbobgegn-Default",
+      "category": "/Aplicativos/Aplicativos do Chromium",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "chrome-fnnddiokljlbkmeppnclajginnfbffgb-Default.desktop",
+      "name": "Proton Drive",
+      "icon": "chrome-fnnddiokljlbkmeppnclajginnfbffgb-Default",
+      "category": "/Aplicativos/Aplicativos do Chromium",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "chrome-olggnbmhbgamkpioofminkgpogefpijh-Default.desktop",
+      "name": "SimpleLogin",
+      "icon": "chrome-olggnbmhbgamkpioofminkgpogefpijh-Default",
+      "category": "/Aplicativos/Aplicativos do Chromium",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop",
+      "name": "WhatsApp Web",
+      "icon": "chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Default",
+      "category": "/Aplicativos/Aplicativos do Chromium",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "chrome-agimnkijcaahngcdmfeangaknmldooml-Default.desktop",
+      "name": "YouTube",
+      "icon": "chrome-agimnkijcaahngcdmfeangaknmldooml-Default",
+      "category": "/Aplicativos/Aplicativos do Chromium",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "io.github.pemsley.Alexandria.desktop:flatpak",
+      "name": "Alexandria",
+      "icon": "io.github.pemsley.Alexandria",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "appy-gtk-appimage.desktop",
+      "name": "AppImages",
+      "icon": "appy-gtk-appimage",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "appy-gtk.desktop",
+      "name": "Appy",
+      "icon": "appy-gtk",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.FileRoller.desktop",
+      "name": "Archive Manager",
+      "icon": "org.gnome.FileRoller",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "nemo.desktop",
+      "name": "Arquivos",
+      "icon": "system-file-manager",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.Calculator.desktop",
+      "name": "Calculator",
+      "icon": "org.gnome.Calculator",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "hu.irl.cameractrls.desktop:flatpak",
+      "name": "Cameractrls",
+      "icon": "hu.irl.cameractrls",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "chatgpt.desktop",
+      "name": "ChatGPT",
+      "icon": "chatgpt",
+      "category": "/Aplicativos/Desenvolvimento",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "clamtk.desktop",
+      "name": "ClamTk",
+      "icon": "clamtk",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "com.anthropic.Claude.desktop",
+      "name": "Claude",
+      "icon": "claude-desktop",
+      "category": "/Aplicativos/Desenvolvimento",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "copiar-entre-areas.desktop",
+      "name": "Copiar entre áreas",
+      "icon": "edit-copy",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "areas-integradas-desinstalar.desktop",
+      "name": "Desinstalar áreas — conjunto completo",
+      "icon": "list-remove",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.DiskUtility.desktop",
+      "name": "Disks",
+      "icon": "org.gnome.DiskUtility",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "escolher-cor-pastas.desktop",
+      "name": "Escolher cor das pastas",
+      "icon": "folder",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.Extensions.desktop",
+      "name": "Extensions",
+      "icon": "org.gnome.Extensions",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "io.github.cboxdoerfer.FSearch.desktop",
+      "name": "FSearch",
+      "icon": "io.github.cboxdoerfer.FSearch",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "appy-gtk-flatpak.desktop",
+      "name": "Flatpaks",
+      "icon": "appy-gtk-flatpak",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.font-viewer.desktop",
+      "name": "Fonts",
+      "icon": "org.gnome.font-viewer",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mintstick-format.desktop",
+      "name": "Formatador de dispositivos USB",
+      "icon": "mintstick",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "forticlient.desktop",
+      "name": "FortiClient",
+      "icon": "forticlient",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mintstick.desktop",
+      "name": "Gravador de Imagem USB",
+      "icon": "mintstick",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "raincarroof-start.desktop",
+      "name": "Iniciar Rain",
+      "icon": "rain-gruvbox",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "areas-integradas-instalar.desktop",
+      "name": "Instalar áreas — conjunto completo",
+      "icon": "list-add",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "gucharmap.desktop",
+      "name": "Mapa de caracteres",
+      "icon": "accessories-character-map",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "page.codeberg.libre_menu_editor.LibreMenuEditor.desktop:flatpak",
+      "name": "Menu Principal",
+      "icon": "page.codeberg.libre_menu_editor.LibreMenuEditor",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "sticky.desktop",
+      "name": "Notas",
+      "icon": "sticky",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "onboard.desktop",
+      "name": "Onboard",
+      "icon": "onboard",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "raincarroof-stop.desktop",
+      "name": "Parar Rain",
+      "icon": "rain-stop-gruvbox",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.seahorse.Application.desktop",
+      "name": "Passwords and Keys",
+      "icon": "org.gnome.seahorse.Application",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.kde.kclock.desktop:flatpak",
+      "name": "Relógio",
+      "icon": "org.kde.kclock",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "bulky.desktop",
+      "name": "Renomeador de arquivo",
+      "icon": "bulky",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.Screenshot.desktop",
+      "name": "Screenshot",
+      "icon": "org.gnome.Screenshot",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "appy-gtk-snap.desktop",
+      "name": "Snaps",
+      "icon": "appy-gtk-snap",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-onscreen-keyboard.desktop",
+      "name": "Teclado virtual",
+      "icon": "cinnamon-virtual-keyboard",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "timo-gtk.desktop",
+      "name": "Timo Image Optimizer",
+      "icon": "timo-gtk",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "tt-video-shrink.desktop",
+      "name": "Video Shrink",
+      "icon": "tt-video-shrink",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "xreader.desktop",
+      "name": "Visualizador de documentos",
+      "icon": "xreader",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "xviewer.desktop",
+      "name": "Visualizador de imagens",
+      "icon": "xviewer",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.x.Warpinator.desktop",
+      "name": "Warpinator",
+      "icon": "org.x.Warpinator",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "io.gitlab.azymohliad.WatchMate.desktop:flatpak",
+      "name": "Watchmate",
+      "icon": "io.gitlab.azymohliad.WatchMate",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "xclicker.desktop",
+      "name": "XClicker",
+      "icon": "xclicker",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "com.yubico.yubioath.desktop",
+      "name": "Yubico Authenticator",
+      "icon": "yubioath",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "nnn.desktop",
+      "name": "nnn",
+      "icon": "nnn",
+      "category": "/Aplicativos/Acessórios",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "page.codeberg.elly_code.inscriptions.desktop:flatpak",
+      "name": "Inscriptions",
+      "icon": "page.codeberg.elly_code.inscriptions",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "Carcassonne The Official Board Game.desktop",
+      "name": "Carcassonne: The Official Board Game",
+      "icon": "steam_icon_598810",
+      "category": "/Aplicativos/Jogos",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "fceux.desktop",
+      "name": "Fceux",
+      "icon": "fceux",
+      "category": "/Aplicativos/Jogos",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "steam.desktop",
+      "name": "Steam",
+      "icon": "steam",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "com.realm667.Wolfenstein_Blade_of_Agony.desktop:flatpak",
+      "name": "Wolfenstein: Blade of Agony",
+      "icon": "com.realm667.Wolfenstein_Blade_of_Agony",
+      "category": "/Aplicativos/Jogos",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "simple-scan.desktop",
+      "name": "Document Scanner",
+      "icon": "org.gnome.SimpleScan",
+      "category": "/Aplicativos/Gráficos",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.flameshot.Flameshot.desktop",
+      "name": "Flameshot",
+      "icon": "org.flameshot.Flameshot",
+      "category": "/Aplicativos/Gráficos",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "net.code-industry.masterpdfeditor5.desktop",
+      "name": "Master PDF Editor 5",
+      "icon": "masterpdfeditor",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "pix.desktop",
+      "name": "Pix",
+      "icon": "pix",
+      "category": "/Aplicativos/Gráficos",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "gimp.desktop",
+      "name": "Programa de manipulação de imagem do GNU",
+      "icon": "gimp",
+      "category": "/Aplicativos/Gráficos",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "scribus.desktop",
+      "name": "Scribus",
+      "icon": "scribus",
+      "category": "/Aplicativos/Gráficos",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.kde.digikam.desktop",
+      "name": "digiKam",
+      "icon": "digikam",
+      "category": "/Aplicativos/Gráficos",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "webapp-manager.desktop",
+      "name": "Aplicativos Web",
+      "icon": "webapp-manager",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "insync.desktop",
+      "name": "Insync",
+      "icon": "insync",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "webapp-OnlineChat4519.desktop",
+      "name": "Matrix",
+      "icon": "mintchat",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "firefox.desktop",
+      "name": "Navegador Web Firefox",
+      "icon": "firefox",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "chromium-browser.desktop",
+      "name": "Navegador de Internet Chromium",
+      "icon": "chromium",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "proton-mail.desktop",
+      "name": "Proton Mail",
+      "icon": "proton-mail",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "proton.vpn.app.gtk.desktop",
+      "name": "Proton VPN",
+      "icon": "proton-vpn-logo",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.remmina.Remmina.desktop",
+      "name": "Remmina",
+      "icon": "org.remmina.Remmina",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "io.github.zaedus.spider.desktop:flatpak",
+      "name": "Spider",
+      "icon": "io.github.zaedus.spider",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "syncthing-start.desktop",
+      "name": "Start Syncthing",
+      "icon": "syncthing",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "syncthing-ui.desktop",
+      "name": "Syncthing Web UI",
+      "icon": "syncthing",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "com.github.IsmaelMartinez.teams_for_linux.desktop:flatpak",
+      "name": "Teams for Linux",
+      "icon": "com.github.IsmaelMartinez.teams_for_linux",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "termius-app.desktop",
+      "name": "Termius",
+      "icon": "termius-app",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "transmission-gtk.desktop",
+      "name": "Transmission",
+      "icon": "transmission",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "app.zen_browser.zen.desktop:flatpak",
+      "name": "Zen Browser",
+      "icon": "app.zen_browser.zen",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "Zoom.desktop",
+      "name": "Zoom Workplace",
+      "icon": "Zoom",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "io.github.kukuruzka165.materialgram.desktop:flatpak",
+      "name": "materialgram",
+      "icon": "io.github.kukuruzka165.materialgram",
+      "category": "/Aplicativos/Internet",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "thingy.desktop",
+      "name": "Biblioteca",
+      "icon": "thingy",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.Calendar.desktop",
+      "name": "Calendar",
+      "icon": "org.gnome.Calendar",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "calibre-ebook-edit.desktop",
+      "name": "E-book editor",
+      "icon": "calibre-ebook-edit",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "calibre-ebook-viewer.desktop",
+      "name": "E-book viewer",
+      "icon": "calibre-viewer",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "net.cozic.joplin_desktop.desktop:flatpak",
+      "name": "Joplin",
+      "icon": "net.cozic.joplin_desktop",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "calibre-lrfviewer.desktop",
+      "name": "LRF viewer",
+      "icon": "calibre-viewer",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.onlyoffice.desktopeditors.desktop:flatpak",
+      "name": "ONLYOFFICE",
+      "icon": "org.onlyoffice.desktopeditors",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "md.obsidian.Obsidian.desktop:flatpak",
+      "name": "Obsidian",
+      "icon": "md.obsidian.Obsidian",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "texstudio.desktop",
+      "name": "TeXstudio",
+      "icon": "texstudio",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "calibre-gui.desktop",
+      "name": "calibre",
+      "icon": "calibre-gui",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "prerex.desktop",
+      "name": "prerex",
+      "icon": "prerex-gruvbox",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "com.smasisoftware.smasi.desktop:flatpak",
+      "name": "smasi",
+      "icon": "com.smasisoftware.smasi",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "vprerex.desktop",
+      "name": "vprerex",
+      "icon": "vprerex",
+      "category": "/Aplicativos/Escritório",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "OneDrive.desktop",
+      "name": "OneDrive",
+      "icon": "dk-onedrive",
+      "category": "/Aplicativos/Outros",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "Relax.desktop",
+      "name": "Relax",
+      "icon": "thunder",
+      "category": "/Aplicativos/Outros",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "Studio.cinnamon-generated.desktop",
+      "name": "Studio",
+      "icon": "studio-gruvbox",
+      "category": "/Aplicativos/Outros",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "irealpro.desktop",
+      "name": "iReal Pro",
+      "icon": "irealpro",
+      "category": "/Aplicativos/Outros",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "sublime_text.desktop",
+      "name": "Sublime Text",
+      "icon": "sublime-text",
+      "category": "/Aplicativos/Desenvolvimento",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "yad-icon-browser.desktop",
+      "name": "Ícone do navegador",
+      "icon": "yad",
+      "category": "/Aplicativos/Desenvolvimento",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "io.github.celluloid_player.Celluloid.desktop",
+      "name": "Celluloid",
+      "icon": "io.github.celluloid_player.Celluloid",
+      "category": "/Aplicativos/Multimídia",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "pavucontrol.desktop",
+      "name": "Controle de volume do PulseAudio",
+      "icon": "multimedia-volume-control",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "io.github.cosmic_utils.camera.desktop:flatpak",
+      "name": "Câmera",
+      "icon": "io.github.cosmic_utils.camera",
+      "category": "/Aplicativos/Multimídia",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "dev.fredol.open-tv.desktop:flatpak",
+      "name": "Fred TV",
+      "icon": "dev.fredol.open-tv",
+      "category": "/Aplicativos/Multimídia",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "rain.desktop",
+      "name": "Rain",
+      "icon": "rain-gruvbox",
+      "category": "/Aplicativos/Multimídia",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "vlc.desktop",
+      "name": "Reprodutor de Mídias VLC",
+      "icon": "vlc",
+      "category": "/Aplicativos/Multimídia",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.Rhythmbox3.desktop",
+      "name": "Rhythmbox",
+      "icon": "org.gnome.Rhythmbox3",
+      "category": "/Aplicativos/Multimídia",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "guvcview.desktop",
+      "name": "guvcview",
+      "icon": "guvcview",
+      "category": "/Aplicativos/Multimídia",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mpv.desktop",
+      "name": "mpv Media Player",
+      "icon": "mpv",
+      "category": "/Aplicativos/Multimídia",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-universal-access.desktop",
+      "name": "Acessibilidade",
+      "icon": "cs-universal-access",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "nm-connection-editor.desktop",
+      "name": "Advanced Network Configuration",
+      "icon": "preferences-system-network",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-default.desktop",
+      "name": "Aplicativos Preferenciais",
+      "icon": "cs-default-applications",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-startup.desktop",
+      "name": "Aplicativos da Inicialização",
+      "icon": "cs-startup-programs",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-applets.desktop",
+      "name": "Applets",
+      "icon": "cs-applets",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-hotcorner.desktop",
+      "name": "Atalhos nos cantos",
+      "icon": "cs-overview",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-actions.desktop",
+      "name": "Ações",
+      "icon": "cs-actions",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings.desktop",
+      "name": "Configurações do sistema",
+      "icon": "preferences-desktop",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "gnome-online-accounts-gtk.desktop",
+      "name": "Contas Online",
+      "icon": "gnome-online-accounts-gtk",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-color-panel.desktop",
+      "name": "Cor",
+      "icon": "cs-color",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-calendar.desktop",
+      "name": "Data e Hora",
+      "icon": "cs-date-time",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-desklets.desktop",
+      "name": "Desklets",
+      "icon": "cs-desklets",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-user.desktop",
+      "name": "Detalhes da Conta",
+      "icon": "cs-user",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-effects.desktop",
+      "name": "Efeitos",
+      "icon": "cs-desktop-effects",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-workspaces.desktop",
+      "name": "Espaços de Trabalho",
+      "icon": "cs-workspaces",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-extensions.desktop",
+      "name": "Extensões",
+      "icon": "cs-extensions",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "gufw.desktop",
+      "name": "Firewall Configuration",
+      "icon": "gufw",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-general.desktop",
+      "name": "Geral",
+      "icon": "cs-general",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "blueman-manager.desktop",
+      "name": "Gerenciador de Bluetooth",
+      "icon": "blueman",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-power.desktop",
+      "name": "Gerenciamento de Energia",
+      "icon": "cs-power",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-gestures.desktop",
+      "name": "Gestos",
+      "icon": "cs-gestures",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mintlocale.desktop",
+      "name": "Idiomas",
+      "icon": "preferences-desktop-locale",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-windows.desktop",
+      "name": "Janelas",
+      "icon": "cs-windows",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "gnome-language-selector.desktop",
+      "name": "Language Support",
+      "icon": "preferences-desktop-locale",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-nightlight.desktop",
+      "name": "Luz noturna",
+      "icon": "cs-nightlight",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-wacom-panel.desktop",
+      "name": "Mesa Digitalizadora",
+      "icon": "cs-tablet",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-display-panel.desktop",
+      "name": "Monitor",
+      "icon": "cs-display",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-mouse.desktop",
+      "name": "Mouse e Touchpad",
+      "icon": "cs-mouse",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mintlocale-im.desktop",
+      "name": "Método de entrada",
+      "icon": "mintlocale-im",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-notifications.desktop",
+      "name": "Notificações",
+      "icon": "cs-notifications",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-panel.desktop",
+      "name": "Painel",
+      "icon": "cs-panel",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-backgrounds.desktop",
+      "name": "Planos de Fundo",
+      "icon": "cs-backgrounds",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-privacy.desktop",
+      "name": "Privacidade",
+      "icon": "cs-privacy",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-screensaver.desktop",
+      "name": "Proteção de Tela",
+      "icon": "cs-screensaver",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-network-panel.desktop",
+      "name": "Rede",
+      "icon": "cs-network",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "restaurar-areas-anteriores.desktop",
+      "name": "Restaurar áreas e Rain",
+      "icon": "edit-undo",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-fonts.desktop",
+      "name": "Seleção de fonte",
+      "icon": "cs-fonts",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-sound.desktop",
+      "name": "Som",
+      "icon": "cs-sound",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "gnome-session-properties.desktop",
+      "name": "Startup Applications",
+      "icon": "session-properties",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "texdoctk.desktop",
+      "name": "TeXdoctk",
+      "icon": "texdoctk-gruvbox",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-keyboard.desktop",
+      "name": "Teclado",
+      "icon": "cs-keyboard",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mintwelcome.desktop",
+      "name": "Tela de Boas-Vindas",
+      "icon": "mintwelcome",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-themes.desktop",
+      "name": "Temas",
+      "icon": "cs-themes",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-thunderbolt.desktop",
+      "name": "Thunderbolt",
+      "icon": "cs-thunderbolt",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "wallpapers-por-espaco.desktop",
+      "name": "Wallpapers por espaço",
+      "icon": "preferences-desktop-wallpaper",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-desktop.desktop",
+      "name": "Área de Trabalho",
+      "icon": "cs-desktop",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "espacos-de-trabalho.desktop",
+      "name": "Ícones por espaço de trabalho",
+      "icon": "preferences-desktop-workspaces",
+      "category": "/Aplicativos/Preferências",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mintsysadm.desktop",
+      "name": "Administração do sistema",
+      "icon": "mintsysadm",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "aptik-gtk.desktop",
+      "name": "Aptik",
+      "icon": "aptik-gtk",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "com.bitwarden.desktop.desktop:flatpak",
+      "name": "Bitwarden",
+      "icon": "com.bitwarden.desktop",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cool-retro-term.desktop",
+      "name": "Cool Retro Term",
+      "icon": "cool-retro-term",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "com.github.qarmin.czkawka.desktop:flatpak",
+      "name": "Czkawka",
+      "icon": "com.github.qarmin.czkawka",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.baobab.desktop",
+      "name": "Disk Usage Analyzer",
+      "icon": "org.gnome.baobab",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mintbackup.desktop",
+      "name": "Ferramenta para cópia de segurança",
+      "icon": "mintbackup",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mintsources.desktop",
+      "name": "Fontes de Aplicativos",
+      "icon": "mintsources",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mintinstall.desktop",
+      "name": "Gerenciador de Aplicativos",
+      "icon": "mintinstall",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mintupdate.desktop",
+      "name": "Gerenciador de Atualizações",
+      "icon": "mintupdate",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mintdrivers.desktop",
+      "name": "Gerenciador de Drivers",
+      "icon": "mintdrivers",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "fingwit.desktop",
+      "name": "Impressões digitais",
+      "icon": "fingwit",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "mintreport.desktop",
+      "name": "Informações do Sistema",
+      "icon": "mintreport",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "lightdm-settings.desktop",
+      "name": "Janela de Início de Sessão",
+      "icon": "lightdm-settings",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "parar-clamscan.desktop",
+      "name": "Parar ClamScan",
+      "icon": "security-high",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.PowerStats.desktop",
+      "name": "Power Statistics",
+      "icon": "org.gnome.PowerStats",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "system-config-printer.desktop",
+      "name": "Printers",
+      "icon": "printer",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "reparar-nemo.desktop",
+      "name": "Reparar Nemo",
+      "icon": "system-file-manager",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.SystemMonitor.desktop",
+      "name": "System Monitor",
+      "icon": "org.gnome.SystemMonitor",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "org.gnome.Terminal.desktop",
+      "name": "Terminal",
+      "icon": "org.gnome.Terminal",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "timeshift-gtk.desktop",
+      "name": "Timeshift",
+      "icon": "timeshift",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "debian-uxterm.desktop",
+      "name": "UXTerm",
+      "icon": "mini.xterm",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "cinnamon-settings-users.desktop",
+      "name": "Usuários e Grupos",
+      "icon": "system-users",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "debian-xterm.desktop",
+      "name": "XTerm",
+      "icon": "mini.xterm",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    },
+    {
+      "id": "btop.desktop",
+      "name": "btop++",
+      "icon": "btop",
+      "category": "/Aplicativos/Administração",
+      "kind": "system-or-external-application"
+    }
+  ],
+  "note": "Inventário de nomes/ícones, sem comandos, URLs, contas ou dados pessoais. Programas de terceiros são dependências, não cópias de seus binários."
+}

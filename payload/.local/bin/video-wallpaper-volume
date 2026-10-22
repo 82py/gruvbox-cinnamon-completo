@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+RUNDIR="${XDG_RUNTIME_DIR:-/tmp}"
+SOCKET="$RUNDIR/raincarroof-${UID}.sock"
+
+if [ ! -S "$SOCKET" ]; then
+    yad \
+      --error \
+      --title="Raincarroof" \
+      --text="O wallpaper não está em execução."
+    exit 1
+fi
+
+CURRENT="$(
+    printf '%s\n' \
+      '{"command":["get_property","volume"]}' |
+    socat - "UNIX-CONNECT:$SOCKET" |
+    python3 -c '
+import json,sys
+try:
+    x=json.loads(sys.stdin.readline())
+    v=float(x.get("data",35))
+except Exception:
+    v=35
+print(max(0,min(100,round(v))))
+'
+)"
+
+yad \
+  --scale \
+  --title="Raincarroof — volume" \
+  --text="Volume do white noise" \
+  --min-value=0 \
+  --max-value=100 \
+  --step=1 \
+  --value="$CURRENT" \
+  --print-partial \
+  --width=380 \
+  --button="Fechar:0" \
+  2>/dev/null |
+while IFS= read -r VALUE; do
+
+    VALUE="${VALUE%%.*}"
+
+    [[ "$VALUE" =~ ^[0-9]+$ ]] || continue
+
+    [ "$VALUE" -gt 100 ] && VALUE=100
+    [ "$VALUE" -lt 0 ] && VALUE=0
+
+    printf '%s\n' \
+      "{\"command\":[\"set_property\",\"volume\",$VALUE]}" |
+    socat - "UNIX-CONNECT:$SOCKET" \
+      >/dev/null 2>&1 || true
+done

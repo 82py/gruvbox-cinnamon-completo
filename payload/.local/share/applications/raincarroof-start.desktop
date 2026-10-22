@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Iniciar Rain
+Comment=Iniciar wallpaper animado e white noise de chuva
+Exec="__HOME__/.local/bin/raincarroof-start"
+Icon=rain-gruvbox
+Terminal=false
+Categories=Utility;
+StartupNotify=false

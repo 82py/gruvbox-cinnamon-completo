@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Espaços de trabalho independentes
+Exec=/usr/bin/python3 "__HOME__/.local/share/gruvbox-cinnamon/espacos/espacos.py" menu
+Icon=preferences-desktop-workspaces
+Terminal=false
+Categories=Settings;

@@ -1,0 +1,4 @@
+Base: Fausto-Korpsvart/Gruvbox-GTK-Theme (GPL-3.0), with work by Vince Liuice.
+Historical MOD collection: Twilight4/gnome-settings. Individual authorship of historical MOD CSS changes not established.
+Local personalization: Pir (82py), with assistance from OpenAI Codex.
+See CREDITOS.md and docs/PROVENIENCIA.json in the package.

@@ -1,0 +1,9 @@
+{
+  "uuid": "gruvbox-microphone-colors@gruvbox-cinnamon",
+  "name": "Gruvbox — microfone colorido",
+  "description": "Estilo específico dos ícones do microfone, sem editar os applets.",
+  "version": 1,
+  "cinnamon-version": [
+    "6.6"
+  ]
+}

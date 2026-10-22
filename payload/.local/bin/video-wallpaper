@@ -1,0 +1,205 @@
+#!/usr/bin/env bash
+set -euo pipefail
+export PATH="$HOME/.local/bin:$PATH"
+
+VIDEO="${RAIN_VIDEO:-}"
+WRAPPER="$HOME/.local/bin/raincarroof-mpv"
+
+STATE="$HOME/.local/state/video-wallpaper"
+RUNDIR="${XDG_RUNTIME_DIR:-/tmp}"
+
+SOCKET="$RUNDIR/raincarroof-${UID}.sock"
+PIDFILE="$RUNDIR/raincarroof-${UID}.pid"
+MODEFILE="$STATE/working-mode"
+RUNTIME="$STATE/runtime.log"
+
+mkdir -p "$STATE"
+
+running() {
+    [ -f "$PIDFILE" ] || return 1
+    PID="$(cat "$PIDFILE" 2>/dev/null || true)"
+    [ -n "$PID" ] && kill -0 "$PID" 2>/dev/null
+}
+
+cleanup_runtime() {
+    if running; then
+        PID="$(cat "$PIDFILE")"
+        kill -- "-$PID" 2>/dev/null ||
+        kill "$PID" 2>/dev/null ||
+        true
+        sleep 0.3
+    fi
+
+    rm -f "$SOCKET" "$PIDFILE"
+}
+
+try_mode() {
+    NAME="$1"
+    PLAYER="$2"
+    shift 2
+
+    cleanup_runtime
+
+    {
+        echo
+        echo "========================================"
+        echo "TENTATIVA: $NAME"
+        echo "DATA: $(date --iso-8601=seconds)"
+        echo "FLAGS: $*"
+        echo "PLAYER: $PLAYER"
+        echo "========================================"
+    } >> "$RUNTIME"
+
+    setsid nice -n 10 \
+        xwinwrap "$@" -- \
+        "$WRAPPER" \
+        WID \
+        "$SOCKET" \
+        "$VIDEO" \
+        "$PLAYER" \
+        >>"$RUNTIME" 2>&1 &
+
+    PID=$!
+    echo "$PID" > "$PIDFILE"
+
+    for _ in $(seq 1 100); do
+
+        if [ -S "$SOCKET" ] &&
+           kill -0 "$PID" 2>/dev/null
+        then
+            echo "$NAME" > "$MODEFILE"
+
+            # Cinnamon às vezes precisa de uma janela breve
+            # para restabelecer a pilha correta do desktop.
+            xterm \
+                -geometry 1x1+0+0 \
+                -e 'sleep 0.1' \
+                >/dev/null 2>&1 &
+
+            sleep 0.4
+
+            wmctrl -a Desktop \
+                >/dev/null 2>&1 || true
+
+            return 0
+        fi
+
+        if ! kill -0 "$PID" 2>/dev/null; then
+            break
+        fi
+
+        sleep 0.1
+    done
+
+    cleanup_runtime
+    return 1
+}
+
+start() {
+    if [ -z "$VIDEO" ] || [ ! -f "$VIDEO" ]; then
+        /usr/bin/python3 "$HOME/.local/lib/rain/painel.py" --choose
+        return
+    fi
+
+
+    if running && [ -S "$SOCKET" ]; then
+        exit 0
+    fi
+
+    rm -f "$RUNTIME"
+
+    # 1. Configuração usada especificamente em Mint/Cinnamon.
+    if try_mode \
+        "mint-gpu" \
+        gpu \
+        -b -s -fs -st -sp -nf -fdt
+    then
+        return
+    fi
+
+    # 2. Visual ARGB — contorna certos BadMatch de visual/colormap.
+    if try_mode \
+        "mint-argb-gpu" \
+        gpu \
+        -argb -b -s -fs -st -sp -nf -fdt
+    then
+        return
+    fi
+
+    # 3. Render X11 simples, sem EGL/GLX do mpv.
+    if try_mode \
+        "mint-x11" \
+        x11 \
+        -b -s -fs -st -sp -nf -fdt
+    then
+        return
+    fi
+
+    # 4. Último fallback: ARGB + renderer X11.
+    if try_mode \
+        "mint-argb-x11" \
+        x11 \
+        -argb -b -s -fs -st -sp -nf -fdt
+    then
+        return
+    fi
+
+    echo "ERRO: nenhum modo funcionou."
+    echo "Log: $RUNTIME"
+    exit 1
+}
+
+stop() {
+    cleanup_runtime
+}
+
+send() {
+    [ -S "$SOCKET" ] || {
+        echo "Rain não está em execução."
+        exit 1
+    }
+
+    printf '%s\n' "$1" |
+        socat - "UNIX-CONNECT:$SOCKET" >/dev/null
+}
+
+case "${1:-start}" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop
+        sleep 1
+        start
+        ;;
+    mute)
+        send '{"command":["set_property","mute",true]}'
+        ;;
+    unmute)
+        send '{"command":["set_property","mute",false]}'
+        ;;
+    toggle)
+        send '{"command":["cycle","mute"]}'
+        ;;
+    volume-up)
+        send '{"command":["add","volume",5]}'
+        ;;
+    volume-down)
+        send '{"command":["add","volume",-5]}'
+        ;;
+    status)
+        printf '%s\n' \
+          '{"command":["get_property","mute"]}' |
+          socat - "UNIX-CONNECT:$SOCKET"
+        ;;
+    mode)
+        cat "$MODEFILE" 2>/dev/null || echo "nenhum"
+        ;;
+    *)
+        echo "Uso: $0 {start|stop|restart|mute|unmute|toggle|volume-up|volume-down|status|mode}"
+        exit 1
+        ;;
+esac

@@ -1,0 +1,320 @@
+{
+  "date": "2026-10-21",
+  "version": "1.0.1",
+  "source": "active Cinnamon profile",
+  "read_only": true,
+  "settings_total": 936,
+  "file_checks": [
+    {
+      "component": ".local/share/icons/Gruvbox-Plus-Dark",
+      "checked": 46890,
+      "missing": [],
+      "different": []
+    },
+    {
+      "component": ".local/share/icons/Gruvbox-Sistema-Colorido",
+      "checked": 3926,
+      "missing": [],
+      "different": []
+    },
+    {
+      "component": ".themes/Gruvbox-Dark-BL-MOD",
+      "checked": 256,
+      "missing": [],
+      "different": []
+    },
+    {
+      "component": ".themes/Gruvbox-Dark-BL-MOD-Sistema-Colorido",
+      "checked": 257,
+      "missing": [],
+      "different": []
+    },
+    {
+      "component": ".icons/Gruvbox_Cursors_Dark",
+      "checked": 113,
+      "missing": [],
+      "different": []
+    },
+    {
+      "component": ".themes/Mint-L-Dark-Sand",
+      "checked": 37,
+      "missing": [],
+      "different": []
+    },
+    {
+      "component": ".themes/Mint-Y",
+      "checked": 39,
+      "missing": [],
+      "different": []
+    },
+    {
+      "component": ".local/share/cinnamon/extensions/CinnamonMagicLamp@klangman",
+      "checked": 18,
+      "missing": [],
+      "different": []
+    },
+    {
+      "component": ".local/share/cinnamon/extensions/gruvbox-microphone-colors@gruvbox-cinnamon",
+      "checked": 3,
+      "missing": [],
+      "different": []
+    },
+    {
+      "component": ".local/share/cinnamon/extensions/gruvbox-mintupdate-colors@gruvbox-cinnamon",
+      "checked": 3,
+      "missing": [],
+      "different": []
+    },
+    {
+      "component": ".local/share/cinnamon/extensions/gruvbox-system-colors@gruvbox-cinnamon",
+      "checked": 3,
+      "missing": [],
+      "different": []
+    },
+    {
+      "component": ".local/share/cinnamon/extensions/gruvbox-profile-photo@gruvbox-cinnamon",
+      "checked": 2,
+      "missing": [],
+      "different": []
+    },
+    {
+      "component": ".local/share/cinnamon/applets/Radio3.0@claudiux",
+      "checked": 150,
+      "missing": [],
+      "different": []
+    }
+  ],
+  "settings_missing": [],
+  "intentional_adaptations": [
+    {
+      "key": "/org/cinnamon/desktop/applications/terminal/exec",
+      "reason": "Mesmo perfil visual, com configuração isolada do terminal original."
+    },
+    {
+      "key": "/org/cinnamon/desktop/background/picture-uri",
+      "reason": "Imagem excluída a pedido; fundo sólido até escolha local."
+    },
+    {
+      "key": "/org/cinnamon/desktop/background/primary-color",
+      "reason": "Fundo sólido Gruvbox substitui a imagem não distribuída."
+    },
+    {
+      "key": "/org/cinnamon/desktop/background/slideshow/image-source",
+      "reason": "Imagens de fundo não distribuídas."
+    },
+    {
+      "key": "/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/command",
+      "reason": "Escolha local de vídeo substitui o caminho de mídia pessoal."
+    }
+  ],
+  "excluded_private_settings": [
+    "/org/cinnamon/looking-glass-history",
+    "/org/cinnamon/settings-daemon/plugins/color/night-light-last-coordinates"
+  ],
+  "unexpected_differences": [],
+  "applets": [
+    {
+      "id": "1",
+      "uuid": "separator@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "3",
+      "uuid": "systray@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "4",
+      "uuid": "xapp-status@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "6",
+      "uuid": "printers@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "8",
+      "uuid": "keyboard@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "10",
+      "uuid": "network@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "14",
+      "uuid": "cornerbar@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "20",
+      "uuid": "windows-quick-list@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "23",
+      "uuid": "calendar@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "24",
+      "uuid": "settings@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "25",
+      "uuid": "menu@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "26",
+      "uuid": "grouped-window-list@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "27",
+      "uuid": "notifications@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "28",
+      "uuid": "sound@cinnamon.org",
+      "provided_by": "Linux Mint Cinnamon"
+    },
+    {
+      "id": "29",
+      "uuid": "Radio3.0@claudiux",
+      "provided_by": "payload"
+    }
+  ],
+  "extensions": [
+    {
+      "uuid": "CinnamonMagicLamp@klangman",
+      "present_in_package": true
+    },
+    {
+      "uuid": "gruvbox-microphone-colors@gruvbox-cinnamon",
+      "present_in_package": true
+    },
+    {
+      "uuid": "gruvbox-mintupdate-colors@gruvbox-cinnamon",
+      "present_in_package": true
+    },
+    {
+      "uuid": "gruvbox-system-colors@gruvbox-cinnamon",
+      "present_in_package": true
+    },
+    {
+      "uuid": "gruvbox-profile-photo@gruvbox-cinnamon",
+      "present_in_package": true
+    }
+  ],
+  "desklets": [],
+  "runtime_extensions": {
+    "running": [
+      "gruvbox-microphone-colors@gruvbox-cinnamon",
+      "CinnamonMagicLamp@klangman",
+      "gruvbox-mintupdate-colors@gruvbox-cinnamon",
+      "gruvbox-system-colors@gruvbox-cinnamon",
+      "gruvbox-profile-photo@gruvbox-cinnamon"
+    ],
+    "states": [
+      {
+        "uuid": "gruvbox-microphone-colors@gruvbox-cinnamon",
+        "state": 1,
+        "path": "__HOME__/.local/share/cinnamon/extensions/gruvbox-microphone-colors@gruvbox-cinnamon"
+      },
+      {
+        "uuid": "CinnamonMagicLamp@klangman",
+        "state": 1,
+        "path": "__HOME__/.local/share/cinnamon/extensions/CinnamonMagicLamp@klangman/5.6"
+      },
+      {
+        "uuid": "gruvbox-mintupdate-colors@gruvbox-cinnamon",
+        "state": 1,
+        "path": "__HOME__/.local/share/cinnamon/extensions/gruvbox-mintupdate-colors@gruvbox-cinnamon"
+      },
+      {
+        "uuid": "gruvbox-system-colors@gruvbox-cinnamon",
+        "state": 1,
+        "path": "__HOME__/.local/share/cinnamon/extensions/gruvbox-system-colors@gruvbox-cinnamon"
+      },
+      {
+        "uuid": "gruvbox-profile-photo@gruvbox-cinnamon",
+        "state": 1,
+        "path": "__HOME__/.local/share/cinnamon/extensions/gruvbox-profile-photo@gruvbox-cinnamon"
+      }
+    ]
+  },
+  "personalization_tools": [
+    {
+      "tool": "Rain",
+      "present": true
+    },
+    {
+      "tool": "Relax",
+      "present": true
+    },
+    {
+      "tool": "Pastas coloridas",
+      "present": true
+    },
+    {
+      "tool": "Espaços independentes",
+      "present": true
+    },
+    {
+      "tool": "Fundos por espaço",
+      "present": true
+    },
+    {
+      "tool": "Copiar entre áreas",
+      "present": true
+    },
+    {
+      "tool": "Terminal visual isolado",
+      "present": true
+    }
+  ],
+  "menu_application_count": 180,
+  "autostart": [
+    {
+      "file": "espacos-de-trabalho.desktop",
+      "treatment": "included"
+    },
+    {
+      "file": "video-wallpaper.desktop",
+      "treatment": "included"
+    },
+    {
+      "file": "insync.desktop",
+      "treatment": "included only if insync is installed"
+    },
+    {
+      "file": "com.bitwarden.desktop.desktop",
+      "treatment": "included only if Bitwarden Flatpak is installed"
+    },
+    {
+      "file": "nvidia-prime.desktop",
+      "treatment": "disabled in source; not enabled by theme"
+    },
+    {
+      "file": "remmina-applet.desktop",
+      "treatment": "disabled in source; not enabled by theme"
+    }
+  ],
+  "external_application_policy": "Only theme/integration programs are bundled. Standard and third-party apps, credentials, personal servers, VPN, synchronization data and unrelated personal scripts are not copied. Their icons and visible menu inventory are included.",
+  "portable_changes": [
+    "No videos, wallpapers, photo or desktop documents.",
+    "Workspace folders are empty, except the existing recipient desktop is reused as area 1.",
+    "Media chooser replaces original fixed paths.",
+    "Fontconfig overrides merge with existing overrides.",
+    "Browser-menu entries merge without removing other entries.",
+    "Terminal profile runs in an isolated app-data folder and restores normal XDG paths for child commands.",
+    "Old dated workspace installers are replaced by the new install/uninstall tools; source-machine restoration backups are not distributed.",
+    "GTK/Qt application accounts and sessions are excluded; appearance-only files are included."
+  ],
+  "coverage_ok": true
+}

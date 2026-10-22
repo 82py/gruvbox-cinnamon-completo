@@ -1,0 +1,1 @@
+Cópia separada de Gruvbox-Dark-BL-MOD. A única regra CSS adicional é .printers-cinnamon-org-applet .system-status-icon { -st-icon-style: regular; }. Usar com os ícones Gruvbox-Sistema-Colorido. O tema original permanece intacto.

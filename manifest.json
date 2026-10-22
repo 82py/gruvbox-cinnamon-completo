@@ -1,0 +1,425 @@
+{
+  "version": "1.0.1",
+  "tested": {
+    "distribution": "Linux Mint 22.3",
+    "cinnamon": "6.6",
+    "session": "x11"
+  },
+  "units": [
+    {
+      "source": "payload/.local/share/icons/Gruvbox-Plus-Dark",
+      "target": ".local/share/icons/Gruvbox-Plus-Dark",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/icons/Gruvbox-Sistema-Colorido",
+      "target": ".local/share/icons/Gruvbox-Sistema-Colorido",
+      "local": false
+    },
+    {
+      "source": "payload/.themes/Gruvbox-Dark-BL-MOD",
+      "target": ".themes/Gruvbox-Dark-BL-MOD",
+      "local": false
+    },
+    {
+      "source": "payload/.themes/Gruvbox-Dark-BL-MOD-Sistema-Colorido",
+      "target": ".themes/Gruvbox-Dark-BL-MOD-Sistema-Colorido",
+      "local": false
+    },
+    {
+      "source": "payload/.icons/Gruvbox_Cursors_Dark",
+      "target": ".icons/Gruvbox_Cursors_Dark",
+      "local": false
+    },
+    {
+      "source": "payload/.themes/Mint-L-Dark-Sand",
+      "target": ".themes/Mint-L-Dark-Sand",
+      "local": false
+    },
+    {
+      "source": "payload/.themes/Mint-Y",
+      "target": ".themes/Mint-Y",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/cinnamon/extensions/CinnamonMagicLamp@klangman",
+      "target": ".local/share/cinnamon/extensions/CinnamonMagicLamp@klangman",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/cinnamon/extensions/gruvbox-microphone-colors@gruvbox-cinnamon",
+      "target": ".local/share/cinnamon/extensions/gruvbox-microphone-colors@gruvbox-cinnamon",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/cinnamon/extensions/gruvbox-mintupdate-colors@gruvbox-cinnamon",
+      "target": ".local/share/cinnamon/extensions/gruvbox-mintupdate-colors@gruvbox-cinnamon",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/cinnamon/extensions/gruvbox-system-colors@gruvbox-cinnamon",
+      "target": ".local/share/cinnamon/extensions/gruvbox-system-colors@gruvbox-cinnamon",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/cinnamon/extensions/gruvbox-profile-photo@gruvbox-cinnamon",
+      "target": ".local/share/cinnamon/extensions/gruvbox-profile-photo@gruvbox-cinnamon",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/cinnamon/applets/Radio3.0@claudiux",
+      "target": ".local/share/cinnamon/applets/Radio3.0@claudiux",
+      "local": false
+    },
+    {
+      "source": "payload/.config/cinnamon/spices/printers@cinnamon.org/6.json",
+      "target": ".config/cinnamon/spices/printers@cinnamon.org/6.json",
+      "local": false
+    },
+    {
+      "source": "payload/.config/cinnamon/spices/menu@cinnamon.org/25.json",
+      "target": ".config/cinnamon/spices/menu@cinnamon.org/25.json",
+      "local": false
+    },
+    {
+      "source": "payload/.config/cinnamon/spices/network@cinnamon.org/network@cinnamon.org.json",
+      "target": ".config/cinnamon/spices/network@cinnamon.org/network@cinnamon.org.json",
+      "local": false
+    },
+    {
+      "source": "payload/.config/cinnamon/spices/Radio3.0@claudiux/Radio3.0@claudiux.json",
+      "target": ".config/cinnamon/spices/Radio3.0@claudiux/Radio3.0@claudiux.json",
+      "local": false
+    },
+    {
+      "source": "payload/.config/cinnamon/spices/grouped-window-list@cinnamon.org/26.json",
+      "target": ".config/cinnamon/spices/grouped-window-list@cinnamon.org/26.json",
+      "local": false
+    },
+    {
+      "source": "payload/.config/cinnamon/spices/sound@cinnamon.org/sound@cinnamon.org.json",
+      "target": ".config/cinnamon/spices/sound@cinnamon.org/sound@cinnamon.org.json",
+      "local": false
+    },
+    {
+      "source": "payload/.config/cinnamon/spices/notifications@cinnamon.org/notifications@cinnamon.org.json",
+      "target": ".config/cinnamon/spices/notifications@cinnamon.org/notifications@cinnamon.org.json",
+      "local": false
+    },
+    {
+      "source": "payload/.config/cinnamon/spices/CinnamonMagicLamp@klangman/CinnamonMagicLamp@klangman.json",
+      "target": ".config/cinnamon/spices/CinnamonMagicLamp@klangman/CinnamonMagicLamp@klangman.json",
+      "local": false
+    },
+    {
+      "source": "payload/.config/cinnamon/spices/calendar@cinnamon.org/23.json",
+      "target": ".config/cinnamon/spices/calendar@cinnamon.org/23.json",
+      "local": false
+    },
+    {
+      "source": "payload/.config/cinnamon/spices/cornerbar@cinnamon.org/14.json",
+      "target": ".config/cinnamon/spices/cornerbar@cinnamon.org/14.json",
+      "local": false
+    },
+    {
+      "source": "payload/.config/cinnamon/spices/power@cinnamon.org/power@cinnamon.org.json",
+      "target": ".config/cinnamon/spices/power@cinnamon.org/power@cinnamon.org.json",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/nemo/actions/convert-image-format@el-amine-404.nemo_action",
+      "target": ".local/share/nemo/actions/convert-image-format@el-amine-404.nemo_action",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/nemo/actions/copy-path-to-clipboard@claudiux.nemo_action",
+      "target": ".local/share/nemo/actions/copy-path-to-clipboard@claudiux.nemo_action",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/nemo/actions/create-desktop-shortcut@anaximeno.nemo_action",
+      "target": ".local/share/nemo/actions/create-desktop-shortcut@anaximeno.nemo_action",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/nemo/actions/copy-path-to-clipboard@claudiux",
+      "target": ".local/share/nemo/actions/copy-path-to-clipboard@claudiux",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/nemo/actions/timo.nemo_action",
+      "target": ".local/share/nemo/actions/timo.nemo_action",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/nemo/actions/convert-image-format@el-amine-404",
+      "target": ".local/share/nemo/actions/convert-image-format@el-amine-404",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/nemo/actions/calcular-hash.nemo_action",
+      "target": ".local/share/nemo/actions/calcular-hash.nemo_action",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/nemo/actions/create-desktop-shortcut@anaximeno",
+      "target": ".local/share/nemo/actions/create-desktop-shortcut@anaximeno",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/nemo/actions/copiar-entre-areas.nemo_action",
+      "target": ".local/share/nemo/actions/copiar-entre-areas.nemo_action",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/nemo/actions/calcular-hash.py",
+      "target": ".local/share/nemo/actions/calcular-hash.py",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/gruvbox-cinnamon/espacos/espacos.py",
+      "target": ".local/share/gruvbox-cinnamon/espacos/espacos.py",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/gruvbox-cinnamon/espacos/fundos.py",
+      "target": ".local/share/gruvbox-cinnamon/espacos/fundos.py",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/gruvbox-cinnamon/espacos/raincarroof_por_espaco.py",
+      "target": ".local/share/gruvbox-cinnamon/espacos/raincarroof_por_espaco.py",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/gruvbox-cinnamon/espacos/copiar_entre_areas.py",
+      "target": ".local/share/gruvbox-cinnamon/espacos/copiar_entre_areas.py",
+      "local": false
+    },
+    {
+      "source": "payload/.local/bin/video-wallpaper",
+      "target": ".local/bin/video-wallpaper",
+      "local": false
+    },
+    {
+      "source": "payload/.local/bin/video-wallpaper-tray",
+      "target": ".local/bin/video-wallpaper-tray",
+      "local": false
+    },
+    {
+      "source": "payload/.local/bin/video-wallpaper-volume",
+      "target": ".local/bin/video-wallpaper-volume",
+      "local": false
+    },
+    {
+      "source": "payload/.local/bin/video-wallpaper-session",
+      "target": ".local/bin/video-wallpaper-session",
+      "local": false
+    },
+    {
+      "source": "payload/.local/bin/video-wallpaper-autostart",
+      "target": ".local/bin/video-wallpaper-autostart",
+      "local": false
+    },
+    {
+      "source": "payload/.local/bin/raincarroof-start",
+      "target": ".local/bin/raincarroof-start",
+      "local": false
+    },
+    {
+      "source": "payload/.local/bin/raincarroof-stop",
+      "target": ".local/bin/raincarroof-stop",
+      "local": false
+    },
+    {
+      "source": "payload/.local/bin/raincarroof-mpv",
+      "target": ".local/bin/raincarroof-mpv",
+      "local": false
+    },
+    {
+      "source": "payload/.local/lib/rain/painel.py",
+      "target": ".local/lib/rain/painel.py",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/icons/raincarroof-white-noise.png",
+      "target": ".local/share/icons/raincarroof-white-noise.png",
+      "local": false
+    },
+    {
+      "source": "assets-locais/.local/bin/xwinwrap",
+      "target": ".local/bin/xwinwrap",
+      "local": true
+    },
+    {
+      "source": "payload/.config/autostart/espacos-de-trabalho.desktop",
+      "target": ".config/autostart/espacos-de-trabalho.desktop",
+      "local": false
+    },
+    {
+      "source": "payload/.config/autostart/video-wallpaper.desktop",
+      "target": ".config/autostart/video-wallpaper.desktop",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/applications/rain.desktop",
+      "target": ".local/share/applications/rain.desktop",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/applications/raincarroof-start.desktop",
+      "target": ".local/share/applications/raincarroof-start.desktop",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/applications/raincarroof-stop.desktop",
+      "target": ".local/share/applications/raincarroof-stop.desktop",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/applications/espacos-de-trabalho.desktop",
+      "target": ".local/share/applications/espacos-de-trabalho.desktop",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/applications/wallpapers-por-espaco.desktop",
+      "target": ".local/share/applications/wallpapers-por-espaco.desktop",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/applications/copiar-entre-areas.desktop",
+      "target": ".local/share/applications/copiar-entre-areas.desktop",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/gruvbox-cinnamon/manage.py",
+      "target": ".local/share/gruvbox-cinnamon/manage.py",
+      "local": false
+    },
+    {
+      "source": "payload/.local/bin/gruvbox-desinstalar",
+      "target": ".local/bin/gruvbox-desinstalar",
+      "local": false
+    },
+    {
+      "source": "payload/.config/gtk-3.0/gtk.css",
+      "target": ".config/gtk-3.0/gtk.css",
+      "local": false
+    },
+    {
+      "source": "payload/.gtkrc-2.0",
+      "target": ".gtkrc-2.0",
+      "local": false
+    },
+    {
+      "source": "payload/.local/bin/gruvbox-video-tela-cheia",
+      "target": ".local/bin/gruvbox-video-tela-cheia",
+      "local": false
+    },
+    {
+      "source": "escolher-cor-pastas.sh",
+      "target": "escolher-cor-pastas.sh",
+      "local": false
+    },
+    {
+      "source": "folders-color-chooser.sh",
+      "target": "folders-color-chooser.sh",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/gruvbox-cinnamon/folder_colors.py",
+      "target": ".local/share/gruvbox-cinnamon/folder_colors.py",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/icons/Gruvbox-Pastas-Coloridas-A",
+      "target": ".local/share/icons/Gruvbox-Pastas-Coloridas-A",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/icons/Gruvbox-Pastas-Coloridas-B",
+      "target": ".local/share/icons/Gruvbox-Pastas-Coloridas-B",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/applications/gruvbox-cor-pastas.desktop",
+      "target": ".local/share/applications/gruvbox-cor-pastas.desktop",
+      "local": false
+    },
+    {
+      "source": "payload/.config/gtk-2.0/gtkfilechooser.ini",
+      "target": ".config/gtk-2.0/gtkfilechooser.ini",
+      "local": false
+    },
+    {
+      "source": "payload/.var/app/org.kde.kclock/config/kclock-fontconfig/fonts.conf",
+      "target": ".var/app/org.kde.kclock/config/kclock-fontconfig/fonts.conf",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/flatpak/overrides/org.kde.kclock",
+      "target": ".local/share/flatpak/overrides/org.kde.kclock",
+      "local": false,
+      "merge_ini": true
+    },
+    {
+      "source": "payload/.var/app/io.github.kukuruzka165.materialgram/config/materialgram-fontconfig/fonts.conf",
+      "target": ".var/app/io.github.kukuruzka165.materialgram/config/materialgram-fontconfig/fonts.conf",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/flatpak/overrides/io.github.kukuruzka165.materialgram",
+      "target": ".local/share/flatpak/overrides/io.github.kukuruzka165.materialgram",
+      "local": false,
+      "merge_ini": true
+    },
+    {
+      "source": "payload/.config/menus/applications-merged/user-chrome-apps.menu",
+      "target": ".config/menus/applications-merged/user-chrome-apps.menu",
+      "local": false,
+      "merge_menu": true
+    },
+    {
+      "source": "payload/.local/share/desktop-directories/chrome-apps.directory",
+      "target": ".local/share/desktop-directories/chrome-apps.directory",
+      "local": false
+    },
+    {
+      "source": "payload/.config/autostart/insync.desktop",
+      "target": ".config/autostart/insync.desktop",
+      "local": false,
+      "requires_command": "insync"
+    },
+    {
+      "source": "payload/.config/autostart/com.bitwarden.desktop.desktop",
+      "target": ".config/autostart/com.bitwarden.desktop.desktop",
+      "local": false,
+      "requires_flatpak": "com.bitwarden.desktop"
+    },
+    {
+      "source": "payload/.local/share/gruvbox-cinnamon/terminal-data",
+      "target": ".local/share/gruvbox-cinnamon/terminal-data",
+      "local": false
+    },
+    {
+      "source": "payload/.local/bin/gruvbox-terminal",
+      "target": ".local/bin/gruvbox-terminal",
+      "local": false
+    },
+    {
+      "source": "payload/.config/gruvbox-cinnamon/terminal",
+      "target": ".config/gruvbox-cinnamon/terminal",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/applications/cool-retro-term.desktop",
+      "target": ".local/share/applications/cool-retro-term.desktop",
+      "local": false
+    },
+    {
+      "source": "payload/.local/share/applications/Relax.desktop",
+      "target": ".local/share/applications/Relax.desktop",
+      "local": false
+    }
+  ]
+}

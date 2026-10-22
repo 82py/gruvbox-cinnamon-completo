@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+CTRL="$HOME/.local/bin/video-wallpaper"
+TRAY="$HOME/.local/bin/video-wallpaper-tray"
+STATE="$HOME/.local/state/video-wallpaper"
+
+mkdir -p "$STATE"
+
+/usr/bin/python3 "__HOME__/.local/share/gruvbox-cinnamon/espacos/raincarroof_por_espaco.py" start
+
+# Remove apenas controles Raincarroof antigos/duplicados.
+while read -r pid; do
+    [ -n "$pid" ] && kill "$pid" 2>/dev/null || true
+done < <(
+    ps -C yad -o pid=,args= 2>/dev/null |
+    awk '
+      /Raincarroof|raincarroof-white-noise/ {
+        print $1
+      }
+    '
+)
+
+sleep 1
+
+nohup "$TRAY" \
+    >"$STATE/tray.log" \
+    2>&1 &
+
+if command -v notify-send >/dev/null 2>&1; then
+    notify-send \
+      -i "$HOME/.local/share/icons/raincarroof-white-noise.png" \
+      "Rain" \
+      "Rain selecionado nesta área."
+fi

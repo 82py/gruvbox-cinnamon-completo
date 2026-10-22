@@ -1,0 +1,10 @@
+[Nemo Action]
+Name=Convert Images and PDF
+Comment=Convert image files and PDF documents
+Exec=timo-gtk %F
+Selection=notnone
+#Extensions=any;
+Icon-Name=timo-gtk
+Dependencies=timo-gtk;
+EscapeSpaces=true
+Mimetypes=image/*;inode/directory;application/pdf;application/x-pdf;

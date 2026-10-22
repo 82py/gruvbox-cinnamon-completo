@@ -1,0 +1,10 @@
+{
+  "note": "Distribuição pública. O instalador compila xwinwrap do fonte incluído; o binário da máquina de origem não é distribuído.",
+  "components": [
+    {
+      "source": "assets-locais/.local/bin/xwinwrap",
+      "target": ".local/bin/xwinwrap",
+      "local": true
+    }
+  ]
+}

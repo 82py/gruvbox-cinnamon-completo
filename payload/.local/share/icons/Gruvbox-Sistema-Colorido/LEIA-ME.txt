@@ -1,0 +1,1 @@
+Variante aprovada em 21/10/2026. Herda Gruvbox-Plus-Dark para preservar os 39 ícones aprovados e as demais artes. Categorias regulares exigem desativar categorias simbólicas no menu. A impressora colorida exige a regra específica do tema visual Gruvbox-Dark-BL-MOD-Sistema-Colorido. Créditos/licenças das artes XApp em licencas/. O tema base permanece intacto.

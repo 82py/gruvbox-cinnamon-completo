@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Rain
+Comment=Wallpaper animado e white noise de chuva
+Exec="__HOME__/.local/bin/video-wallpaper-tray"
+Icon=__HOME__/.local/share/icons/raincarroof-white-noise.png
+Terminal=false
+OnlyShowIn=X-Cinnamon;
+X-GNOME-Autostart-enabled=true

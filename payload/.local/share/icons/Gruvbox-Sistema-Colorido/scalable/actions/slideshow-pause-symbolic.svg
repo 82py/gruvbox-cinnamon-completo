@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns1="http://www.inkscape.org/namespaces/inkscape" xmlns:ns2="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns4="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" id="svg7384" height="16.001" width="16" version="1.1" ns1:version="0.48.4 r9939" ns2:docname="video-display-symbolic.svg" fill="#7daea3" color="#7daea3">
+  <defs id="defs10" />
+  <ns2:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" ns1:pageopacity="0" ns1:pageshadow="2" ns1:window-width="1472" ns1:window-height="922" id="namedview8" showgrid="true" ns1:snap-bbox="true" ns1:zoom="41.716694" ns1:cx="8.0610968" ns1:cy="8.1482271" ns1:window-x="393" ns1:window-y="0" ns1:window-maximized="0" ns1:current-layer="svg7384">
+    <ns1:grid type="xygrid" id="grid3757" />
+  </ns2:namedview>
+  <title id="title9167">Gnome Symbolic Icon Theme</title>
+  <metadata id="metadata90">
+    <rdf:RDF>
+      <ns4:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </ns4:Work>
+    </rdf:RDF>
+  </metadata>
+  <path ns1:connector-curvature="0" d="M 2.19,0 C 0.99,0 0,0.99 0,2.19 v 8.625 c 0,1.1999 0.9859,2.1875 2.1875,2.1875 h 11.625 C 15.0141,13.0025 16,12.01492 16,10.815 V 2.19 c -0.01,-1.21 -1,-2.2 -2.2,-2.2 H 2.175 z m 0,2 h 11.625 c 0.1238,0 0.1875,0.0566 0.1875,0.1875 v 8.625 C 14.0025,10.9434 13.9388,11 13.815,11 H 2.19 C 2.05,10.99 1.99,10.93 1.99,10.8 V 2.175 c 0,-0.12 0.06,-0.18 0.19,-0.18 z" style="text-indent:0;text-transform:none;block-progression:tb;color:#7daea3;fill:#7daea3" id="rect11749-5" />
+  <path ns1:connector-curvature="0" d="M 4.91,14 A 1.0011,1.0011 0 1 0 5,16 h 6 a 1.0001,1.0001 0 1 0 0,-2 H 5 a 1.0001,1.0001 0 0 0 -0.0937,0 z" style="text-indent:0;text-transform:none;block-progression:tb;color:#7daea3;fill:#7daea3" id="path11751-2" />
+  <g id="g3945" transform="translate(3.9299927,-4.0616007)">
+    <path id="path10403" style="text-indent:0;text-transform:none;block-progression:tb;color:#7daea3;fill:#7daea3" d="m 4.03,6.94 c -1.0888,0 -2,0.87892 -2,1.9688 v 1.5938 h 1 V 8.9088 c 0,-0.55143 0.45371,-0.96875 1,-0.96875 0.54629,0 0.96875,0.41732 0.96875,0.96875 v 1.5625 h 1 V 8.9088 C 5.99875,7.819 5.11877,6.94 4.02995,6.94 z" ns1:connector-curvature="0" />
+    <rect id="rect11173" style="color:#7daea3;fill:#7daea3" height="4.0626001" width="5.9661999" y="10" x="1.0700073" />
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Escolher cor das pastas Gruvbox
+Exec=bash "__HOME__/escolher-cor-pastas.sh"
+Icon=folder
+Terminal=true
+Categories=Settings;DesktopSettings;

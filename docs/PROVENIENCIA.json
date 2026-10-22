@@ -1,0 +1,27 @@
+{
+  "checked": "2026-10-21",
+  "cursor": {
+    "installed_name": "Gruvbox_Cursors_Dark",
+    "upstream": "sainnhe/capitaine-cursors",
+    "release": "r5",
+    "variant": "Capitaine Cursors (Gruvbox) - White",
+    "matching_files": 113,
+    "different_files": 0,
+    "source_commit": "de1f0cb501cf64478428c87d3d366ede57678e86",
+    "original_author": "Keefer Rourke",
+    "variant_author": "sainnhe"
+  },
+  "visual_theme": {
+    "upstream": "Fausto-Korpsvart/Gruvbox-GTK-Theme",
+    "revision": "c0b7fb501938241a3b6b5734f8cb1f0982edc6b4",
+    "variant": "themes/Gruvbox-Dark-BL",
+    "matching_regular_files": 251,
+    "different_files": [
+      "cinnamon/cinnamon.css"
+    ],
+    "local_author_metadata": "vinceliucie | mod: f.korpsvart",
+    "modified_collection": "Twilight4/gnome-settings",
+    "collection_revision": "5560f12a465654d1808638ccb4e6e0968ac10240",
+    "matching_entries_in_collection": 255
+  }
+}

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+CTRL="$HOME/.local/bin/video-wallpaper"
+
+/usr/bin/python3 "__HOME__/.local/share/gruvbox-cinnamon/espacos/raincarroof_por_espaco.py" stop
+
+# Fecha somente o ícone/menu Raincarroof.
+while read -r pid; do
+    [ -n "$pid" ] && kill "$pid" 2>/dev/null || true
+done < <(
+    ps -C yad -o pid=,args= 2>/dev/null |
+    awk '
+      /Raincarroof|raincarroof-white-noise/ {
+        print $1
+      }
+    '
+)
+
+if command -v notify-send >/dev/null 2>&1; then
+    notify-send \
+      "Rain" \
+      "Imagem estática selecionada nesta área."
+fi

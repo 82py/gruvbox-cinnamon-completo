@@ -1,0 +1,43 @@
+{
+  "settings": {
+    "fps": 0,
+    "windowScaling": 1,
+    "showTerminalSize": true,
+    "fontScaling": 0.85,
+    "fontNames": [
+      "TERMINUS",
+      "APPLE_II",
+      "COMMODORE_PET"
+    ],
+    "showMenubar": false,
+    "bloomQuality": 0.25,
+    "burnInQuality": 0.25,
+    "useCustomCommand": false,
+    "customCommand": ""
+  },
+  "profile": {
+    "backgroundColor": "#000000",
+    "fontColor": "#729fcf",
+    "flickering": 0.2,
+    "horizontalSync": 0,
+    "staticNoise": 0.0955,
+    "chromaColor": 1,
+    "saturationColor": 0.4983,
+    "screenCurvature": 0,
+    "glowingLine": 0.1476,
+    "burnIn": 0,
+    "bloom": 0.5017,
+    "rasterization": 0,
+    "jitter": 0.099,
+    "rbgShift": 0,
+    "brightness": 1,
+    "contrast": 1,
+    "ambientLight": 0,
+    "windowOpacity": 1,
+    "fontName": "TERMINUS",
+    "fontWidth": 1.1,
+    "margin": 1,
+    "blinkingCursor": true,
+    "frameMargin": 1
+  }
+}

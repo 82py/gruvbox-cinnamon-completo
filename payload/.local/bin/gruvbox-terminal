@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+"""Abre o perfil visual do terminal sem modificar a configuração original do app."""
+from pathlib import Path
+import os,shutil,sys
+
+def launch(args=None,home=None):
+ home=Path.home() if home is None else Path(home);args=list(sys.argv[1:] if args is None else args)
+ if args==['--help']:print('Uso: gruvbox-terminal [-- | -e] [comando argumentos...]');return
+ if args[:1] in (['--'],['-e']):args.pop(0)
+ shell=os.environ.get('SHELL','/bin/bash')
+ if not os.path.isfile(shell) or not os.access(shell,os.X_OK):shell='/bin/bash'
+ command=args or [shell,'-l'];program=shutil.which('cool-retro-term')
+ if not program:
+  program=shutil.which('xterm')
+  if not program:raise RuntimeError('Instale cool-retro-term ou xterm.')
+  os.execvpe(program,[program,'-e',*command],dict(os.environ));return
+ env=dict(os.environ);restore=[]
+ for key,default,scoped in [('XDG_DATA_HOME',home/'.local/share',home/'.local/share/gruvbox-cinnamon/terminal-data'),('XDG_CONFIG_HOME',home/'.config',home/'.config/gruvbox-cinnamon/terminal'),('XDG_CACHE_HOME',home/'.cache',home/'.cache/gruvbox-cinnamon/terminal')]:
+  restore.append(key+'='+env.get(key,str(default)));Path(scoped).mkdir(parents=True,exist_ok=True);env[key]=str(scoped)
+ # Only the terminal app sees the separate profile; commands inside use the user's normal paths.
+ os.execvpe(program,[program,'-e','/usr/bin/env',*restore,*command],env)
+if __name__=='__main__':launch()

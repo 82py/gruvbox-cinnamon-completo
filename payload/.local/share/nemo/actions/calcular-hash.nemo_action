@@ -1,0 +1,11 @@
+[Nemo Action]
+Active=true
+Name=Calcular hash…
+Comment=Escolher o algoritmo, mostrar e copiar o hash do arquivo
+Exec=<calcular-hash.py %F>
+Icon-Name=dialog-information
+Selection=s
+Extensions=nodirs;
+Quote=double
+Dependencies=python3;
+Terminal=false

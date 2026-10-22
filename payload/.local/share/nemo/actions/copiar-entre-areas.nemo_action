@@ -1,0 +1,10 @@
+[Nemo Action]
+Active=true
+Name=Copiar para outra área…
+Comment=Copia os itens selecionados mantendo os originais
+Exec=/usr/bin/python3 "__HOME__/.local/share/gruvbox-cinnamon/espacos/copiar_entre_areas.py" -- %U
+Icon-Name=edit-copy
+Selection=notnone
+Extensions=any;
+Quote=double
+Dependencies=/usr/bin/python3;

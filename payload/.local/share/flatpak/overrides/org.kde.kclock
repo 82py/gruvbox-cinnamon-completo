@@ -1,0 +1,2 @@
+[Environment]
+FONTCONFIG_FILE=__HOME__/.var/app/org.kde.kclock/config/kclock-fontconfig/fonts.conf

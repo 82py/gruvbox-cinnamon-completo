@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<defs>
+<linearGradient id="tile" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse"><stop stop-color="#3c3836"/><stop offset="1" stop-color="#282828"/></linearGradient>
+<radialGradient id="lens" cx="0" cy="0" r="1" gradientTransform="translate(128 105) rotate(90) scale(51)" gradientUnits="userSpaceOnUse"><stop stop-color="#689d6a"/><stop offset="1" stop-color="#458588"/></radialGradient>
+</defs>
+<rect x="8" y="8" width="240" height="240" rx="50" fill="url(#tile)"/>
+<rect x="10" y="10" width="236" height="236" rx="48" fill="none" stroke="#ebdbb2" stroke-opacity=".18" stroke-width="2"/>
+
+<!-- O anel do ícone original torna-se lente, com controles abaixo. -->
+<circle cx="128" cy="105" r="68" fill="#1d2021" stroke="#ebdbb2" stroke-width="10"/>
+<circle cx="128" cy="105" r="51" fill="url(#lens)" stroke="#83a598" stroke-width="4"/>
+<path d="M128 56 154 89 142 139 102 151 78 105 99 69Z" fill="#3f7278" opacity=".68"/>
+<circle cx="128" cy="105" r="28" fill="#282828" stroke="#83a598" stroke-width="4"/>
+<circle cx="128" cy="105" r="8" fill="#fabd2f"/>
+<path d="M57 195h142M57 218h142" stroke="#ebdbb2" stroke-width="5" stroke-linecap="round" opacity=".78"/>
+<circle cx="98" cy="195" r="10" fill="#d79921" stroke="#282828" stroke-width="3"/>
+<circle cx="163" cy="218" r="10" fill="#83a598" stroke="#282828" stroke-width="3"/>
+
+</svg>

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+sleep 5
+
+"__HOME__/.local/bin/video-wallpaper" start
+
+sleep 2
+
+pkill -f "__HOME__/.local/bin/video-wallpaper-tray" 2>/dev/null || true
+
+exec "__HOME__/.local/bin/video-wallpaper-tray"

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<defs>
+<linearGradient id="tile" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse"><stop stop-color="#3c3836"/><stop offset="1" stop-color="#282828"/></linearGradient>
+<linearGradient id="green" x1="45" y1="45" x2="211" y2="211" gradientUnits="userSpaceOnUse"><stop stop-color="#689d6a"/><stop offset="1" stop-color="#427b58"/></linearGradient>
+</defs>
+<rect x="8" y="8" width="240" height="240" rx="50" fill="url(#tile)"/>
+<rect x="10" y="10" width="236" height="236" rx="48" fill="none" stroke="#ebdbb2" stroke-opacity=".18" stroke-width="2"/>
+
+<!-- Quadrante claro sobre verde do ícone original, aqui como página de notas. -->
+<rect x="45" y="45" width="166" height="166" rx="20" fill="url(#green)"/>
+<path d="M75 180C75 122 122 75 180 75V180Z" fill="#ebdbb2"/>
+<path d="M94 180c0-47 39-86 86-86" fill="none" stroke="#83a598" stroke-width="5" opacity=".75"/>
+<path d="M122 147h39M113 162h48" stroke="#458588" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/>
+<circle cx="180" cy="75" r="6" fill="#fabd2f"/>
+
+</svg>
