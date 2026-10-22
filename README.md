@@ -2,7 +2,7 @@
 
 Personalização organizada por **Pir ([82py](https://github.com/82py))**, com assistência do **OpenAI Codex** na criação e revisão de ícones, integração, documentação e empacotamento.
 
-Versão 1.0.2 · retrato da configuração ativa em 21/10/2026 · Linux Mint 22.3, Cinnamon 6.6 / Nemo 6.6, sessão X11.
+Versão 1.0.3 · retrato da configuração ativa em 21/10/2026 · Linux Mint 22.3, Cinnamon 6.6 / Nemo 6.6, sessão X11.
 
 Inclui Relax, o perfil visual isolado do terminal, as correções de fontes por aplicativo Flatpak e o tema Gruvbox Plus Dark personalizado, a variante Gruvbox Sistema Colorido, as categorias e indicadores coloridos, temas visuais, cursor, layout do painel e menus, Magic Lamp, Radio3, extensões próprias, ações do Nemo, Rain completo e quatro espaços com pastas e fundos independentes.
 
@@ -52,6 +52,6 @@ A personalização foi comparada com os componentes carregados no Cinnamon: 15 a
 
 A 1.0.2 foi instalada e desinstalada em Linux Mint 22.3 Cinnamon X11, em VM QEMU/KVM. Os 15 applets e as cinco extensões carregaram; os quatro espaços, fundos locais, Rain e cores das pastas foram exercitados. Após desinstalar e reiniciar, a comparação de 115 destinos e 936 preferências não encontrou diferenças; documentos foram preservados.
 
-Veja [método e resultados](docs/VALIDACAO-VM.md) e [relatório estruturado](docs/VALIDACAO-VM.json). A versão corrige problemas encontrados na primeira beta; prefira 1.0.2 à 1.0.1.
+Veja [método e resultados](docs/VALIDACAO-VM.md) e [relatório estruturado](docs/VALIDACAO-VM.json). A 1.0.3 acrescenta a correção da janela de cópia: uma seleção aberta pelo menu executa uma única operação, fecha ao concluir e envia uma notificação. Cliques repetidos e falhas parciais não repetem os itens já copiados. A correção tem [testes GTK próprios](tests/test_copy_dialog.py) e [relatório](docs/VALIDACAO-COPIA.json); a instalação e desinstalação em VM documentadas acima foram realizadas com a 1.0.2.
 
 ![Menu e painel na máquina virtual](docs/imagens/menu-gruvbox-vm.png)

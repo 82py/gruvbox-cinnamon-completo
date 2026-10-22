@@ -1,7 +1,7 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "date": "2026-10-21",
-  "regular_files": 27838,
+  "regular_files": 27840,
   "internal_relative_symlinks": 25224,
   "installation_units": 82,
   "settings": 936,
@@ -18,7 +18,8 @@
     "active_coverage_audit": "passed",
     "full_install_restore_tests": 3,
     "runtime_tests": 3,
-    "real_cinnamon_vm": "Mint 22.3 X11: install, features, uninstall and reboot passed",
+    "copy_dialog_tests": 4,
+    "real_cinnamon_vm": "Historical baseline 1.0.2: Mint 22.3 X11 install, features, uninstall and reboot passed; full VM cycle not repeated for 1.0.3",
     "xwinwrap_source_build": "passed (one upstream unused chdir return warning)",
     "current_environment_preflight": "passed"
   },

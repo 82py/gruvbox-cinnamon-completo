@@ -5,6 +5,7 @@ import os
 from pathlib import Path
 import shutil
 import stat
+import subprocess
 import sys
 import threading
 from urllib.parse import unquote, urlsplit
@@ -106,6 +107,18 @@ def copy_batch(sources, destination, progress=lambda text: None):
     return done, errors
 
 
+def notify_completed(number, count):
+    try:
+        subprocess.Popen(
+            ['notify-send', '--app-name=Copiar entre áreas',
+             'Cópia concluída',
+             f'{count} item(ns) copiado(s) para a área {number}. Originais preservados.'],
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+        )
+    except OSError:
+        pass
+
+
 def main():
     import gi
     gi.require_version('Gtk', '3.0')
@@ -193,6 +206,8 @@ def main():
             self.set_border_width(20)
             self.stick()
             self.busy = False
+            self.completed = False
+            self.one_shot = False
             self.sources = []
             self.previews = []
             self.video_preview = None
@@ -220,6 +235,7 @@ def main():
                 if args and args[0] == '--':
                     args = args[1:]
                 self.sources = freeze_sources(args)
+                self.one_shot = bool(self.sources)
                 if self.sources:
                     self.status.set_text(f'{len(self.sources)} item(ns) selecionado(s). Clique na área de destino.')
                 for i, folder in enumerate(self.folders):
@@ -314,7 +330,7 @@ def main():
                 self.status.set_text(str(exc))
 
         def start_copy(self, sources, folder, number):
-            if self.busy:
+            if self.busy or self.completed:
                 return False
             try:
                 config = json.loads((BASE / 'configuracao.json').read_text())
@@ -339,7 +355,12 @@ def main():
 
         def finished(self, number, done, errors):
             self.busy = False
-            self.grid.set_sensitive(True)
+            if self.one_shot:
+                # A selection opened by Nemo is a single operation, including
+                # partial failures. Never copy its successful items again.
+                self.completed = True
+                self.sources = []
+            self.grid.set_sensitive(not self.completed)
             if errors:
                 self.status.set_text(f'{len(done)} item(ns) copiado(s). Houve um problema; os originais foram mantidos.')
                 dialog = Gtk.MessageDialog(transient_for=self, modal=True, message_type=Gtk.MessageType.WARNING, buttons=Gtk.ButtonsType.CLOSE, text='A cópia não foi concluída para todos os itens.')
@@ -348,6 +369,10 @@ def main():
                 dialog.destroy()
             else:
                 self.status.set_text(f'{len(done)} item(ns) copiado(s) para a área {number}. Originais preservados.')
+                if self.one_shot:
+                    notify_completed(number, len(done))
+            if self.one_shot:
+                self.destroy()
             return False
 
     window = Window()

@@ -1,6 +1,6 @@
 # Conferência final da personalização ativa — 21/10/2026
 
-Revisão 1.0.2. A conferência leu o estado do Cinnamon e comparou os arquivos ativos com as duas árvores de distribuição. Nada foi aplicado na sessão real da máquina de origem; a instalação completa foi exercitada em uma VM separada.
+Conferência histórica da revisão 1.0.2. A 1.0.3 atualiza somente o utilitário de cópia e seus testes/documentação; veja VALIDACAO-COPIA.json. A conferência leu o estado do Cinnamon e comparou os arquivos ativos com as duas árvores de distribuição. Nada foi aplicado na sessão real da máquina de origem; a instalação completa foi exercitada em uma VM separada.
 
 | Componente ativo | Cobertura |
 | --- | --- |

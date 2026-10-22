@@ -1,0 +1,16 @@
+{
+  "version": "1.0.3",
+  "date": "2026-10-21",
+  "method": "Real GTK 3 with hidden windows, temporary source and destination folders, notifications mocked; no personal files or desktop settings used.",
+  "results": {
+    "40_clicks_one_copy_one_notification_window_closed": "passed",
+    "partial_failure_successful_items_not_repeated": "passed",
+    "standalone_mode_accepts_new_deliberate_operations": "passed",
+    "missing_notify_send_does_not_block_completion": "passed"
+  },
+  "full_vm_validation": {
+    "version": "1.0.2",
+    "report": "VALIDACAO-VM.json",
+    "repeated_for_1_0_3": false
+  }
+}

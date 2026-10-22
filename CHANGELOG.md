@@ -1,5 +1,13 @@
 # Alterações
 
+## 1.0.3 — 21/10/2026
+
+- A janela “Copiar para outra área…” aberta pelo menu do Nemo agora executa uma única operação por seleção. Os destinos ficam bloqueados durante a cópia; no sucesso, a janela fecha e solicita uma notificação.
+- Seleções concluídas são consumidas. Cliques adicionais, inclusive após uma falha parcial, não criam cópias duplicadas dos itens que já foram copiados. Erros continuam sendo apresentados antes do fechamento.
+- O modo independente de arrastar arquivos continua aceitando novas operações deliberadas.
+- Quatro testes GTK de regressão cobrem cliques repetidos, falha parcial, modo de arraste e ausência do serviço de notificações. Nenhum arquivo pessoal é usado nos testes.
+- Mantida a validação completa de instalação e desinstalação em VM da 1.0.2 como evidência histórica; esse ciclo completo não foi repetido para a 1.0.3.
+
 ## 1.0.2 — 21/10/2026
 
 - Instalação e desinstalação reais em VM Mint 22.3 Cinnamon X11, com reinicializações e comparação de 115 destinos, 936 preferências e arquivos internos.

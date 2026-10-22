@@ -15,3 +15,9 @@ Atalhos: Ctrl+F12 abre um vídeo em tela cheia (a primeira vez pede um arquivo l
 O Rain usa mpv, xwinwrap, X11, Python GTK e o serviço de usuário do systemd. O código completo acompanha o pacote; vídeos, codecs externos, drivers e serviços do sistema são dependências do computador. O fonte de xwinwrap é compilado localmente na instalação, sem baixar código, preservando a revisão registrada em `vendor/xwinwrap/ORIGIN.txt`.
 
 Se houver falha, confira `$HOME/.local/state/video-wallpaper/runtime.log`, o estado em `$HOME/.local/share/gruvbox-cinnamon/espacos` e `systemctl --user status espacos-de-trabalho.service`. Arquivos de log, PID, lock e estado transitório da máquina de origem não são distribuídos.
+
+## Copiar para outra área
+
+No menu de contexto do Nemo, escolha “Copiar para outra área…” e clique uma vez no destino. Durante a cópia, os destinos ficam desativados. A janela fecha ao concluir e solicita uma notificação. A seleção é consumida e não pode iniciar outra cópia por cliques repetidos.
+
+Se parte dos itens falhar, o aviso mostra os detalhes antes de fechar. Os originais e as cópias já concluídas são preservados; para tentar novamente, selecione apenas os itens que falharam. A janela aberta sem seleção continua disponível para novas operações por arraste.
