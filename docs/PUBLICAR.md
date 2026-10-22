@@ -4,6 +4,8 @@
 
 ## English
 
+**Current release: 1.1.0 adds the GTK manager and removes Radio3. On a prepared public checkout, run `python3 scripts/empacotar.py` to rebuild the versioned TAR.GZ, checksums and report. Run the GUI engine/GTK tests in addition to existing checks. Inspect the archive for private data before uploading it. The export procedure below describes creating a separate public tree from a source tree; it refuses an existing destination.**
+
 Public repository: [82py/gruvbox-cinnamon-completo](https://github.com/82py/gruvbox-cinnamon-completo).
 
 The initial v1.0.1 remains a historical prerelease. Version 1.0.2 includes fixes and complete Mint 22.3 Cinnamon X11 VM validation; see [VM validation](VALIDACAO-VM.md). Version 1.0.3 fixes repeated copies and adds bilingual visual documentation.
@@ -27,6 +29,8 @@ The integration uses GPL-3.0-or-later; third-party components retain their own l
 ---
 
 ## Português
+
+**Versão atual: 1.1.0 inclui o gerenciador GTK e retira Radio3. Em uma cópia pública preparada, execute `python3 scripts/empacotar.py` para gerar TAR.GZ versionado, somas e relatório. Execute os testes de mecanismo/GTK da GUI além das verificações existentes. Confira dados privados no pacote antes de enviar. O fluxo abaixo descreve a criação de outra árvore pública a partir de uma árvore de origem; ele recusa um destino existente.**
 
 Repositório público: https://github.com/82py/gruvbox-cinnamon-completo
 

@@ -1,6 +1,6 @@
 {
   "/org/cinnamon/enabled-applets": "['panel1:left:1:separator@cinnamon.org:1', 'panel1:right:3:systray@cinnamon.org:3', 'panel1:right:4:xapp-status@cinnamon.org:4', 'panel1:right:6:printers@cinnamon.org:6', 'panel1:right:9:keyboard@cinnamon.org:8', 'panel1:right:8:network@cinnamon.org:10', 'panel1:right:11:cornerbar@cinnamon.org:14', 'panel1:right:2:windows-quick-list@cinnamon.org:20', 'panel1:right:10:calendar@cinnamon.org:23', 'panel1:right:1:settings@cinnamon.org:24', 'panel1:left:0:menu@cinnamon.org:25', 'panel1:left:2:grouped-window-list@cinnamon.org:26', 'panel1:right:5:notifications@cinnamon.org:27', 'panel1:right:7:sound@cinnamon.org:28']",
-  "/org/cinnamon/enabled-extensions": "['CinnamonMagicLamp@klangman', 'gruvbox-microphone-colors@gruvbox-cinnamon', 'gruvbox-mintupdate-colors@gruvbox-cinnamon', 'gruvbox-system-colors@gruvbox-cinnamon', 'gruvbox-profile-photo@gruvbox-cinnamon']",
+  "/org/cinnamon/enabled-extensions": "['gruvbox-microphone-colors@gruvbox-cinnamon', 'gruvbox-mintupdate-colors@gruvbox-cinnamon', 'gruvbox-system-colors@gruvbox-cinnamon', 'gruvbox-profile-photo@gruvbox-cinnamon']",
   "/org/cinnamon/favorite-apps": "['raincarroof-start.desktop', 'raincarroof-stop.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Calendar.desktop', 'org.x.editor.desktop', 'mintinstall.desktop', 'cinnamon-settings.desktop']",
   "/org/cinnamon/hotcorner-layout": "['expo:false:0', 'scale:false:0', 'scale:false:0', 'desktop:false:0']",
   "/org/cinnamon/next-applet-id": "30",
@@ -819,7 +819,6 @@
   "/org/nemo/list-view/enable-folder-expansion": "false",
   "/org/nemo/list-view/default-visible-columns": "['name', 'size', 'type', 'date_modified']",
   "/org/nemo/list-view/default-column-order": "['name', 'size', 'type', 'date_modified']",
-  "/org/nemo/plugins/disabled-extensions": "@as []",
   "/org/nemo/plugins/disabled-scripts": "@as []",
   "/org/nemo/preferences/click-double-parent-folder": "false",
   "/org/nemo/preferences/tooltips-show-birth-date": "false",

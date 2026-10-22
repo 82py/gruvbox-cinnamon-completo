@@ -1,5 +1,5 @@
 {
-  "note": "Local personal GUI build, based on theme 1.0.3. Not published. xwinwrap is built from included source; no originating-machine binary is distributed.",
+  "note": "Public GUI distribution. xwinwrap is compiled from included source; personal media, photo, profiles and backups are excluded.",
   "components": [
     {
       "source": "assets-locais/.local/bin/xwinwrap",
@@ -7,5 +7,5 @@
       "local": true
     }
   ],
-  "gui_version": "0.1.0-personal"
+  "gui_version": "1.1.0"
 }

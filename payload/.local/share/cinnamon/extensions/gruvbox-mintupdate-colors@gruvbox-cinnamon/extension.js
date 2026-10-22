@@ -15,12 +15,26 @@ function synchronize(actor, record) {
     if (NAMES.has(actor.icon_name || '')) actor.add_style_class_name(TAG);
     else actor.remove_style_class_name(TAG);
 }
+// Release references when an actor leaves the watched applet subtree.
+function unwatch(actor, restoreStyle=true) {
+    const r = watched.get(actor);
+    if (!r) return;
+    const children = actor.get_children();
+    watched.delete(actor);
+    for (const id of [r.added, r.removed, r.destroyed, r.changed]) {
+        if (id) actor.disconnect(id);
+    }
+    for (const child of children) unwatch(child, restoreStyle);
+    if (restoreStyle && actor instanceof St.Icon && r.owned)
+        actor.remove_style_class_name(TAG);
+}
 function watch(actor) {
-    if (watched.has(actor)) return;
-    let r = {owned: !(actor instanceof St.Icon) || !actor.has_style_class_name(TAG), added: 0, destroyed: 0, changed: 0};
+    if (!started || watched.has(actor)) return;
+    let r = {owned: !(actor instanceof St.Icon) || !actor.has_style_class_name(TAG), added: 0, removed: 0, destroyed: 0, changed: 0};
     watched.set(actor,r);
     r.added = actor.connect('actor-added', (_parent, child) => watch(child));
-    r.destroyed = actor.connect('destroy', () => watched.delete(actor));
+    r.removed = actor.connect('actor-removed', (_parent, child) => unwatch(child));
+    r.destroyed = actor.connect('destroy', () => unwatch(actor, false));
     if (actor instanceof St.Icon) {
         r.changed = actor.connect('notify::icon-name', () => synchronize(actor,r));
         synchronize(actor,r);
@@ -54,11 +68,6 @@ function disable() {
     if (settingsId) global.settings.disconnect(settingsId);
     if (busId) Gio.DBus.session.signal_unsubscribe(busId);
     idleId=settingsId=busId=0;
-    for (let [a,r] of watched) {
-        if (r.added) a.disconnect(r.added);
-        if (r.destroyed) a.disconnect(r.destroyed);
-        if (r.changed) a.disconnect(r.changed);
-        if (a instanceof St.Icon && r.owned) a.remove_style_class_name(TAG);
-    }
+    for (const actor of [...watched.keys()]) unwatch(actor);
     watched.clear();
 }

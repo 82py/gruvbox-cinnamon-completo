@@ -2,7 +2,7 @@
   "uuid": "gruvbox-mintupdate-colors@gruvbox-cinnamon",
   "name": "Gruvbox — atualizações coloridas",
   "description": "Preserva as cores dos seis ícones do MintUpdate no painel, sem modificar applets ou aplicativos.",
-  "version": 1,
+  "version": 2,
   "cinnamon-version": [
     "6.6"
   ]

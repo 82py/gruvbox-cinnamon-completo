@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Teste de integração de ambos os TAR.GZ em HOME e GSettings keyfile isolados."""
+"""Teste de integração do TAR.GZ público em HOME e GSettings keyfile isolados."""
 from pathlib import Path
 import ast,configparser,fcntl,hashlib,importlib.util,json,os,shutil,subprocess,sys,tarfile,tempfile
 from unittest.mock import patch
 D=Path(__file__).resolve().parents[2]
 VERSION=json.loads((Path(__file__).resolve().parents[1]/'manifest.json').read_text())['version']
-NAMES=['Gruvbox-Cinnamon-Completo-'+VERSION,'Gruvbox-Cinnamon-GitHub-'+VERSION]
+NAMES=['Gruvbox-Cinnamon-GitHub-'+VERSION]
 REPORT=[]
 def digest_tree(root):
  h=hashlib.sha256()
@@ -109,4 +109,4 @@ for name in NAMES:
   assert all(not (icons/s).exists() for s in colors.SLOTS)
   report={'archive':archive.name,'sha256':archive_sha,'colors_checked':len(colors.COLORS),'gtk_path_checks':resolved_checks,'gtk_icons_rendered':rendered_checks,'terminal_menu':'passed','reset_plasma':'passed','restore_previous_theme':'passed','invalid_color':'refused without changes','unrelated_theme':'refused without changes','concurrent_selection':'refused','failure_rollback':'passed','original_themes_and_other_components':'unchanged','uninstall_restores_original_scripts':'passed','personal_documents':'preserved'}
   REPORT.append(report);print(json.dumps(report,ensure_ascii=False),flush=True)
-output=D/('Gruvbox-Cinnamon-Validacao-Cores-'+VERSION+'.json');output.write_text(json.dumps({'date':'2026-10-21','method':'Extract exact final archives, install in fake HOME, real GSettings keyfile backend, explicit GTK icon-theme objects. Active desktop settings never used for writes.','results':REPORT},ensure_ascii=False,indent=2)+'\n');print(output)
+output=D/('Gruvbox-Cinnamon-Validacao-Cores-'+VERSION+'.json');output.write_text(json.dumps({'date':'2026-10-22','method':'Extract exact final archives, install in fake HOME, real GSettings keyfile backend, explicit GTK icon-theme objects. Active desktop settings never used for writes.','results':REPORT},ensure_ascii=False,indent=2)+'\n');print(output)

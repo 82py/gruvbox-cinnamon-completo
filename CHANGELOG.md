@@ -4,6 +4,24 @@
 
 ## English
 
+The theme preserves the user's current list of disabled Nemo extensions, including when applying old profiles or restoring older points. It does not install antivirus software or change antivirus configuration.
+
+### System-icon lifecycle correction — 2026-10-22
+
+- System-color extension v3 releases removed actor subtrees and their signal handlers, and excludes the client-window group. The previous watcher could retain closed-window surfaces.
+- MintUpdate-color extension v2 also releases removed indicator and texture subtrees. Its previous watcher retained replaced texture actors. An isolated regression repeats 25 texture replacements while checking bounded tracking, disconnected signals and preserved icon color.
+- Adds isolated JavaScript lifecycle regressions for removal, reattachment, existing style classes, window-group exclusion and repeated disable. These fixes address the identified retention defects; they do not establish that every reported desktop slowdown is resolved.
+
+### 1.1.0 — 2026-10-22
+
+- Magic Lamp removed after an observed animation exception and a source-less full-screen clone were found in the source desktop. Native animations remain available. / Magic Lamp removido após erro de animação e clone sem origem sobre a tela inteira. Animações nativas preservadas.
+
+- Adds the GTK manager for selective installation, customization, uninstall and restore across 15 components, with English and Portuguese UI and instructions.
+- Adds profiles, dependency checks, confirmation review, dated restore points, rollback, interrupted-operation recovery and a retained offline installer.
+- Keeps current local settings, workspace folders and media references as defaults. Excludes personal media/photo, Radio3 and Magic Lamp from this release; an existing radio instance is preserved.
+- GUI: 51 Python and 14 actor-lifecycle checks passed. The public installer passed an isolated Mint VM install, feature, uninstall and reboot cycle, preserving original files/preferences and workspace documents.
+
+
 ### 1.0.3 — 2026-10-21
 
 - Bilingual documentation, English first, with a visual presentation, actual icon galleries, all 25 folder colors, and independent-workspace/Rain explanations. Named acknowledgments and an “as is” disclaimer follow the vibe-coding note. Installed code and preferences are unchanged by the documentation refresh.
@@ -47,6 +65,22 @@
 ---
 
 ## Português
+
+O tema preserva a lista atual de extensões desativadas do Nemo, inclusive ao aplicar perfis antigos ou restaurar pontos anteriores. Não instala antivírus nem altera sua configuração.
+
+### Correção do ciclo de vida dos ícones de sistema — 2026-10-22
+
+- A extensão de cores de sistema v3 libera subárvores de atores removidas e seus sinais, e exclui o grupo de janelas de aplicativos. O observador anterior podia reter superfícies de janelas fechadas.
+- A extensão de cores do MintUpdate v2 também libera subárvores de indicadores e texturas removidas. O observador anterior retinha atores de texturas substituídas. Uma regressão isolada repete 25 trocas, conferindo contagem limitada, sinais desconectados e cor preservada.
+- Inclui regressões JavaScript isoladas para remoção, reconexão, classes de estilo preexistentes, exclusão das janelas e desativação repetida. Corrige as retenções identificadas; não comprova a resolução de todas as lentidões relatadas.
+
+### 1.1.0 — 2026-10-22
+
+- Inclui o gerenciador GTK para instalação, personalização, remoção e restauração seletivas de 15 componentes, com interface e instruções em inglês e português.
+- Inclui perfis, conferência de dependências, revisão antes de aplicar, pontos datados, reversão de falhas, recuperação de operações interrompidas e cópia offline do instalador.
+- Mantém valores atuais, pastas e referências de mídia como padrão. Não distribui mídia/foto pessoal nem Radio3 ou Magic Lamp; preserva uma instância de rádio existente.
+- GUI: 51 testes Python e 14 testes de ciclo de vida dos elementos aprovados. O instalador público passou num ciclo de instalação, recursos, remoção e reinicializações em VM Mint isolada, preservando arquivos/preferências anteriores e documentos.
+
 
 ### 1.0.3 — 21/10/2026
 

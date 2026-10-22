@@ -8,7 +8,6 @@ COMPONENTS={
  'themes':('Temas de janelas e aplicativos','Desktop and application themes',()),
  'cursor':('Cursor','Cursor',()),
  'panel':('Painel, menu e favoritos','Panel, menu and favorites',()),
- 'effects':('Efeito Magic Lamp','Magic Lamp effect',()),
  'photo':('Atualização da foto de perfil','Profile photo refresh',()),
  'workspaces':('Espaços, arquivos e fundos independentes','Independent workspaces, files and backgrounds',()),
  'rain':('Rain e fundos em vídeo','Rain and video wallpapers',('workspaces',)),
@@ -20,7 +19,7 @@ COMPONENTS={
  'autostart':('Inicialização opcional de aplicativos','Optional application autostart',()),
  'preferences':('Fontes, atalhos, gestos e outras preferências','Fonts, shortcuts, gestures and other preferences',()),
 }
-EXTENSIONS={'effects':['CinnamonMagicLamp@klangman'],'photo':['gruvbox-profile-photo@gruvbox-cinnamon'], 'system':['gruvbox-microphone-colors@gruvbox-cinnamon','gruvbox-mintupdate-colors@gruvbox-cinnamon','gruvbox-system-colors@gruvbox-cinnamon']}
+EXTENSIONS={'photo':['gruvbox-profile-photo@gruvbox-cinnamon'], 'system':['gruvbox-microphone-colors@gruvbox-cinnamon','gruvbox-mintupdate-colors@gruvbox-cinnamon','gruvbox-system-colors@gruvbox-cinnamon']}
 AGGREGATE='/org/cinnamon/enabled-extensions'
 def array(raw):
  if raw is None:return []
@@ -46,7 +45,6 @@ def unit_group(target):
  if 'Gruvbox-Plus-Dark' in target:return 'icons'
  if '.icons/' in target:return 'cursor'
  if '.themes/' in target or target in ('.gtkrc-2.0','.config/gtk-3.0/gtk.css','.config/gtk-2.0/gtkfilechooser.ini'):return 'themes'
- if 'MagicLamp' in target:return 'effects'
  if 'profile-photo@' in target:return 'photo'
  if '.var/app/' in target or '/flatpak/overrides/' in target:return 'flatpak'
  if 'terminal' in target or target.endswith('/cool-retro-term.desktop'):return 'terminal'
@@ -71,7 +69,6 @@ def setting_group(key):
  if name in ('enabled-applets','next-applet-id','favorite-apps') or name.startswith(('panel','app-menu','system-icon')):return 'panel'
  if key.startswith('/org/blueman/'):return 'system'
  if key.startswith('/org/nemo/'):return 'nemo'
- if name.startswith('desktop-effects') or name=='window-effect-speed':return 'effects'
  return 'preferences'
 
 def units(root=ROOT):

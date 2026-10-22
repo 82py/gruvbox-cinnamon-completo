@@ -4,6 +4,8 @@
 
 ## English
 
+**Historical audit of the 1.0.x base. Version 1.1.0 adds the GUI and excludes Radio3; see [current validation](../VALIDACAO-GUI.json) and [installation](INSTALAR.md).**
+
 **Historical audit of 1.0.2, dated 2026-10-21.** Version 1.0.3 updates the copy tool and its tests/documentation; see [copy validation](VALIDACAO-COPIA.json). The audit read Cinnamon's loaded components and compared active files with both distribution trees. It did not install the package on the source session; full installation was exercised in a separate VM.
 
 | Active component | Included coverage |
@@ -44,6 +46,8 @@ Install/restore and selector tests use isolated HOME/preferences. Both original 
 ---
 
 ## Português
+
+**Auditoria histórica da base 1.0.x. A versão 1.1.0 inclui a GUI e exclui Radio3; veja a [validação atual](../VALIDACAO-GUI.json) e a [instalação](INSTALAR.md).**
 
 Conferência histórica da revisão 1.0.2. A 1.0.3 atualiza somente o utilitário de cópia e seus testes/documentação; veja VALIDACAO-COPIA.json. A conferência leu o estado do Cinnamon e comparou os arquivos ativos com as duas árvores de distribuição. Nada foi aplicado na sessão real da máquina de origem; a instalação completa foi exercitada em uma VM separada.
 

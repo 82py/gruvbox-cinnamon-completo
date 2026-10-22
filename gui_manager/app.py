@@ -10,7 +10,7 @@ from .engine import Manager,raw
 
 class Window(Gtk.Window):
  def __init__(self,manager=None,profile=None):
-  super().__init__(title='Gruvbox Manager · Pessoal')
+  super().__init__(title='Gruvbox Manager')
   self.manager=manager or Manager();self.profile=profile or default_profile(self.manager.home,self.manager.sandbox)
   if profile is None and self.manager.read_registry()['groups']:self.profile['components']=self.manager.read_registry()['groups']
   self.lang=self.profile.get('language','pt_BR');self.busy=False;self.cancel=threading.Event();self.last_progress=0;self.checks={};self.guard=False;self.snapshot_ids=[]
@@ -37,7 +37,7 @@ class Window(Gtk.Window):
   head=self.box(False);root.pack_start(head,False,False,0)
   head.pack_start(self.label('Gruvbox Manager','title'),True,True,0)
   languages=Gtk.ComboBoxText();languages.append('pt_BR','Português (Brasil)');languages.append('en','English');languages.set_active_id(self.lang);languages.connect('changed',self.language_changed);head.pack_end(languages,False,False,0)
-  self.banner=self.label(self.t('Uso pessoal · Abrir e revisar não altera seu Cinnamon.','Personal use · Opening and reviewing does not change Cinnamon.'),'muted');root.pack_start(self.banner,False,False,0)
+  self.banner=self.label(self.t('Abrir e revisar não altera seu Cinnamon.','Opening and reviewing does not change Cinnamon.'),'muted');root.pack_start(self.banner,False,False,0)
   actionrow=self.box(False);root.pack_start(actionrow,False,False,0)
   actionrow.pack_start(self.label(self.t('Operação','Operation')),False,False,0)
   self.operation=Gtk.ComboBoxText()

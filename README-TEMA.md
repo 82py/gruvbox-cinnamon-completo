@@ -6,6 +6,8 @@
 
 ## English
 
+**Historical reference: theme release 1.0.3. For the current GUI workflow and included components, use the [current README](README.md) and [installation guide](docs/INSTALAR.md).**
+
 A complete Gruvbox desktop setup for **Linux Mint Cinnamon**, with custom icons, a colorful panel, independent workspaces, and video wallpapers.
 
 Created by **Pir ([82py](https://github.com/82py))**, with assistance from **OpenAI Codex**. Based on Gruvbox and the work of the authors credited in [CREDITOS.md](CREDITOS.md).
@@ -112,6 +114,8 @@ The icon pack also builds on work by **Sam Hewitt**, **Andrea Bonanni**, **Gusta
 ---
 
 ## Português
+
+**Referência histórica: versão 1.0.3 do tema. Para o fluxo atual da GUI e seus componentes, use o [README atual](README.md) e o [guia de instalação](docs/INSTALAR.md).**
 
 Uma personalização Gruvbox completa para o **Linux Mint Cinnamon**, com ícones próprios, painel colorido, espaços de trabalho independentes e fundos em vídeo.
 

@@ -30,9 +30,9 @@ for p in sorted(R.rglob('*')):
   files.append((rel,sha))
 if errors:raise SystemExit('\n'.join(errors))
 (R/'SHA256SUMS').write_text(''.join(sha+'  '+rel+'\n' for rel,sha in files))
-report={'base_theme_version':manifest['version'],'gui_version':(R/'GUI-VERSION').read_text().strip(),'regular_files':len(files),'internal_relative_symlinks':len(links),'installation_units':len(manifest['units']),'settings':len(json.loads((R/'settings.json').read_text())),'exclusions_verified':['videos','wallpaper-images-not-copied','personal-photo-by-hash','personal-documents-not-copied','fixed-personal-home-paths','Radio3-payload-removed'],'gui_validation':json.loads((R/'VALIDACAO-GUI.json').read_text()),'links':links}
+report={'version':manifest['version'],'base_theme_version':manifest.get('base_theme_version',manifest['version']),'gui_version':(R/'GUI-VERSION').read_text().strip(),'regular_files':len(files),'internal_relative_symlinks':len(links),'installation_units':len(manifest['units']),'settings':len(json.loads((R/'settings.json').read_text())),'exclusions_verified':['videos','wallpaper-images-not-copied','personal-photo-by-hash','personal-documents-not-copied','fixed-personal-home-paths','Radio3-payload-removed'],'gui_validation':json.loads((R/'VALIDACAO-GUI.json').read_text()),'links':links}
 (R/'RELATORIO-VALIDACAO.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
-archive=R.parent/'Gruvbox-Cinnamon-GUI-Pessoal-0.1.0.tar.gz'
+archive=R.parent/('Gruvbox-Cinnamon-GitHub-'+manifest['version']+'.tar.gz')
 def clean(info):
  if '.git' in Path(info.name).parts or '__pycache__' in Path(info.name).parts:return None
  info.uid=0;info.gid=0;info.uname='';info.gname=''

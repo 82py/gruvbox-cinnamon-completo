@@ -4,6 +4,8 @@
 
 ## English
 
+Radio3 and Magic Lamp are excluded from the current GUI build. Their authors remain credited below for the base release and project history.
+
 - **Pir ([82py](https://github.com/82py))** — personalization concept, visual direction, artwork/color choices, icon review and approval, desired integration, and Cinnamon usage tests.
 - **OpenAI Codex** — assistance creating/reviewing customized icons, investigating rendering, implementing integrations, portability, documentation, and packaging, under Pir's direction and approval.
 - **Pavel Pertsev (morhetz)** — creator of [Gruvbox](https://github.com/morhetz/gruvbox), the project's color foundation; upstream declares MIT/X11.
@@ -53,6 +55,8 @@ The terminal appearance profile is Pir's configuration for cool-retro-term (**Sw
 ---
 
 ## Português
+
+Radio3 e Magic Lamp estão excluídos da GUI atual. Seus autores permanecem creditados abaixo pela versão base e pelo histórico do projeto.
 
 - **Pir ([82py](https://github.com/82py))** — concepção da personalização, direção visual, escolhas de desenhos e cores, revisão e aprovação dos ícones, integração desejada e testes de uso no Cinnamon.
 - **OpenAI Codex** — assistência na criação e revisão dos ícones personalizados, investigação da renderização, implementação das integrações, portabilidade, documentação e empacotamento, sob orientação e aprovação de Pir.

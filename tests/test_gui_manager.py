@@ -16,7 +16,7 @@ class ManagerTests(unittest.TestCase):
  def choose(self,*groups):
   profile=copy.deepcopy(self.profile);profile['components']=list(groups);return profile
  def test_catalog_covers_every_unit(self):
-  self.assertEqual(len(units()),80)
+  self.assertEqual(len(units()),78)
   self.assertEqual(closure(['rain']),{'rain','workspaces'})
  def test_radio_is_excluded_and_existing_instance_preserved(self):
   self.assertNotIn('radio',COMPONENTS)
@@ -47,9 +47,14 @@ class ManagerTests(unittest.TestCase):
   self.manager.apply(self.choose('cursor','photo'));self.manager.uninstall(['cursor'])
   self.assertEqual(self.manager.read_registry()['groups'],['photo']);self.assertTrue((self.home/'.local/share/cinnamon/extensions/gruvbox-profile-photo@gruvbox-cinnamon').exists());self.assertIn('gruvbox-profile-photo@gruvbox-cinnamon',array(self.manager.value(AGGREGATE)))
  def test_partial_restore_preserves_later_unrelated_extension(self):
-  point=self.manager.apply(self.choose('photo'));self.manager.apply(self.choose('effects'))
+  point=self.manager.apply(self.choose('photo'));key=AGGREGATE
+  self.manager.set(key,raw(array(self.manager.value(key))+['external-animation@example.invalid']))
   self.manager.restore_point(point,['photo'])
-  self.assertEqual(self.manager.read_registry()['groups'],['effects']);self.assertIn('CinnamonMagicLamp@klangman',array(self.manager.value(AGGREGATE)));self.assertNotIn('gruvbox-profile-photo@gruvbox-cinnamon',array(self.manager.value(AGGREGATE)))
+  self.assertEqual(self.manager.read_registry()['groups'],[]);self.assertIn('external-animation@example.invalid',array(self.manager.value(key)));self.assertNotIn('gruvbox-profile-photo@gruvbox-cinnamon',array(self.manager.value(key)))
+ def test_magic_lamp_is_not_distributed_or_enabled_by_preset(self):
+  self.assertNotIn('effects',COMPONENTS)
+  self.assertFalse(any('MagicLamp' in u['target'] for u,g in units()))
+  self.assertFalse(any('MagicLamp' in x for x in array(self.profile['settings'][AGGREGATE])))
  def test_failure_rolls_back(self):
   original=self.fake.read_bytes();write=self.manager._write;calls=0
   def fail(entry):

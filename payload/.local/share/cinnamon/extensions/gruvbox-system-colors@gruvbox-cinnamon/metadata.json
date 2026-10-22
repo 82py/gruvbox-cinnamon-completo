@@ -2,7 +2,7 @@
   "uuid": "gruvbox-system-colors@gruvbox-cinnamon",
   "name": "Gruvbox — cobertura dos ícones de sistema",
   "description": "Preserva cores nos nomes explícitos de ícones do sistema e nos itens recoloridos do Iniciar, incluindo GIcons de aplicativos e lugares; sem modificar applets.",
-  "version": 2,
+  "version": 3,
   "cinnamon-version": [
     "6.6"
   ]

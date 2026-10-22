@@ -15,12 +15,28 @@ function synchronize(actor, r) {
     else actor.remove_style_class_name(TAG);
 }
 
+function unwatch(actor, restoreStyle=true) {
+    const r=tracked.get(actor);
+    if (!r) return;
+    const children=actor.get_children();
+    tracked.delete(actor);
+    for (const id of [r.added,r.removed,r.destroyed,r.changed,r.giconChanged]) {
+        if (id) actor.disconnect(id);
+    }
+    for (const child of children) unwatch(child,restoreStyle);
+    if (restoreStyle && actor instanceof St.Icon && r.owned)
+        actor.remove_style_class_name(TAG);
+}
+
 function watch(actor) {
-    if (!started || tracked.has(actor)) return;
-    const r={owned: !(actor instanceof St.Icon) || !actor.has_style_class_name(TAG), added:0, destroyed:0, changed:0, giconChanged:0};
+    // Client-window surfaces never need system-icon styling. Keeping references
+    // to them prevents their release after the window leaves the scene graph.
+    if (!started || actor===global.window_group || tracked.has(actor)) return;
+    const r={owned: !(actor instanceof St.Icon) || !actor.has_style_class_name(TAG), added:0, removed:0, destroyed:0, changed:0, giconChanged:0};
     tracked.set(actor,r);
     r.added=actor.connect('actor-added', (_parent,child) => watch(child));
-    r.destroyed=actor.connect('destroy', () => tracked.delete(actor));
+    r.removed=actor.connect('actor-removed', (_parent,child) => unwatch(child));
+    r.destroyed=actor.connect('destroy', () => unwatch(actor,false));
     if (actor instanceof St.Icon) {
         r.changed=actor.connect('notify::icon-name', () => synchronize(actor,r));
         r.giconChanged=actor.connect('notify::gicon', () => synchronize(actor,r));
@@ -36,12 +52,6 @@ function enable() {
 }
 function disable() {
     started=false;
-    for (const [a,r] of tracked) {
-        if (r.added) a.disconnect(r.added);
-        if (r.destroyed) a.disconnect(r.destroyed);
-        if (r.changed) a.disconnect(r.changed);
-        if (r.giconChanged) a.disconnect(r.giconChanged);
-        if (a instanceof St.Icon && r.owned) a.remove_style_class_name(TAG);
-    }
+    for (const actor of [...tracked.keys()]) unwatch(actor);
     tracked.clear();
 }

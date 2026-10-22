@@ -4,6 +4,8 @@
 
 ## English
 
+**The updated 1.1.0 GUI installer completed a separate full install, feature, uninstall and reboot cycle in an isolated Mint VM, including the 2026-10-22 actor cleanup and Nemo preference protection. See the [GUI report](../VALIDACAO-GUI.json). The 1.0.2 report below is historical.**
+
 **Historical validation of version 1.0.2, 2026-10-21.** QEMU/KVM VM: 4 vCPUs, 8 GiB RAM, and a 40 GiB virtual disk. Linux Mint 22.3 was installed from the official Cinnamon ISO after checking SHA-256 and the official signing-key signature. Guest versions: Cinnamon 6.6.4, Nemo 6.6.3, Muffin 6.6.1, X11.
 
 No physical host disk, home folder, clipboard, or audio device was shared. Networking used NAT and a test SSH port bound only to 127.0.0.1. Private keys, credentials, and VM disks are not distributed.
@@ -39,6 +41,8 @@ References: [official Mint 22.3 ISO](https://www.linuxmint.com/edition.php?id=32
 ---
 
 ## Português
+
+**O instalador GUI 1.1.0 atualizado completou um ciclo separado de instalação, recursos, remoção e reinicializações numa VM Mint isolada, incluindo as correções de 22/10/2026 para liberação de elementos e preservação da preferência do Nemo. Veja o [relatório da GUI](../VALIDACAO-GUI.json). O relatório da versão 1.0.2 abaixo é histórico.**
 
 Versão 1.0.2, 21/10/2026. VM QEMU/KVM com 4 vCPUs, 8 GiB de RAM e disco virtual de 40 GiB. Linux Mint 22.3 instalado a partir da ISO oficial Cinnamon; SHA-256 e assinatura da chave oficial foram verificados. Cinnamon 6.6.4, Nemo 6.6.3, Muffin 6.6.1 e X11.
 

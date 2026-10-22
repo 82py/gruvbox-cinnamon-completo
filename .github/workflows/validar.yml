@@ -8,10 +8,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 tests/test_public.py
+      - run: node tests/test_system_colors_lifecycle.js
+      - run: node tests/test_mintupdate_colors_lifecycle.js
       - run: python3 scripts/verificar-documentacao.py
       - run: python3 tests/test_install.py
       - run: python3 tests/test_audit_additions.py
-      - run: sudo apt-get update && sudo apt-get install -y python3-gi python3-xlib gir1.2-gtk-3.0 gir1.2-pango-1.0 xvfb
+      - run: sudo apt-get update && sudo apt-get install -y python3-gi python3-gi-cairo python3-xlib gir1.2-gtk-3.0 gir1.2-pango-1.0 xvfb
+      - run: /usr/bin/python3 tests/test_gui_manager.py
+      - run: xvfb-run -a /usr/bin/python3 tests/test_gui_manager_gtk.py
+      - run: /usr/bin/python3 tests/test_nemo_extension_preferences.py
       - run: /usr/bin/python3 tests/test_runtime.py
       - run: xvfb-run -a /usr/bin/python3 tests/test_copy_dialog.py
       - run: bash -n escolher-cor-pastas.sh folders-color-chooser.sh

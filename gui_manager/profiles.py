@@ -2,6 +2,10 @@ from pathlib import Path
 import copy,json,os,shlex,subprocess
 from .catalog import ROOT,COMPONENTS
 
+def theme_settings(values):
+ # Ignore this external preference even when importing a pre-fix profile.
+ return {key:value for key,value in values.items() if key!='/org/nemo/plugins/disabled-extensions'}
+
 def get(key,sandbox=False,home=None):
  if sandbox:
   p=Path(home)/'fake-dconf.json';return json.loads(p.read_text()).get(key) if p.is_file() else None
@@ -26,7 +30,7 @@ def existing_workspace(home):
 
 def default_profile(home=None,sandbox=False):
  home=Path.home() if home is None else Path(home)
- values=json.loads((ROOT/'settings.json').read_text())
+ values=theme_settings(json.loads((ROOT/'settings.json').read_text()))
  # On the personal machine, live values are the default; a test account is isolated.
  if not sandbox:
   for key in list(values):
@@ -96,7 +100,7 @@ def validate(profile):
  return selected
 
 def load(path):
- p=json.loads(Path(path).read_text());validate(p);return p
+ p=json.loads(Path(path).read_text());validate(p);p['settings']=theme_settings(p['settings']);return p
 
 def export(path,profile):
  validate(profile);path=Path(path);tmp=path.with_name(path.name+'.tmp');tmp.write_text(json.dumps(profile,ensure_ascii=False,indent=2)+'\n');tmp.chmod(0o600);os.replace(tmp,path)

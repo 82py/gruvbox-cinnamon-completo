@@ -21,11 +21,14 @@ class Manager:
   if not sandbox and self.home!=Path.home().resolve():raise ValueError('Não é permitido operar em outra conta')
   self.state=self.home/'.local/state/gruvbox-manager';self.registry=self.state/'installed.json';self.progress=progress or (lambda message:None)
  def read_registry(self):
-  return json.loads(self.registry.read_text()) if self.registry.is_file() else {'schema':1,'groups':[],'files':{},'settings':{},'shortcuts':{}}
+  data=json.loads(self.registry.read_text()) if self.registry.is_file() else {'schema':1,'groups':[],'files':{},'settings':{},'shortcuts':{}}
+  data['settings']=legacy.managed_settings(data['settings'])
+  return data
  def save(self,path,value):legacy.save(path,value)
  def target(self,rel):return legacy.safe(self.home,rel)
  def value(self,key):return get(key,self.sandbox,self.home)
  def set(self,key,value):
+  if not legacy.manages_setting(key):return
   if self.sandbox:
    p=self.home/'fake-dconf.json';data=json.loads(p.read_text()) if p.is_file() else {}
    if value is None:data.pop(key,None)
@@ -83,7 +86,7 @@ class Manager:
     files.append(self._entry(unit['target'],group,text=self.target(unit['target']).read_text()))
    else:
     files.append(self._entry(unit['target'],group,source=str(source),merge_ini=unit.get('merge_ini',False),merge_menu=unit.get('merge_menu',False)))
-  for key,value in profile['settings'].items():
+  for key,value in legacy.managed_settings(profile['settings']).items():
    group=setting_group(key)
    if group in selected and key not in ('/org/cinnamon/desktop/keybindings/custom-list','/org/cinnamon/enabled-applets') and '/custom-keybindings/' not in key:
     settings[key]={'group':group,'value':self.render(value)}
@@ -197,6 +200,7 @@ class Manager:
  def preview(self,plan):
   return {'components':plan['groups'],'files':len(plan['files']),'settings':len(plan['settings']),'new_directories':plan['directories'],'targets':[{'path':str(self.target(e['target'])),'component':e['group'],'exists':legacy.exists(self.target(e['target']))} for e in plan['files']],'dependencies_added':sorted(set(plan['groups'])-set(plan['profile']['components']))}
  def _snapshot(self,entries,settings,groups,action):
+  settings=legacy.managed_settings(settings)
   point_id=stamp();path=self.state/'points'/point_id;path.mkdir(parents=True)
   runtime={'workspace_running':False,'rain_tray_running':False}
   if not self.sandbox:
@@ -251,7 +255,7 @@ class Manager:
    if e['group'] in groups:
     entries.append(self._entry(e['target'],e['group'],source=str(self._blob(point['id'],e['backup']))) if e['backup'] else self._entry(e['target'],e['group'],restore_none=True))
   settings={k:copy.deepcopy(v) for k,v in point['settings'].items() if v['group'] in groups or v['group'] in ('aggregate','shortcuts','radio_aggregate')}
-  return entries,settings
+  return entries,legacy.managed_settings(settings)
  def _rollback(self,point):
   entries,settings=self._restore_entries(point,set(point['groups'])|{'core'})
   for e in reversed(entries):self._write(e)
@@ -448,6 +452,7 @@ class Manager:
    if e['group'] in groups and target not in known and target not in previous['files']:entries.append(self._entry(target,e['group'],restore_none=True))
   return self._execute_restore(entries,settings,groups,current,previous)
  def _execute_restore(self,entries,settings,groups,reg,previous):
+  settings=legacy.managed_settings(settings)
   with self.lock():
    undo=self._snapshot(entries,settings,groups,'restore' if previous is not None else 'uninstall');undo['status']='applying';self.save(self.state/'points'/undo['id']/'point.json',undo)
    try:

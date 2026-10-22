@@ -1,10 +1,11 @@
 {
+  "version": "1.1.0",
   "base_theme_version": "1.0.3",
-  "gui_version": "0.1.0-personal",
-  "regular_files": 27717,
+  "gui_version": "1.1.0",
+  "regular_files": 27702,
   "internal_relative_symlinks": 25224,
-  "installation_units": 80,
-  "settings": 936,
+  "installation_units": 78,
+  "settings": 935,
   "exclusions_verified": [
     "videos",
     "wallpaper-images-not-copied",
@@ -14,25 +15,25 @@
     "Radio3-payload-removed"
   ],
   "gui_validation": {
-    "gui_version": "0.1.0-personal",
+    "gui_version": "1.1.0",
     "base_theme_version": "1.0.3",
     "status": "passed",
-    "publication": "local personal build; not published",
+    "publication": "Public GUI release",
     "radio": "excluded from GUI, payload and new panel defaults; existing enabled instance preserved",
     "automated_tests": {
-      "gui_engine": 24,
-      "gtk_interface": 5,
-      "workspace_runtime": 3,
-      "copy_dialog": 4,
-      "syntax_manifest_and_safe_paths": 5
+      "python_regression_suite": "51 passed on 2026-10-22",
+      "system_color_actor_lifecycle": "7 passed on 2026-10-22",
+      "mintupdate_actor_lifecycle": "7 passed on 2026-10-22",
+      "nemo_extension_preference_protection": "included in Python regression suite"
     },
     "virtual_machine": {
+      "scope": "The 1.1.0 public TAR.GZ with the 2026-10-22 actor cleanup and Nemo preference protection was transferred by SSH and verified by SHA-256 before extraction.",
       "environment": "Linux Mint 22.3; Cinnamon 6.6.4; Nemo 6.6.3; Muffin 6.6.1; X11",
       "isolation": "QEMU/KVM separate disk; no host folders, clipboard or media shared",
-      "installation": "16 components; 14 applets and 5 extensions loaded",
+      "installation": "15 components; 14 applets and 4 extensions loaded",
       "partial_restore": "cursor uninstall and point restoration passed",
       "after_reboot": "Rain infinite loop, volume, mute, workspace pause, folder color switch/restore and GUI launch passed",
-      "uninstall": "all 16 components removed using retained installer, with extracted source absent",
+      "uninstall": "all 15 components removed using retained installer, with extracted source absent",
       "comparison_after_uninstall": {
         "changed_managed_paths": [],
         "changed_original_settings": [],
@@ -43,12 +44,13 @@
       "documents": "files created both before installation and afterwards inside workspace folders preserved"
     },
     "limits": [
+      "The exact updated TAR.GZ completed a full VM install, post-install reboot, feature check, uninstall and post-uninstall reboot cycle. The graphical interface was opened in the VM.",
       "Physical GPU, printer, Bluetooth and Wi-Fi hardware were not exercised in the VM.",
       "Only the specified Mint/Cinnamon X11 versions were validated.",
       "Administrative dependency installation was not run on the personal host.",
-      "Personal media, profile photo, profiles and backups are not bundled.",
-      "This is a personal GUI release, separate from the published stable theme."
-    ]
+      "Personal media, profile photo, profiles and backups are not bundled."
+    ],
+    "public_release_changes": "Versioning, bilingual documentation, launcher titles, read-only CLI check and CI; Radio3 requirements removed from both installer helper copies; actor cleanup and Nemo preference protection included in the exact VM-tested archive."
   },
   "links": [
     {

@@ -5,7 +5,10 @@ import argparse,datetime,hashlib,json,os,re,shutil,subprocess,sys,tempfile,time,
 import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 PACKAGES=['cinnamon','nemo','muffin','xdg-user-dirs','python3-xlib','mpv']
-COMMANDS=['dconf','gsettings','nemo','nemo-desktop','mpv','ffprobe','ffmpeg','socat','wmctrl','xterm','zenity','systemd-run','notify-send','xdg-user-dir','make','cc','yad','wget','pacmd','sox','at','ffmpegthumbnailer','yt-dlp']
+COMMANDS=['dconf','gsettings','nemo','nemo-desktop','mpv','ffprobe','ffmpeg','socat','wmctrl','xterm','zenity','systemd-run','notify-send','xdg-user-dir','make','cc']
+# This external extension list belongs to the user, including in older backups.
+def manages_setting(key):return key!='/org/nemo/plugins/disabled-extensions'
+def managed_settings(values):return {key:value for key,value in values.items() if manages_setting(key)}
 def run(*args,**kw):return subprocess.check_output(args,text=True,stderr=subprocess.PIPE,**kw).strip()
 def save(p,obj):
  p.parent.mkdir(parents=True,exist_ok=True);t=p.with_name(p.name+'.tmp');t.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n');os.replace(t,p)
@@ -68,6 +71,7 @@ class Installer:
   if self.sandbox:return json.loads((self.home/'fake-dconf.json').read_text()).get(key) if (self.home/'fake-dconf.json').exists() else None
   return run('dconf','read',key) or None
  def set(self,key,value):
+  if not manages_setting(key):return
   if self.sandbox:
    p=self.home/'fake-dconf.json';d=json.loads(p.read_text()) if p.exists() else {}
    if value is None:d.pop(key,None)
@@ -81,18 +85,16 @@ class Installer:
   if self.sandbox:return
   if os.geteuid()==0:raise RuntimeError('Execute como usuário comum, sem sudo.')
   if self.home!=Path.home().resolve():raise RuntimeError('--home alternativo somente com --sandbox.')
-  if os.environ.get('XDG_SESSION_TYPE')!='x11' or 'cinnamon' not in os.environ.get('XDG_CURRENT_DESKTOP','').lower():raise RuntimeError('Requer sessão Cinnamon X11. Ubuntu GNOME/Wayland não é compatível com esta versão.')
+  if os.environ.get('XDG_SESSION_TYPE')!='x11' or 'cinnamon' not in os.environ.get('XDG_CURRENT_DESKTOP','').lower():raise RuntimeError('Ambiente testado: Cinnamon 6.6.x em X11; outros ambientes não foram validados.')
   version=run('cinnamon','--version')
   if not re.search(r'\b6\.6\.',version):raise RuntimeError('Versão validada: Cinnamon 6.6.x; encontrada '+version)
   missing=[c for c in COMMANDS if not shutil.which(c)]
   if missing:raise RuntimeError('Dependências ausentes: '+', '.join(missing)+'. Leia docs/INSTALAR.md.')
   subprocess.run(['cc','-fsyntax-only',str(ROOT/'vendor/xwinwrap/xwinwrap.c')],check=True)
   subprocess.run(['/usr/bin/python3','-c','import gi, Xlib, PIL; gi.require_version("Gtk","3.0"); from gi.repository import Gtk,Gio,GdkPixbuf'],check=True)
-  for required in ['/usr/share/doc/libsox-fmt-all/copyright','/usr/lib/python3/dist-packages/polib.py','/usr/lib/mpv-mpris/mpris.so','/usr/share/doc/gir1.2-soup-3.0/copyright']:
-   if not Path(required).is_file():raise RuntimeError('Dependência da Radio3 ausente: '+required+'. Execute o instalador de dependências.')
   # Validate all GVariants before any installation write.
   from gi.repository import GLib
-  for key,value in json.loads((ROOT/'settings.json').read_text()).items():GLib.Variant.parse(None,self.render(value),None,None)
+  for key,value in managed_settings(json.loads((ROOT/'settings.json').read_text())).items():GLib.Variant.parse(None,self.render(value),None,None)
   if '6.6.' not in run('nemo','--version'):raise RuntimeError('Nemo 6.6.x necessário para a separação dos espaços.')
  def put(self,rel,src=None,text=None,symlink=None):
   dest=safe(self.home,rel);backup=self.state/'backup'/str(len(self.data['files']))
@@ -122,7 +124,7 @@ class Installer:
   manifest=json.loads((ROOT/'manifest.json').read_text())
   missing=[u['source'] for u in manifest['units'] if not (ROOT/u['source']).exists() and u['target']!='.local/bin/xwinwrap']
   if missing:raise RuntimeError('Componentes locais ausentes: '+', '.join(missing)+'. Consulte docs/PUBLICAR.md; não instale uma distribuição incompleta.')
-  values=json.loads((ROOT/'settings.json').read_text())
+  values=managed_settings(json.loads((ROOT/'settings.json').read_text()))
   original_settings={key:self.get(key) for key in values}
   self.data={'version':manifest['version'],'sandbox':self.sandbox,'status':'installing','files':[],'settings':original_settings,'created':datetime.datetime.now().isoformat()};self.checkpoint()
   try:
@@ -182,7 +184,7 @@ class Installer:
     if not src or self.sandbox:continue
     s=src.read_text();s=re.sub(r'^Icon(?:\[[^\]]+\])?=.*$',lambda m:'Icon='+icon if m[0].startswith('Icon=') else m[0],s,flags=re.M)
     self.put(rel,text=s)
-   values=json.loads((ROOT/'settings.json').read_text())
+   values=managed_settings(json.loads((ROOT/'settings.json').read_text()))
    for key in sorted(values,key=lambda k:k.endswith('enabled-extensions')):
     self.set(key,self.render(values[key]))
    self.data['status']='installed';self.checkpoint()
@@ -244,7 +246,7 @@ class Installer:
     copy(dest,recovery/e['target'])
    remove(dest)
    if e['backup']:copy(self.state/e['backup'],dest)
-  for key in sorted(self.data['settings'],key=lambda k:(k.startswith('/org/gnome/desktop/interface/'),k)):
+  for key in sorted(managed_settings(self.data['settings']),key=lambda k:(k.startswith('/org/gnome/desktop/interface/'),k)):
    self.set(key,self.data['settings'][key])
   if not self.sandbox:
    time.sleep(.4)

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.3",
+  "version": "1.1.0",
   "tested": {
     "distribution": "Linux Mint 22.3",
     "cinnamon": "6.6",
@@ -39,11 +39,6 @@
     {
       "source": "payload/.themes/Mint-Y",
       "target": ".themes/Mint-Y",
-      "local": false
-    },
-    {
-      "source": "payload/.local/share/cinnamon/extensions/CinnamonMagicLamp@klangman",
-      "target": ".local/share/cinnamon/extensions/CinnamonMagicLamp@klangman",
       "local": false
     },
     {
@@ -94,11 +89,6 @@
     {
       "source": "payload/.config/cinnamon/spices/notifications@cinnamon.org/notifications@cinnamon.org.json",
       "target": ".config/cinnamon/spices/notifications@cinnamon.org/notifications@cinnamon.org.json",
-      "local": false
-    },
-    {
-      "source": "payload/.config/cinnamon/spices/CinnamonMagicLamp@klangman/CinnamonMagicLamp@klangman.json",
-      "target": ".config/cinnamon/spices/CinnamonMagicLamp@klangman/CinnamonMagicLamp@klangman.json",
       "local": false
     },
     {
@@ -411,5 +401,7 @@
       "target": ".local/share/applications/Relax.desktop",
       "local": false
     }
-  ]
+  ],
+  "base_theme_version": "1.0.3",
+  "gui_version": "1.1.0"
 }
