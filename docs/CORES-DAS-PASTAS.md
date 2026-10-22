@@ -1,5 +1,9 @@
 # Cor das pastas
 
+![As 25 cores de pastas disponíveis no seletor Gruvbox](imagens/folder-colors.png)
+
+A imagem acima mostra os SVGs reais distribuídos no pacote. Os nomes em inglês correspondem às opções do seletor e do comando `--color`; `plasma` é o padrão original. [Abrir a imagem em tamanho completo](imagens/folder-colors.png).
+
 Depois de instalar o pacote, abra “Escolher cor das pastas Gruvbox” no Iniciar ou execute `bash "$HOME/escolher-cor-pastas.sh"`. Os dois arquivos SH também acompanham a raiz do pacote. Antes da instalação, a listagem e a ajuda funcionam, mas uma troca é recusada: isso impede alterações acidentais no tema do computador de montagem.
 
 Há 25 cores, opção 0 para o padrão upstream plasma e opção r para restaurar a aparência anterior ao uso do seletor. O comando equivalente é `bash "$HOME/folders-color-chooser.sh" -c blue`; `-C` seleciona plasma e `--restore` devolve a aparência anterior.
