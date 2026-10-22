@@ -1,57 +1,119 @@
 # Gruvbox Cinnamon Completo
 
-Personalização organizada por **Pir ([82py](https://github.com/82py))**, com assistência do **OpenAI Codex** na criação e revisão de ícones, integração, documentação e empacotamento.
+[English](#english) · [Português](#português)
 
-Versão 1.0.3 · retrato da configuração ativa em 21/10/2026 · Linux Mint 22.3, Cinnamon 6.6 / Nemo 6.6, sessão X11.
+## English
 
-Inclui Relax, o perfil visual isolado do terminal, as correções de fontes por aplicativo Flatpak e o tema Gruvbox Plus Dark personalizado, a variante Gruvbox Sistema Colorido, as categorias e indicadores coloridos, temas visuais, cursor, layout do painel e menus, Magic Lamp, Radio3, extensões próprias, ações do Nemo, Rain completo e quatro espaços com pastas e fundos independentes.
+A complete Gruvbox desktop setup for **Linux Mint Cinnamon**, with custom icons, a colorful panel, independent workspaces, and video wallpapers.
 
-**Sem vídeos, imagens de fundo, foto de perfil ou documentos pessoais.** O primeiro acesso usa fundo sólido Gruvbox; cada pessoa escolhe suas mídias. Aplicativos de terceiros não são instalados pelo tema: seus ícones são fornecidos e os atalhos existentes recebem as associações correspondentes.
+Created by **Pir ([82py](https://github.com/82py))**, with assistance from **OpenAI Codex**. Based on Gruvbox and the work of the authors credited in [CREDITOS.md](CREDITOS.md).
 
-## Usar a cópia completa
+**Current release:** [1.0.3](https://github.com/82py/gruvbox-cinnamon-completo/releases/tag/v1.0.3) · **Target:** Linux Mint 22.3, Cinnamon/Nemo 6.6, X11.
 
-Baixe o TAR.GZ e sua assinatura SHA-256 em [Releases](https://github.com/82py/gruvbox-cinnamon-completo/releases). Prefira esse arquivo ao ZIP automático do GitHub, para preservar os links dos ícones. Extraia em uma pasta de sua escolha. Leia [instalação](docs/INSTALAR.md), [restauração](docs/DESINSTALAR.md) e [espaços e Rain](docs/ESPACOS-E-RAIN.md).
+![Menu and panel in the Linux Mint test VM](docs/imagens/menu-gruvbox-vm.png)
+
+### What's included
+
+- Customized Gruvbox Plus Dark application icons, colorful system icons, menu categories, and panel indicators.
+- Desktop themes, cursor, panel and menu layout, Magic Lamp, Radio3, and custom extensions.
+- **Rain:** video wallpapers with tray controls for playback, volume, and mute.
+- Four workspaces with their own folders and backgrounds, plus a tool to copy files between them.
+- A folder color picker, Nemo actions, the Relax fullscreen video launcher, an isolated terminal appearance profile, and font fixes for selected Flatpak apps.
+
+**Personal videos, wallpaper images, profile photos, and documents are not included.** The setup starts with a solid Gruvbox background; you choose your own media. Third-party applications are installed separately.
+
+### Install
+
+Download the **TAR.GZ** and its **SHA-256 checksum file** from [Releases](https://github.com/82py/gruvbox-cinnamon-completo/releases). Use the TAR.GZ rather than GitHub's automatic ZIP to preserve icon symlinks. Extract it and open a terminal in the extracted folder:
 
 ```sh
 bash verificar.sh
 bash instalar.sh
-# Depois: encerrar a sessão e entrar novamente.
-# Para voltar ao estado anterior:
+```
+
+Run as your regular user, then log out and back in. The installer creates backups and does not modify internal Cinnamon or application files. Dependencies are installed separately as described in the [installation guide](docs/INSTALAR.md).
+
+To restore the previous setup:
+
+```sh
 bash desinstalar.sh
 ```
 
-Execute os três comandos como usuário comum. O instalador não baixa dependências nem altera arquivos internos do Cinnamon ou aplicativos. O comando separado de dependências é descrito no guia.
+An existing managed installation must be uninstalled before installing another version. Read the [restoration guide](docs/DESINSTALAR.md) first. Detailed guides are currently in Portuguese: [workspaces and Rain](docs/ESPACOS-E-RAIN.md), [folder colors](docs/CORES-DAS-PASTAS.md).
 
-## Cor das pastas
+### Compatibility and testing
 
-O seletor em português e seu script auxiliar acompanham a raiz do pacote e são instalados na pasta pessoal. Depois da instalação, também aparecem no Iniciar. Veja [cores das pastas](docs/CORES-DAS-PASTAS.md).
+This release targets **Cinnamon 6.6 on X11**. It is not an installer for Ubuntu GNOME or Wayland; see the [Ubuntu adaptation assessment](docs/UBUNTU.md).
 
-## Publicar e compatibilidade
+- **1.0.3:** 22 automated tests passed, including GTK regression tests for repeated clicks in the file-copy dialog. Both final archives were also checked for folder colors and icon resolution.
+- **1.0.2:** full installation, feature checks, uninstallation, and reboots were tested in a Linux Mint 22.3 QEMU/KVM VM. The final comparison found no differences in 115 installation destinations and 936 preferences; test documents were preserved.
 
-A estrutura pública inclui os componentes visuais, código, créditos e licenças recuperadas. O binário xwinwrap da máquina original fica separado; a instalação pública compila o fonte incluído. Consulte [publicação](docs/PUBLICAR.md), [créditos](CREDITOS.md) e [proveniência](docs/PROVENIENCIA.json). Repositório: [82py/gruvbox-cinnamon-completo](https://github.com/82py/gruvbox-cinnamon-completo).
+The full VM cycle was not repeated for 1.0.3. See the [VM report](docs/VALIDACAO-VM.md), [copy-dialog tests](tests/test_copy_dialog.py), [coverage audit](docs/AUDITORIA-FINAL.md), and [GitHub Actions](https://github.com/82py/gruvbox-cinnamon-completo/actions).
 
-[Análise de Ubuntu](docs/UBUNTU.md): adaptação possível, mas esta versão não é um instalador para GNOME/Wayland. Nenhuma adaptação foi aplicada.
+### Source, credits, and licenses
 
-## Estrutura
+`payload/` contains the portable desktop components; `scripts/` contains the installation and restoration tools; `tests/` contains the automated checks. The public installer builds xwinwrap from the source included in `vendor/xwinwrap/`.
 
-- `payload/`: ícones, temas com licença conhecida, extensões, applet e código portátil.
-- `assets-locais/`: cópias locais separadas, somente o binário xwinwrap da máquina de origem; excluídas do Git.
-- `vendor/xwinwrap/`: fonte original com revisão fixa e aviso de licença no cabeçalho.
-- `scripts/manage.py`: instalação com registro de alterações, cópias de segurança e restauração.
-- `settings.json`, `app-icons.json`, `manifest.json`: configuração e inventário portáteis.
-- `LICENSES/`, `CREDITOS.md`: avisos dos projetos de origem.
-- `tests/`, `.github/workflows/`: verificação de instalação e desinstalação isoladas.
+The integration code is licensed under **GPL-3.0-or-later**. Third-party components retain their own licenses and attribution. See [credits](CREDITOS.md), [license notices](LICENSES/), [provenance](docs/PROVENIENCIA.json), and [contributing](CONTRIBUTING.md).
 
-O código de integração deste projeto está sob GPL-3.0-or-later. Cada componente de terceiros mantém sua própria licença; a licença da raiz não substitui os avisos dos autores originais.
+### Made with vibe coding
 
-## Auditoria final
+This project grew out of a personal desktop experiment, built through **vibe coding**. I brought the ideas, chose the look, and reviewed the results; OpenAI Codex helped turn that back-and-forth into icons, scripts, integrations, documentation, and a distributable package. The process included trying things in Cinnamon, refining them, and testing installation and restoration. The original projects and their authors remain credited throughout.
 
-A personalização foi comparada com os componentes carregados no Cinnamon: 15 applets, cinco extensões, 180 entradas visíveis no menu e 936 preferências explícitas. Veja [auditoria](docs/AUDITORIA-FINAL.md) e [inventário do menu](docs/MENU-INVENTARIADO.json). `scripts/auditar-desktop.py` repete a comparação somente de leitura.
+---
 
-## Validação em máquina virtual
+## Português
 
-A 1.0.2 foi instalada e desinstalada em Linux Mint 22.3 Cinnamon X11, em VM QEMU/KVM. Os 15 applets e as cinco extensões carregaram; os quatro espaços, fundos locais, Rain e cores das pastas foram exercitados. Após desinstalar e reiniciar, a comparação de 115 destinos e 936 preferências não encontrou diferenças; documentos foram preservados.
+Uma personalização Gruvbox completa para o **Linux Mint Cinnamon**, com ícones próprios, painel colorido, espaços de trabalho independentes e fundos em vídeo.
 
-Veja [método e resultados](docs/VALIDACAO-VM.md) e [relatório estruturado](docs/VALIDACAO-VM.json). A 1.0.3 acrescenta a correção da janela de cópia: uma seleção aberta pelo menu executa uma única operação, fecha ao concluir e envia uma notificação. Cliques repetidos e falhas parciais não repetem os itens já copiados. A correção tem [testes GTK próprios](tests/test_copy_dialog.py) e [relatório](docs/VALIDACAO-COPIA.json); a instalação e desinstalação em VM documentadas acima foram realizadas com a 1.0.2.
+Criada por **Pir ([82py](https://github.com/82py))**, com assistência do **OpenAI Codex**. Baseada no Gruvbox e no trabalho dos autores reconhecidos em [CREDITOS.md](CREDITOS.md).
 
-![Menu e painel na máquina virtual](docs/imagens/menu-gruvbox-vm.png)
+**Versão atual:** [1.0.3](https://github.com/82py/gruvbox-cinnamon-completo/releases/tag/v1.0.3) · **Plataforma:** Linux Mint 22.3, Cinnamon/Nemo 6.6, X11.
+
+### O que está incluído
+
+- Ícones de aplicativos Gruvbox Plus Dark personalizados, ícones de sistema coloridos, categorias do menu e indicadores do painel.
+- Temas visuais, cursor, organização do painel e dos menus, Magic Lamp, Radio3 e extensões próprias.
+- **Rain:** fundos em vídeo com controles de reprodução, volume e som na bandeja.
+- Quatro espaços com pastas e fundos próprios, além de uma ferramenta para copiar arquivos entre eles.
+- Seletor de cores das pastas, ações do Nemo, atalho Relax para vídeo em tela cheia, perfil visual isolado do terminal e correções de fontes para determinados aplicativos Flatpak.
+
+**Vídeos, imagens de fundo, foto de perfil e documentos pessoais não acompanham o pacote.** A configuração começa com um fundo sólido Gruvbox; cada pessoa escolhe suas mídias. Aplicativos de terceiros são instalados separadamente.
+
+### Instalação
+
+Baixe o **TAR.GZ** e seu **arquivo de verificação SHA-256** em [Releases](https://github.com/82py/gruvbox-cinnamon-completo/releases). Prefira o TAR.GZ ao ZIP automático do GitHub para preservar os links dos ícones. Extraia e abra um terminal na pasta extraída:
+
+```sh
+bash verificar.sh
+bash instalar.sh
+```
+
+Execute como usuário comum; depois, encerre a sessão e entre novamente. O instalador cria cópias de segurança e não modifica arquivos internos do Cinnamon ou dos aplicativos. As dependências são instaladas separadamente, conforme o [guia de instalação](docs/INSTALAR.md).
+
+Para restaurar a configuração anterior:
+
+```sh
+bash desinstalar.sh
+```
+
+Uma instalação gerenciada anterior precisa ser desinstalada antes de instalar outra versão. Leia primeiro o [guia de restauração](docs/DESINSTALAR.md). Veja também os guias de [espaços e Rain](docs/ESPACOS-E-RAIN.md) e [cores das pastas](docs/CORES-DAS-PASTAS.md).
+
+### Compatibilidade e testes
+
+Esta versão foi preparada para **Cinnamon 6.6 em X11**. Não é um instalador para Ubuntu GNOME ou Wayland; veja a [análise de adaptação para Ubuntu](docs/UBUNTU.md).
+
+- **1.0.3:** 22 testes automatizados aprovados, incluindo testes GTK contra cliques repetidos na janela de cópia. Os dois compactados finais também foram verificados quanto às cores das pastas e à resolução dos ícones.
+- **1.0.2:** instalação completa, recursos, desinstalação e reinicializações testados em uma VM QEMU/KVM com Linux Mint 22.3. A comparação final não encontrou diferenças em 115 destinos de instalação e 936 preferências; os documentos de teste foram preservados.
+
+O ciclo completo de VM não foi repetido para a 1.0.3. Consulte o [relatório da VM](docs/VALIDACAO-VM.md), os [testes da janela de cópia](tests/test_copy_dialog.py), a [auditoria de cobertura](docs/AUDITORIA-FINAL.md) e o [GitHub Actions](https://github.com/82py/gruvbox-cinnamon-completo/actions).
+
+### Código, créditos e licenças
+
+`payload/` reúne os componentes portáteis; `scripts/`, as ferramentas de instalação e restauração; `tests/`, as verificações automatizadas. O instalador público compila o xwinwrap a partir do código incluído em `vendor/xwinwrap/`.
+
+O código de integração usa **GPL-3.0-or-later**. Componentes de terceiros mantêm suas próprias licenças e atribuições. Consulte os [créditos](CREDITOS.md), [avisos de licença](LICENSES/), [registro de origem](docs/PROVENIENCIA.json) e [orientações para contribuir](CONTRIBUTING.md).
+
+### Feito com vibe coding
+
+Este projeto nasceu da vontade de deixar meu desktop com a minha cara e foi construído com **vibe coding**. Eu trouxe as ideias, escolhi a aparência e revisei os resultados; o OpenAI Codex ajudou a transformar essa conversa em ícones, scripts, integrações, documentação e um pacote compartilhável. O processo teve experimentação no Cinnamon, ajustes e testes de instalação e restauração. Os projetos que serviram de base e seus autores continuam reconhecidos nos créditos.
