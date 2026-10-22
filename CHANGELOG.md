@@ -2,7 +2,7 @@
 
 ## 1.0.3 — 21/10/2026
 
-- Documentação dos compactados atualizada: README bilíngue (inglês primeiro), apresentação visual com ícones reais, catálogo das 25 cores de pastas e agradecimentos nominais após a nota de vibe coding. Código instalado e preferências permanecem iguais.
+- Documentação dos compactados atualizada: README bilíngue (inglês primeiro), apresentação visual com ícones reais, catálogo das 25 cores de pastas e agradecimentos nominais e aviso de responsabilidade após a nota de vibe coding. Código instalado e preferências permanecem iguais.
 
 - A janela “Copiar para outra área…” aberta pelo menu do Nemo agora executa uma única operação por seleção. Os destinos ficam bloqueados durante a cópia; no sucesso, a janela fecha e solicita uma notificação.
 - Seleções concluídas são consumidas. Cliques adicionais, inclusive após uma falha parcial, não criam cópias duplicadas dos itens que já foram copiados. Erros continuam sendo apresentados antes do fechamento.

@@ -66,6 +66,12 @@ The integration code is licensed under **GPL-3.0-or-later**. Third-party compone
 
 This project grew out of a personal desktop experiment, built through **vibe coding**. I brought the ideas, chose the look, and reviewed the results; OpenAI Codex helped turn that back-and-forth into icons, scripts, integrations, documentation, and a distributable package. The process included trying things in Cinnamon, refining them, and testing installation and restoration. The original projects and their authors remain credited throughout.
 
+#### Disclaimer
+
+This project is provided **“as is”**, without warranties of any kind, express or implied. To the extent permitted by applicable law, the author and contributors shall not be liable for damages, data loss, or other consequences arising from its installation or use. **Install and use at your own risk.** Review the scripts and keep backups before making changes. See [LICENSE](LICENSE) for the applicable terms. Third-party components retain their own licenses.
+
+#### Acknowledgments
+
 My thanks to the people whose code and artwork made this possible:
 
 - **Pavel Pertsev (morhetz)** — the original [Gruvbox palette](https://github.com/morhetz/gruvbox).
@@ -138,6 +144,12 @@ O código de integração usa **GPL-3.0-or-later**. Componentes de terceiros man
 ### Feito com vibe coding
 
 Este projeto nasceu da vontade de deixar meu desktop com a minha cara e foi construído com **vibe coding**. Eu trouxe as ideias, escolhi a aparência e revisei os resultados; o OpenAI Codex ajudou a transformar essa conversa em ícones, scripts, integrações, documentação e um pacote compartilhável. O processo teve experimentação no Cinnamon, ajustes e testes de instalação e restauração. Os projetos que serviram de base e seus autores continuam reconhecidos nos créditos.
+
+#### Aviso de responsabilidade
+
+Este projeto é fornecido **“no estado em que se encontra” (“as is”)**, sem garantias de qualquer natureza, expressas ou implícitas. Na medida permitida pela legislação aplicável, o autor e os colaboradores não se responsabilizam por danos, perda de dados ou outras consequências decorrentes de sua instalação ou uso. **Instale e use por sua conta e risco.** Revise os scripts e mantenha cópias de segurança antes de fazer alterações. Consulte a [licença](LICENSE) para os termos aplicáveis. Componentes de terceiros mantêm suas próprias licenças.
+
+#### Agradecimentos
 
 Meu agradecimento às pessoas cujo código e desenhos tornaram isso possível:
 
